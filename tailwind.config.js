@@ -4,8 +4,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        BgCustom: 'rgba(243, 246, 246, var(1))',
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-font-inter')],
 }
 
