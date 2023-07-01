@@ -13,8 +13,8 @@ function Navbar() {
           <li className='hover:text-blue-600 cursor-pointer'><a href="#problem-solving">Problem Solving</a></li>
           <li className='hover:text-blue-600 cursor-pointer'><a href="#education">Education</a></li>
           <li className='hover:text-blue-600 cursor-pointer'><a href="#projects">Projects</a></li>
-          <li className='hover:text-blue-600 cursor-pointer'><a href="#contest">Contests</a></li>
-          <li className='hover:text-blue-600 cursor-pointer'><a href="#certification">Certification</a></li>
+          <li className='hover:text-blue-600 cursor-pointer'><a href="#experience">Experience</a></li>
+          <li className='hover:text-blue-600 cursor-pointer'><a href="#achivements">Achivements</a></li>
         </ul>
       </div>
       <div className='flex justify-start items-center pr-8 mr-8'>

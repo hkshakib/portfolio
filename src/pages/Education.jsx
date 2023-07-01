@@ -14,7 +14,7 @@ const Education = () => {
         <div className='flex flex-col justify-center mb-[60px] border-b-[1px]'>
           <h1 className='font-bold text-[30px] font-mono'>Leading University</h1>
           <h2 className='text-[25px]'>Bachelor of Science in Computer Science and Engineering</h2>
-          <h2 className='text-[23px]'>February 2022 - February 2023</h2>
+          <h2 className='text-[23px]'>February 2018 - February 2023</h2>
           <h2 className='text-[23px]'>Sylhet, Bangladesh</h2>
         </div>
       </div>
