@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import Skills from "./pages/Skills";
 import ProblemSolving from "./pages/ProblemSolving";
 import Projects from "./pages/Projects";
 import Contest from "./pages/Contest";
@@ -38,8 +39,16 @@ const App = () => {
         <Home />
       </section>
 
+      <section id="skills" className="flex pt-[200px] items-center justify-center z-1 relative">
+        <Skills/>
+      </section>
+
       <section id="problem-solving" className="flex pt-[200px] items-center justify-center z-1 relative">
         <ProblemSolving/>
+      </section>
+
+      <section id="education" className="flex pt-[200px] z-1 relative">
+        <Education/>
       </section>
 
       {/* <section id="problem-solving" className="flex pt-200 items-center justify-center z-1 relative">
@@ -51,13 +60,10 @@ const App = () => {
       </section>
 
       <section id="problem-solving" className="flex pt-200 items-center justify-center z-1 relative">
-        <Education/>
-      </section>
-
-      <section id="problem-solving" className="flex pt-200 items-center justify-center z-1 relative">
         <Certification/>
       </section> */}
-      <section id="problem-solving" className="flex pt-[200px] items-center justify-center z-1 relative">
+
+      <section id="footer" className="flex pt-[200px] items-center justify-center z-1 relative">
         <Footer/>
       </section>
     </div>
