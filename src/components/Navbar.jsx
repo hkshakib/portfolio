@@ -55,6 +55,15 @@ function Navbar() {
           <li className='hover:text-blue-600 cursor-pointer'>
             <a href='#achivements'>Achivements</a>
           </li>
+<<<<<<< HEAD
+=======
+          <li className='hover:text-blue-600 cursor-pointer'><a href="#skills">Skills</a></li>
+          <li className='hover:text-blue-600 cursor-pointer'><a href="#problem-solving">Problem Solving</a></li>
+          <li className='hover:text-blue-600 cursor-pointer'><a href="#education">Education</a></li>
+          <li className='hover:text-blue-600 cursor-pointer'><a href="#projects">Projects</a></li>
+          <li className='hover:text-blue-600 cursor-pointer'><a href="#experience">Experience</a></li>
+          <li className='hover:text-blue-600 cursor-pointer'><a href="#achivements">Achivements</a></li>
+>>>>>>> 83cac3be9cf231707a6d772673bb3181a63d838f
         </ul>
       </div>
 
