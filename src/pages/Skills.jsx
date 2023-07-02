@@ -4,12 +4,12 @@ import { FaPooStorm } from 'react-icons/fa';
 
 function Skills() {
   return (
-    <div className='flex'>
+    <div className='flex flex-col lg:flex-row'>
         
         <div className='flex flex-1'>
             <img className='bg-contain' src={Image} alt="skills" />
         </div>
-        <div className='flex flex-col flex-1 justify-start items-start pt-[50px]'>
+        <div className='flex flex-col flex-1 justify-start items-start pt-[50px] lg:pl-0 pl-12'>
             <h1 className='text-[56px] font-mono'>Skills</h1>
             <div className='flex gap-2 mb-[10px]'>
                 <h2 className='text-blue-600 text-[18px]'>Languages: </h2>

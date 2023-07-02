@@ -7,10 +7,11 @@ const ProblemSolving = () => {
   return (
     <div className='flex flex-col'>
         <h1 className='flex justify-center text-[56px] font-mono mb-[20px]'>Problem Solving</h1>
-        <div className='flex gap-20 justify-around items-center'>
-            <div className='flex flex-1 bg-[#FCF4FF] h-[400px] w-[400px] shadow-lg'>
+        <div className='flex gap-20 flex-wrap justify-around items-center lg:p-0 p-10'>
+
+            <div className='flex lg:flex-1 bg-[#FCF4FF] h-[400px] w-[400px] shadow-lg'>
                 <div className='flex flex-col'>
-                    <div className='flex '>
+                    <div className='flex'>
                         <img className='h-[100px] w-[100px]' src={CF} alt="" />
                         <h1 className='ml-[10px] pt-[30px] text-[30px] font-mono'>
                             Codeforces
@@ -30,9 +31,10 @@ const ProblemSolving = () => {
                         <a className='text-[12px]' href="https://codeforces.com/profile/_Bohemian">Bohemian</a>
                     </div>
                 </div>
+
             </div>
 
-            <div className='flex flex-1 bg-[#FEFAF0] h-[400px] w-[400px] shadow-lg'>
+            <div className='flex lg:flex-1 bg-[#FEFAF0] h-[400px] w-[400px] shadow-lg'>
                 <div className='flex flex-col'>
                         <div className='flex '>
                             <img className='h-[100px] w-[100px]' src={CC} alt="" />
@@ -55,7 +57,8 @@ const ProblemSolving = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-1 bg-[#FFF4F4] h-[400px] w-[400px] shadow-lg'>
+
+                <div className='flex lg:flex-1 bg-[#FFF4F4] h-[400px] w-[400px] shadow-lg'>
                     <div className='flex flex-col'>
                         <div className='flex '>
                             <img className='h-[100px] w-[100px]' src={LC} alt="" />

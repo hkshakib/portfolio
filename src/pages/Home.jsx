@@ -5,8 +5,8 @@ import BgHome from '../static/947.jpg';
 
 function Home() {
   return (
-    <div className='flex h-[700px] w-[100%]'>
-        <div className='flex flex-col flex-1 justify-center items-center '>
+    <div className='flex flex-col lg:flex-row h-[700px] w-[100%]'>
+        <div className='flex flex-col flex-1 justify-center items-center mb-[10px]'>
             <div className='flex basis-[5%] flex-shrink-0 w-[100%] justify-center items-center gap-1 pt-[20px] pr-[320px]'>
                 <p className='w-auto text-[#4A6CF7] font-semibold'>Hey There</p>
                 <FaHandsClapping/>
@@ -19,7 +19,7 @@ function Home() {
                 <h3 className='opacity-1 text-gray-400'>Professional </h3>
                 <h6 className='font-semi-bold'>Web Developer</h6>
             </div>
-            <div className='flex basis-[30%] flex-wrap w-[100%] justify-center items-center pl-[250px] pr-12 pb-4 pt-2'>
+            <div className='hidden lg:flex basis-[30%] flex-wrap w-[100%] justify-center items-center lg:pl-[250px] lg:pr-12 lg:pb-4 lg:pt-2 '>
             <h3 className='opacity-1 text-gray-400'>
                 Eager and motivated software engineer ready to turn ideas into reality. 
                 With a solid foundation in C/C++, JavaScript, Python, Django, FastAPI, and many more. 
@@ -36,7 +36,7 @@ function Home() {
         </div>
         
         <div className="flex flex-1 justify-end relative">
-            <img className="flex absolute top-[123px] left-0 right-[10px] z-1 bg-opacity-100" src={Avatar} alt="Avatar" />
+            <img className="flex absolute top-[67px] lg:top-[123px] left-0 right-[10px] z-1 bg-opacity-100" src={Avatar} alt="Avatar" />
             <img className="" src={BgHome} alt="bg" />
         </div>
 
