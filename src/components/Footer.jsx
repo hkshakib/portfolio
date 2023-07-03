@@ -5,7 +5,7 @@ import Email from "../static/email.png";
 const Footer = () => {
   return (
     <div className='flex flex-col w-[100%] pb-[10px]'>
-      <div className='flex flex-col lg:flex-row pb-[100px]'>
+      <div className='flex flex-col lg:flex-row pb-[100px] lg:ml-[15px]'>
         <div className='flex flex-col lg:flex-1 justify-start lg:pt-[50px] pl-4 pb-[50px] lg:pb-0'>
               <h1 className='text-[40px] lg:text-[56px] font-mono'>Contact ME</h1>
               <h2 className='font-mono lg:text-[30px]'>IF YOU WANT TO HIRE ME OR HAVE OTHER QUERIES, THEN KNOCK ME ANYTIME.</h2>
