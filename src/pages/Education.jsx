@@ -1,6 +1,6 @@
 import React from 'react';
 import UniversityLogo from "../static/unilogo.png";
-import SchoolLogo from "../static/scholl.gif";
+import SchoolLogo from "../static/school.gif";
 
 const Education = () => {
   return (

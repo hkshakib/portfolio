@@ -2,7 +2,7 @@ import React from 'react';
 import { FaHandsClapping } from 'react-icons/fa6';
 import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineFacebook, AiOutlineTwitter } from 'react-icons/ai';
 import Avatar from '../static/avatar.png';
-import BgHome from '../static/947.jpg';
+import BgHome from '../static/BgHome.jpg';
 
 const Home = () => {
   return (
