@@ -5,9 +5,9 @@ import SchoolLogo from "../static/scholl.gif";
 const Education = () => {
   return (
     <div className='flex flex-col '>
-      <h1 className='text-[56px] ml-[90px] font-mono border-b-[1px]'>Education</h1>
+      <h1 className='text-[40px] lg:text-[56px] lg:ml-[90px] font-mono border-b-[1px]'>Education</h1>
 
-      <div className='flex '>
+      <div className='flex'>
         <div className='flex'>
           <img src={UniversityLogo} alt="UniversityLogo" />
         </div>
@@ -19,11 +19,11 @@ const Education = () => {
         </div>
       </div>
       <div className='flex'>
-        <div className='flex ml-[70px]'>
-          <img className='h-[200px] w-[200px]' src={SchoolLogo} alt="SchoolLogo" />
+        <div className='flex ml-[25px] lg:ml-[70px]'>
+          <img className='h-[100px] w-[100px] lg:h-[200px] lg:w-[200px]' src={SchoolLogo} alt="SchoolLogo" />
         </div>
-        <div className='flex flex-col justify-center mb-[60px] ml-[70px]'>
-          <h1 className='font-bold texzt-[20px] lg:text-[30px] font-mono'>Scholarshome</h1>
+        <div className='flex flex-col lg:justify-center mb-[60px] ml-[30px] lg:ml-[70px]'>
+          <h1 className='font-bold text-[20px] lg:text-[30px] font-mono'>Scholarshome</h1>
           <h2 className='lg:text-[25px]'>Higher Secondary</h2>
           <h2 className='lg:text-[23px]'>July 2014 - July 2016</h2>
           <h2 className='lg:text-[23px]'>Sylhet, Bangladesh</h2>

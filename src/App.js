@@ -11,10 +11,9 @@ import Experience from "./pages/Experience";
 const App = () => {
 
   return (
-    <div className="flex flex-col bg-white font-inter m-0">
+    <div className="w-full-screen bg-white font-inter">
       
-        <Navbar />
-      
+      <Navbar />
 
       <section id="home" className="flex pt-4 items-center justify-center z-1 relative">
         <Home />
@@ -24,7 +23,7 @@ const App = () => {
         <Skills/>
       </section>
 
-      <section id="problem-solving" className="flex pt-[200px] items-center justify-center z-1 relative">
+      <section id="problem-solving" className="flex lg:pt-[200px] items-center justify-center z-1 relative">
         <ProblemSolving/>
       </section>
 

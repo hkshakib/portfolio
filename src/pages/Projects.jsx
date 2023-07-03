@@ -6,7 +6,7 @@ const Projects = () => {
       <div className='flex justify-center text-[56px] font-mono mb-[20px]'>
         <h1>Projects</h1>
       </div>
-      <div className='flex flex-wrap gap-8 p-12 justify-center'>
+      <div className='flex flex-wrap gap-8 lg:p-12 justify-center'>
 
         <div className='flex flex-col bg-[#FEFAF0] border h-[300px] w-[300px] shadow-lg'>
           <div className='flex justify-center p-4'>
