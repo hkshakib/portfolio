@@ -32,7 +32,7 @@ const App = () => {
         <Experience/>
       </section>
 
-      <section id="projects" className="flex pt-[50px] lg:pt-[200px] items-center justify-center z-1 relative">
+      <section id="projects" className="flex pt-[50px] lg:pt-[100px] items-center justify-center z-1 relative">
         <Projects/>
       </section>
 
