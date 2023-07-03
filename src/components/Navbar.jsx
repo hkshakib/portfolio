@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
+import CV from '../static/Resume.pdf';
 
 function Navbar() {
   const [isNavbarSticky, setIsNavbarSticky] = useState(false);
@@ -59,9 +60,11 @@ function Navbar() {
       </div>
 
       <div className='hidden lg:flex lg:pr-8'>
-        <button className='border h-10 px-4 rounded-lg bg-blue-500 text-white font-bold hover:bg-blue-400 hover:shadow-lg text-sm'>
-          Download CV
-        </button>
+        <a href={CV} target="_blank" rel="noopener noreferrer">
+          <button className='border h-10 px-4 rounded-lg bg-blue-500 text-white font-bold hover:bg-blue-400 hover:shadow-lg text-sm'>
+            Download CV
+          </button>
+        </a>
       </div>
 
       <div className='lg:hidden flex basis-[70%] justify-end gap-8'>
@@ -100,9 +103,11 @@ function Navbar() {
               <a href='#achivements'>Achivements</a>
             </li>
           </ul>
-          <button className='border h-[40px] w-[150px]  my-2 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-400 hover:shadow-lg text-[12px]'>
-            Download CV
-          </button>
+          <a href={CV} target="_blank" rel="noopener noreferrer">
+            <button className='border h-[40px] w-[150px]  my-2 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-400 hover:shadow-lg text-[12px]'>
+              Download CV
+            </button>
+          </a>
         </div>
       )}
 

@@ -12,10 +12,10 @@ const Footer = () => {
               <h2 className='font-mono lg:text-[30px]'><span className='text-blue-500'>Email:</span> hkshakib.cse@gmail.com</h2>
               <div className='flex basis-[10%] lg:w-[100%] gap-4 mt-[10px]'>
                 <button className='flex justify-center items-center text-[35px] gap-2 font-semibold'>
-                    <a href="https://github.com/hkshakib"><AiOutlineGithub className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
-                    <a href="https://www.linkedin.com/in/hkshakib/"><AiOutlineLinkedin className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
-                    <a href="https://web.facebook.com/Humayun.kibria.shakib/"><AiOutlineFacebook className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
-                    <a href="https://twitter.com/HKibriaShakib"><AiOutlineTwitter className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
+                    <a href="https://github.com/hkshakib" target="_blank" rel="noopener noreferrer"><AiOutlineGithub className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
+                    <a href="https://www.linkedin.com/in/hkshakib/" target="_blank" rel="noopener noreferrer"><AiOutlineLinkedin className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
+                    <a href="https://web.facebook.com/Humayun.kibria.shakib/" target="_blank" rel="noopener noreferrer"><AiOutlineFacebook className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
+                    <a href="https://twitter.com/HKibriaShakib" target="_blank" rel="noopener noreferrer"><AiOutlineTwitter className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
                 </button>
             </div>
         </div>

@@ -34,10 +34,10 @@ const Home = () => {
                 <a href="#footer"><button className='h-[30px] w-[100px] lg:h-[50px] lg:w-[180px] text-[12px] rounded-[50px] bg-blue-500 text-white font-semibold hover:shadow-lg lg:text-[1rem]'>Contact Me</button></a>
                 
                 <button className='flex justify-center items-center text-[35px] gap-2 font-semibold'>
-                    <a href="https://github.com/hkshakib"><AiOutlineGithub className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
-                    <a href="https://www.linkedin.com/in/hkshakib/"><AiOutlineLinkedin className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
-                    <a href="https://web.facebook.com/Humayun.kibria.shakib/"><AiOutlineFacebook className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
-                    <a href="https://twitter.com/HKibriaShakib"><AiOutlineTwitter className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
+                    <a href="https://github.com/hkshakib" target="_blank" rel="noopener noreferrer"><AiOutlineGithub className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
+                    <a href="https://www.linkedin.com/in/hkshakib/" target="_blank" rel="noopener noreferrer"><AiOutlineLinkedin className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
+                    <a href="https://web.facebook.com/Humayun.kibria.shakib/" target="_blank" rel="noopener noreferrer"><AiOutlineFacebook className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
+                    <a href="https://twitter.com/HKibriaShakib" target="_blank" rel="noopener noreferrer"><AiOutlineTwitter className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
                 </button>
             </div>
         </div>
