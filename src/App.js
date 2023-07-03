@@ -7,6 +7,7 @@ import Projects from "./pages/Projects";
 import Education from "./pages/Education";
 import Footer from "./components/Footer";
 import Experience from "./pages/Experience";
+import Achivements from "./pages/Achivements";
 
 const App = () => {
 
@@ -23,23 +24,27 @@ const App = () => {
         <Skills/>
       </section>
 
-      <section id="problem-solving" className="flex lg:pt-[200px] items-center justify-center z-1 relative">
+      <section id="problem-solving" className="flex pt-[50px] lg:pt-[200px] items-center justify-center z-1 relative">
         <ProblemSolving/>
       </section>
 
-      <section id="education" className="flex pt-[200px] z-1 relative">
-        <Education/>
-      </section>
-
-      <section id="projects" className="flex pt-[100px] items-center justify-center z-1 relative">
-        <Projects/>
-      </section>
-
-      <section id="projects" className="flex pt-[100px] items-center justify-center z-1 relative">
+      <section id="experience" className="flex pt-[50px] lg:pt-[200px] items-center justify-center z-1 relative">
         <Experience/>
       </section>
 
-      <section id="footer" className="flex pt-[200px] items-center justify-center z-1 relative">
+      <section id="projects" className="flex pt-[50px] lg:pt-[200px] items-center justify-center z-1 relative">
+        <Projects/>
+      </section>
+
+      <section id="education" className="flex pt-[50px] lg:pt-[200px] z-1 relative">
+        <Education/>
+      </section>
+
+      <section id="achivements" className="flex pt-[50px] lg:pt-[200px] items-center justify-center z-1 relative">
+        <Achivements/>
+      </section>
+
+      <section id="footer" className="flex pt-[50px] lg:pt-[200px] items-center justify-center z-1 relative">
         <Footer/>
       </section>
     </div>

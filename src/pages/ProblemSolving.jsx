@@ -11,7 +11,7 @@ const ProblemSolving = () => {
 
         <div className='flex gap-12 lg:gap-20 flex-wrap justify-around items-center lg:p-10'>
 
-            <div className='flex lg:flex-1 bg-[#FCF4FF] h-[400px] lg:w-[400px] shadow-lg border border-black'>
+            <div className='flex lg:flex-1 bg-[#FCF4FF] h-[400px] lg:w-[400px] shadow-lg border'>
                 <div className='flex flex-col'>
 
                     <div className='flex justify-center items-center'>
@@ -39,7 +39,7 @@ const ProblemSolving = () => {
 
             </div>
 
-            <div className='flex lg:flex-1 bg-[#FEFAF0] h-[400px] lg:w-[400px] shadow-lg border border-black'>
+            <div className='flex lg:flex-1 bg-[#FEFAF0] h-[400px] lg:w-[400px] shadow-lg border'>
                 <div className='flex flex-col'>
 
                         <div className='flex justify-center items-center'>
@@ -64,7 +64,7 @@ const ProblemSolving = () => {
                     </div>
                 </div>
 
-                <div className='flex lg:flex-1 bg-[#FFF4F4] h-[400px] lg:w-[400px] shadow-lg border border-black'>
+                <div className='flex lg:flex-1 bg-[#FFF4F4] h-[400px] lg:w-[400px] shadow-lg border'>
                     <div className='flex flex-col'>
                         <div className='flex justify-center items-center'>
                             <img className='h-[50px] w-[50px] lg:h-[100px] lg:w-[100px]' src={LC} alt="" />

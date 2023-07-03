@@ -44,13 +44,13 @@ function Navbar() {
             <a href='#problem-solving'>Problem Solving</a>
           </li>
           <li className='hover:text-blue-600 cursor-pointer'>
-            <a href='#education'>Education</a>
+            <a href='#experience'>Experience</a>
           </li>
           <li className='hover:text-blue-600 cursor-pointer'>
             <a href='#projects'>Projects</a>
           </li>
           <li className='hover:text-blue-600 cursor-pointer'>
-            <a href='#experience'>Experience</a>
+            <a href='#education'>Education</a>
           </li>
           <li className='hover:text-blue-600 cursor-pointer'>
             <a href='#achivements'>Achivements</a>
