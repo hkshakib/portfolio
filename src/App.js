@@ -16,7 +16,7 @@ const App = () => {
       
       <Navbar />
 
-      <section id="home" className="flex pt-4 items-center justify-center z-1 relative">
+      <section id="home" className="flex pt-[50px] items-center justify-center z-1 relative">
         <Home />
       </section>
 

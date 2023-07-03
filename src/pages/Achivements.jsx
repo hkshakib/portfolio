@@ -7,9 +7,10 @@ function Achivements() {
   return (
     <div className='flex flex-col lg:flex-row'>
         
-        <div className='flex lg:flex-1 ml-[40px]'>
+        <div className='flex lg:flex-1 m-[15px] lg:ml-[40px]'>
             <img className='bg-contain rounded-lg' src={Achivment} alt="skills" />
         </div>
+
         <div className='flex flex-col lg:flex-1 lg:justify-start lg:items-start lg:pt-[50px] pl-4 lg:pl-12'>
             <h1 className='text-[56px] font-mono'>Achivements</h1>
             <div className='flex flex-wrap justify-start items-center gap-1 lg:gap-2 mb-[10px]'>
