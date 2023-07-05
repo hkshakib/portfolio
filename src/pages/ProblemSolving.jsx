@@ -23,13 +23,13 @@ const ProblemSolving = () => {
 
                     <div className='flex justify-between items-center mt-[30px]'>
                         <div className='flex flex-col items-center bg-white h-[100px] w-[150px] ml-1 lg:ml-[40px] rounded-lg'>
-                            <h1 className='uppercse font-mono text-[16px] mb-[10px] p-2'>SPECIALIST</h1>
-                            <h2 className='text-[12px] font-mono text-gray-500'>Highest Ratings: 1543</h2>
+                            <h1 className='uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2'>SPECIALIST</h1>
+                            <h2 className='text-[10px] lg:text-[12px] font-mono text-gray-500 p-2'>Highest Ratings: 1543</h2>
                         </div>
 
                         <div className='flex flex-col items-center bg-white h-[100px] w-[150px] ml-[40px] rounded-lg'>
-                            <h1 className='uppercse font-mono text-[16px] mb-[10px] p-2'>Total Solved</h1>
-                            <h2 className='text-[12px] font-mono text-gray-500'>1559 Problems</h2>
+                            <h1 className='uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2'>Total Solved</h1>
+                            <h2 className='text-[10px] lg:text-[12px] font-mono text-gray-500 p-2'>1559 Problems</h2>
                         </div>
                     </div>
                     <div className='flex justify-center items-center mt-[100px] ml-[150px] border w-[100px] h-[30px] bg-blue-800 rounded-md text-white'>
@@ -50,12 +50,12 @@ const ProblemSolving = () => {
                         </div>
                         <div className='flex justify-between items-center mt-[30px]'>
                             <div className='flex flex-col items-center bg-white h-[100px] w-[150px] lg:ml-[40px] rounded-lg'>
-                                <h1 className='uppercse font-mono text-[16px] mb-[10px] p-2'>4*</h1>
-                                <h2 className='text-[12px] font-mono text-gray-500'>Highest Ratings: 1810</h2>
+                                <h1 className='uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2'>4*</h1>
+                                <h2 className='text-[10px] lg:text-[12px] font-mono text-gray-500 p-2'>Highest Ratings: 1810</h2>
                             </div>
                             <div className='flex flex-col items-center bg-white h-[100px] w-[150px] ml-[40px] rounded-lg'>
-                                <h1 className='uppercse font-mono text-[16px] mb-[10px] p-2'>Total Solved</h1>
-                                <h2 className='text-[12px] font-mono text-gray-500'>280 Problems</h2>
+                                <h1 className='uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2'>Total Solved</h1>
+                                <h2 className='text-[10px] lg:text-[12px] font-mono text-gray-500 p-2'>280 Problems</h2>
                             </div>
                         </div>
                         <div className='flex justify-center items-center mt-[100px] ml-[150px] border w-[100px] h-[30px] bg-blue-800 rounded-md text-white'>
@@ -74,12 +74,12 @@ const ProblemSolving = () => {
                         </div>
                         <div className='flex justify-between items-center mt-[30px]'>
                             <div className='flex flex-col items-center bg-white h-[100px] w-[150px] lg:ml-[40px] rounded-lg'>
-                                <h1 className='uppercse font-mono text-[16px] mb-[10px] p-2'>Max Streak</h1>
-                                <h2 className='text-[12px] font-mono text-gray-500'>35</h2>
+                                <h1 className='uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2'>Max Streak</h1>
+                                <h2 className='text-[10px] lg:text-[12px] font-mono text-gray-500 p-2'>35</h2>
                             </div>
                             <div className='flex flex-col items-center bg-white h-[100px] w-[150px] ml-[40px] rounded-lg'>
-                                <h1 className='uppercse font-mono text-[16px] mb-[10px] p-2'>Total Solved</h1>
-                                <h2 className='text-[12px] font-mono text-gray-500'>113 Problems</h2>
+                                <h1 className='uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2'>Total Solved</h1>
+                                <h2 className='text-[10px] lg:text-[12px] font-mono text-gray-500 p-2'>113 Problems</h2>
                             </div>
                         </div>
                         <div className='flex justify-center items-center mt-[100px] ml-[150px] border w-[100px] h-[30px] bg-blue-800 rounded-md text-white'>
