@@ -15,13 +15,16 @@ const Home = () => {
                 <FaHandsClapping/>
                 <p className='w-auto text-[#4A6CF7] font-semibold'> I am </p>
             </div>
+            
             <div className='flex lg:basis-[5%] lg:w-[100%] mb-1'>
                 <h6 className='font-bold text-[#090E34] lg:text-[40px]'>Humayun Kibria Shakib</h6>
             </div>
+
             <div className='flex flex-wrap lg:basis-[2%]  lg:w-[100%] mb-2 gap-2'>
                 <h3 className='opacity-1 text-gray-400 text-[12px] lg:text-[16px]'>Professional </h3>
                 <h6 className='font-semi-bold text-[12px] lg:text-[1rem]'>Web Developer</h6>
             </div>
+
             <div className='hidden lg:flex basis-[30%] flex-wrap lg:w-[50%] mb-2'>
                 <h3 className='opacity-1 text-gray-400'>
                     Eager and motivated software engineer ready to turn ideas into reality. 
@@ -32,6 +35,7 @@ const Home = () => {
                     Let's build the future together!
                 </h3>
             </div>
+            
             <div className='flex basis-[10%] lg:w-[100%] gap-4 mt-[10px]'>
                 <a href="#footer"><button className='h-[30px] w-[100px] lg:h-[50px] lg:w-[180px] text-[12px] rounded-[50px] bg-blue-500 text-white font-semibold hover:shadow-lg lg:text-[1rem]'>Contact Me</button></a>
                 
@@ -44,9 +48,9 @@ const Home = () => {
             </div>
         </div>
         
-        <div className="flex flex-1 justify-end relative">
-            <img className="flex absolute top-[-70px] lg:top-[123px] left-0 right-[20px] z-1 bg-opacity-100" src={Avatar} alt="Avatar" />
-            <img className="" src={BgHome} alt="bg" />
+        <div className="flex flex-1 justify-end relative mt-4 lg:mt-0">
+            <img className="flex absolute max-w-[85%] top-[-70px] lg:top-[123px] left-0 right-[20px] z-1 bg-opacity-100" src={Avatar} alt="Avatar" />
+            <img className="max-w-[100%]" src={BgHome} alt="bg" />
         </div>
 
     </div>

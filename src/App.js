@@ -20,7 +20,7 @@ const App = () => {
         <Home />
       </section>
 
-      <section id="skills" className="flex pt-[200px] items-center justify-center z-1 relative">
+      <section id="skills" className="flex pt-2 lg:pt-[200px] items-center justify-center z-1 relative">
         <Skills/>
       </section>
 
