@@ -7,7 +7,7 @@ const ProblemSolving = () => {
   return (
     <div className='flex flex-col'>
         
-        <h1 className='flex justify-center text-[40px] lg:text-[56px] font-mono mb-[20px]'>Problem Solving</h1>
+        <h1 className='flex justify-center text-[35px] lg:text-[56px] font-mono mb-[20px]'>Problem Solving</h1>
 
         <div className='flex gap-12 justify-center lg:gap-20 flex-wrap lg:p-10'>
 

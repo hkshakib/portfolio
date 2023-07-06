@@ -3,7 +3,7 @@ import React from 'react'
 function Experience() {
   return (
     <div className='flex flex-col justify-center items-center'>
-        <h1 className='text-[56px] font-mono mb-[50px]'>Experience</h1>
+        <h1 className='text-[35px] lg:text-[56px] font-mono mb-[50px]'>Experience</h1>
         <div class="max-w-7xl mx-auto w-full grid grid-cols-9 px-2">
             <div class="col-span-4 w-full h-full ">
                 <div class="w-full h-full bg-[#FCF4FF] rounded-md p-2 md:pl-4">

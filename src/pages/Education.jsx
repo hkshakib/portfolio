@@ -5,7 +5,7 @@ import SchoolLogo from "../static/school.gif";
 const Education = () => {
   return (
     <div className='flex flex-col '>
-      <h1 className='text-[40px] lg:text-[56px] lg:ml-[90px] font-mono border-b-[1px]'>Education</h1>
+      <h1 className='text-[35px] lg:text-[56px] lg:ml-[90px] font-mono border-b-[1px]'>Education</h1>
 
       <div className='flex'>
         <div className='flex'>
