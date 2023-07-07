@@ -20,7 +20,7 @@ function Experience() {
             </div>
             <div class="relative col-span-1 w-full h-full flex justify-center items-center">
                 <div class="h-full w-1 bg-indigo-300"></div>
-                <div class="absolute w-6 h-6 rounded-full bg-indigo-400 z-10 text-white text-center">1</div>
+                <div class="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">1</div>
             </div>
             <div class="col-span-4 w-full h-full"></div>
 
@@ -29,7 +29,7 @@ function Experience() {
             <div class="col-span-4 w-full h-full"></div>
             <div class="relative col-span-1 w-full h-full flex justify-center items-center">
                 <div class="h-full w-1 bg-indigo-300"></div>
-                <div class="absolute w-6 h-6 rounded-full bg-indigo-400 z-10 text-white text-center">2</div>
+                <div class="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">2</div>
             </div>
             <div class="col-span-4 w-full h-full ">
                 <div class="w-full h-full bg-[#FEFAF0] rounded-md p-2 md:pl-4">
@@ -62,7 +62,7 @@ function Experience() {
             </div>
             <div class="relative col-span-1 w-full h-full flex justify-center items-center">
                 <div class="h-full w-1 bg-indigo-300"></div>
-                <div class="absolute w-6 h-6 rounded-full bg-indigo-400 z-10 text-white text-center">3</div>
+                <div class="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">3</div>
             </div>
             <div class="col-span-4 w-full h-full"></div>
         </div>

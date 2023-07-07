@@ -8,7 +8,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 0;
+      const isScrolled = window.scrollY > 500;
       setIsNavbarSticky(isScrolled);
     };
 
@@ -23,7 +23,7 @@ function Navbar() {
   
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen(!menuOpen && isNavbarSticky);
   };
 
   return (
@@ -75,15 +75,15 @@ function Navbar() {
           className='flex text-black cursor-pointer hover:text-gray-600 '
           onClick={toggleMenu}
         >
-          {menuOpen ? <AiOutlineMenu /> : <AiOutlineMenu />}
+          { menuOpen ? <AiOutlineMenu /> : <AiOutlineMenu />}
         </button>
       </div>
 
       
 
       {menuOpen && (
-        <div className='lg:hidden absolute top-16 left-0 right-0 bg-gray-400 z-1000000 w-[100%] transition-all duration-500 ease-in'>
-          <ul className='flex flex-col gap-4 text-[10px] text-[#f2f4f8] transition-all duration-500 ease-in p-4'>
+        <div className='lg:hidden absolute top-16 left-0 right-0 bg-white z-1000000 w-[100%] transition-all duration-500 ease-in z-1000'>
+          <ul className='flex flex-col gap-4 text-[10px] text-black transition-all duration-500 ease-in p-4'>
             <li className='hover:text-blue-600 cursor-pointer'>
               <a href='#home'>Home</a>
             </li>
@@ -107,7 +107,7 @@ function Navbar() {
             </li>
           </ul>
           <a href={CV} target="_blank" rel="noopener noreferrer" className='mx-[20px]'>
-            <button className='border h-[30px] w-[100px]  my-2 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-400 hover:shadow-lg text-[12px]'>
+            <button className='border h-[30px] w-[100px]  my-2 rounded-lg bg-blue-500 text-black font-semibold hover:bg-blue-400 hover:shadow-lg text-[12px]'>
               Download CV
             </button>
           </a>

@@ -22,7 +22,7 @@ const ProblemSolving = () => {
                         </h1>
                     </div>
 
-                    <div className='flex justify-around items-center pt-10 pr-2 lf:pl-0 lg:pr-0 '>
+                    <div className='flex justify-around items-center pt-10 pr-2 pl-2 lg:pl-0 lg:pr-0 '>
 
                         <div className='flex flex-col items-center bg-white h-[100px] w-[150px] rounded-lg border'>
                             <h1 className='uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2'>SPECIALIST</h1>
@@ -57,7 +57,7 @@ const ProblemSolving = () => {
                             </h1>
                         </div>
 
-                        <div className='flex justify-around items-center pt-10 pr-2 lf:pl-0 lg:pr-0'>
+                        <div className='flex justify-around items-center pt-10 pr-2 pl-2 lg:pl-0 lg:pr-0'>
 
                             <div className='flex flex-col items-center bg-white h-[100px] w-[150px]  rounded-lg border'>
                                 <h1 className='uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2'>4*</h1>
@@ -85,7 +85,7 @@ const ProblemSolving = () => {
                                 LeetCode
                             </h1>
                         </div>
-                        <div className='flex justify-around items-center pt-10 pr-2 lf:pl-0 lg:pr-0'>
+                        <div className='flex justify-around items-center pt-10 pr-2 pl-2 lg:pl-0 lg:pr-0'>
 
                             <div className='flex flex-col items-center bg-white h-[100px] w-[150px] rounded-lg border'>
                                 <h1 className='uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2'>Max Streak</h1>

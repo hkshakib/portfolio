@@ -6,15 +6,15 @@ function Skills() {
   return (
     <div className='flex flex-col lg:flex-row'>
         
-        <div className='flex lg:flex-1 justify-end mr-[10px]'>
-            <div className='flex basis-[90%]'>
+        <div className='flex lg:flex-1 lg:justify-end mr-[10px]'>
+            <div className='flex lg:basis-[90%]'>
                 <img className='bg-contain' src={Image} alt="skills" />
             </div>
         </div>
 
-        <div className='flex flex-1 justify-end'>
+        <div className='flex flex-1 lg:justify-end'>
 
-            <div className='flex basis-[90%] flex-col lg:justify-start lg:items-start lg:pt-[50px] pl-4 lg:pl-12'>      
+            <div className='flex lg:basis-[90%] flex-col lg:justify-start lg:items-start lg:pt-[50px] pl-4 lg:pl-12'>      
             <h1 className='text-[56px] font-mono'>Skills</h1>
             <div className='flex flex-wrap justify-start items-center gap-2 lg:gap-2 mb-[10px]'>
                 <h2 className='text-blue-600 text-[14px] lg:text-[18px]'>Languages: </h2>
