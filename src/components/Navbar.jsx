@@ -10,6 +10,9 @@ function Navbar() {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 500;
       setIsNavbarSticky(isScrolled);
+      if(!isNavbarSticky) {
+        setMenuOpen(false);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -18,13 +21,15 @@ function Navbar() {
       window.removeEventListener('scroll', handleScroll);
     };
 
-  }, []);
+  }, [isNavbarSticky]);
 
   
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  // console.log("hello:", {menuOpen:menuOpen, isNavbarSticky:isNavbarSticky});
 
   return (
     <header
@@ -36,7 +41,7 @@ function Navbar() {
         HKSHAKIB
       </div>
 
-      <div className='hidden lg:flex lg:flex-1 justify-center items-center lg:gap-12'>
+      <div className='hidden lg:flex lg:flex-1 justify-center items-center lg:gap-12 border-b'>
         <ul className='flex lg:gap-12 gap-4 text-[15px]'>
           <li className='hover:text-blue-600 cursor-pointer'>
             <a href='#home'>Home</a>
@@ -75,7 +80,9 @@ function Navbar() {
           className='flex text-black cursor-pointer hover:text-gray-600 '
           onClick={toggleMenu}
         >
-          { menuOpen ? <AiOutlineMenu /> : <AiOutlineMenu />}
+          { (menuOpen && isNavbarSticky)? <AiOutlineMenu /> : "" }
+          { (!menuOpen && isNavbarSticky)? <AiOutlineMenu /> : "" }
+
         </button>
       </div>
 
