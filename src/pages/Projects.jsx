@@ -20,7 +20,7 @@ const Projects = () => {
               </p>
             </div>
 
-            <div className='flex flex-1 justify-center items-center gap-4'>
+            <div className='flex flex-1 justify-center items-end pb-3 gap-4'>
               <button className='border bg-white h-[40px] w-[100px] rounded hover:shadow-md'> 
                 <a className='font-mono' href="https://github.com/hkshakib/reactfunbox">Code</a>
               </button>
@@ -30,7 +30,7 @@ const Projects = () => {
             </div>
           </div>
 
-          <div className='flex flex-col items-center bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg p-2'>
+          <div className='flex flex-col items-center bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg'>
             <sapn className='text-[18px] font-mono p-1'>Personal Protfolio</sapn>
             <div className='flex'>
               <p className='text-[14px] p-4 text-gray-500'>
@@ -41,14 +41,14 @@ const Projects = () => {
                 The website's responsive design ensures optimal viewing experience across various devices.
               </p>
             </div>
-            <div className='flex flex-1 justify-center items-center gap-4'>
+            <div className='flex flex-1 justify-center items-end pb-3 gap-4'>
               <button className='border bg-white h-[40px] w-[100px] rounded hover:shadow-md'> 
                 <a className='font-mono' href="https://github.com/hkshakib/protfolio">Code</a>
               </button>
             </div>
           </div>
 
-          <div className='flex flex-col items-center bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg p-2'>
+          <div className='flex flex-col items-center bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg'>
             <sapn className='text-[18px] font-mono p-1'>StoreFront (Backend)</sapn>
             <div className='flex'>
               <p className='text-[14px] p-4 text-gray-500'>
@@ -58,14 +58,14 @@ const Projects = () => {
                 apply filters for a refined search, and access their profiles. The system is designed for future payment integration to provide a seamless purchasing experience.
               </p>
             </div>
-            <div className='flex flex-1 justify-center items-center gap-4'>
+            <div className='flex flex-1 justify-center items-end pb-3 gap-4'>
               <button className='border bg-white h-[40px] w-[100px] rounded hover:shadow-md'> 
                 <a className='font-mono' href="https://github.com/hkshakib/storefront2">Code</a>
               </button>
             </div>
           </div>
 
-          <div className='flex flex-col items-center bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg p-2'>
+          <div className='flex flex-col items-center bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg'>
             <sapn className='text-[18px] font-mono p-1'>Django Authentication (Backend)</sapn>
             <div className='flex'>
               <p className='text-[14px] p-4 text-gray-500'>
@@ -73,7 +73,7 @@ const Projects = () => {
                 I implemented it using Django REST framework. It has several Endpoints for user including login, logout, signup and user profile.
               </p>
             </div>
-            <div className='flex flex-1 justify-center items-center gap-4'>
+            <div className='flex flex-1 justify-center items-end pb-3 gap-4'>
               <button className='border bg-white h-[40px] w-[100px] rounded hover:shadow-md'> 
                 <a className='font-mono' href="https://github.com/hkshakib/DjangoAuthentication">Code</a>
               </button>
@@ -81,8 +81,7 @@ const Projects = () => {
           </div>
 
 
-          {/* extra projects */}
-          <div className='flex flex-col items-center bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg p-2'>
+          <div className='flex flex-col items-center bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg'>
             <sapn className='text-[18px] font-mono p-1'>BID Buddy (Frontend)</sapn>
             <div className='flex'>
               <p className='text-[14px] p-4 text-gray-500'>
@@ -91,7 +90,8 @@ const Projects = () => {
                 the ability to place bids on items.
               </p>
             </div>
-            <div className='flex flex-1 justify-center items-center gap-4'>
+
+            <div className='flex flex-1 justify-center items-end pb-3 gap-4'>
               <button className='border bg-white h-[40px] w-[100px] rounded hover:shadow-md'> 
                 <a className='font-mono' href="https://github.com/hkshakib/auctionfrontend">Code</a>
               </button>
@@ -99,7 +99,7 @@ const Projects = () => {
           </div>
 
 
-          <div className='flex flex-col items-center bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg p-2'>
+          <div className='flex flex-col items-center bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg'>
             <sapn className='text-[18px] font-mono p-1'>BID Buddy (Backend)</sapn>
             <div className='flex'>
               <p className='text-[14px] p-4 text-gray-500'>
@@ -108,7 +108,7 @@ const Projects = () => {
               Also, Included some endpoints for the Admin dashboard and statistics that not includes in frontend yet
               </p>
             </div>
-            <div className='flex flex-1 justify-center items-center gap-4'>
+            <div className='flex flex-1 justify-center items-end pb-3 gap-4'>
               <button className='border bg-white h-[40px] w-[100px] rounded hover:shadow-md'> 
                 <a className='font-mono' href="https://github.com/hkshakib/auctionbackend">Code</a>
               </button>
@@ -116,7 +116,7 @@ const Projects = () => {
           </div>
 
 
-          <div className='flex flex-col items-center bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg p-2'>
+          <div className='flex flex-col items-center bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg'>
             <sapn className='text-[18px] font-mono p-1'>Steller (FullStack)</sapn>
             <div className='flex'>
               <p className='text-[14px] p-4 text-gray-500'>
@@ -124,21 +124,21 @@ const Projects = () => {
                 I implement REST, React Redux in this project while Learning Redux from Scratch.
               </p>
             </div>
-            <div className='flex flex-1 justify-center items-center gap-4'>
+            <div className='flex flex-1 justify-center items-end pb-3 gap-4'>
               <button className='border bg-white h-[40px] w-[100px] rounded hover:shadow-md'> 
                 <a className='font-mono' href="https://github.com/hkshakib/Stellar">Code</a>
               </button>
             </div>
           </div>
 
-          <div className='flex flex-col items-center bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg p-2'>
+          <div className='flex flex-col items-center bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg'>
             <sapn className='text-[18px] font-mono p-1'>Blog (Frontend)</sapn>
             <div className='flex'>
               <p className='text-[14px] p-4 text-gray-500'>
                 I implement this blog using React while Learning React.
               </p>
             </div>
-            <div className='flex flex-1 justify-center items-center gap-4'>
+            <div className='flex flex-1 justify-center items-end pb-3 gap-4'>
               <button className='border bg-white h-[40px] w-[100px] rounded hover:shadow-md'> 
                 <a className='font-mono' href="https://github.com/hkshakib/blogfrontend">Code</a>
               </button>
