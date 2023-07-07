@@ -11,7 +11,7 @@ const ProblemSolving = () => {
 
         <div className='flex gap-12 justify-center lg:gap-20 flex-wrap lg:p-10'>
 
-            <div className='flex lg:flex-1 bg-[#FCF4FF] h-[250px] lg:h-[400px] lg:w-[100%] shadow-lg border'>
+            <div className='flex lg:flex-1 bg-[#FCF4FF] h-[250px] lg:h-[400px] lg:w-[100%] shadow-lg border rounded-md'>
 
                 <div className='flex flex-1 flex-col'>
 
@@ -22,7 +22,7 @@ const ProblemSolving = () => {
                         </h1>
                     </div>
 
-                    <div className='flex justify-around items-center pt-10 pl-2 pr-2 lf:pl-0 lg:pr-0'>
+                    <div className='flex justify-around items-center pt-10 pr-2 lf:pl-0 lg:pr-0 '>
 
                         <div className='flex flex-col items-center bg-white h-[100px] w-[150px] rounded-lg border'>
                             <h1 className='uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2'>SPECIALIST</h1>
@@ -46,7 +46,7 @@ const ProblemSolving = () => {
 
             </div>
 
-            <div className='flex lg:flex-1 bg-[#FEFAF0] h-[250px] lg:h-[400px] lg:w-[400px] shadow-lg border'>
+            <div className='flex lg:flex-1 bg-[#FEFAF0] h-[250px] lg:h-[400px] lg:w-[400px] shadow-lg border rounded-md'>
 
                 <div className='flex flex-1 flex-col'>
 
@@ -56,7 +56,8 @@ const ProblemSolving = () => {
                                 CodeChef
                             </h1>
                         </div>
-                        <div className='flex justify-around items-center pt-10 pl-2 pr-2 lf:pl-0 lg:pr-0'>
+
+                        <div className='flex justify-around items-center pt-10 pr-2 lf:pl-0 lg:pr-0'>
 
                             <div className='flex flex-col items-center bg-white h-[100px] w-[150px]  rounded-lg border'>
                                 <h1 className='uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2'>4*</h1>
@@ -76,15 +77,15 @@ const ProblemSolving = () => {
                     </div>
                 </div>
 
-                <div className='flex lg:flex-1 bg-[#FFF4F4] h-[250px] lg:h-[400px] lg:w-[400px] shadow-lg border'>
+                <div className='flex lg:flex-1 bg-[#FFF4F4] h-[250px] lg:h-[400px] lg:w-[400px] shadow-lg border rounded-md'>
                     <div className='flex flex-1 flex-col'>
                         <div className='flex justify-center items-center'>
-                            <img className='h-[50px] w-[50px] lg:h-[100px] lg:w-[100px]' src={LC} alt="" />
+                            <img className='h-[50px] w-[50px] lg:h-[100px] lg:w-[100px] pt-4' src={LC} alt="" />
                             <h1 className='lg:ml-[10px] lg:pt-[30px] text-[20px] lg:text-[30px] font-mono'>
                                 LeetCode
                             </h1>
                         </div>
-                        <div className='flex justify-around items-center pt-10 pl-2 pr-2 lf:pl-0 lg:pr-0'>
+                        <div className='flex justify-around items-center pt-10 pr-2 lf:pl-0 lg:pr-0'>
 
                             <div className='flex flex-col items-center bg-white h-[100px] w-[150px] rounded-lg border'>
                                 <h1 className='uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2'>Max Streak</h1>
