@@ -89,7 +89,7 @@ function Navbar() {
       
 
       {menuOpen && (
-        <div className='lg:hidden absolute top-16 left-0 right-0 bg-white z-1000000 w-[100%] transition-all duration-500 ease-in z-1000'>
+        <div className='lg:hidden absolute top-16 left-0 right-0 bg-white z-1000000 w-[100%] transition-all duration-1000 ease-in-out border-b shadow-lg p-1'>
           <ul className='flex flex-col gap-4 text-[10px] text-black transition-all duration-500 ease-in p-4'>
             <li className='hover:text-blue-600 cursor-pointer'>
               <a href='#home'>Home</a>
@@ -113,8 +113,8 @@ function Navbar() {
               <a href='#achivements'>Achivements</a>
             </li>
           </ul>
-          <a href={CV} target="_blank" rel="noopener noreferrer" className='mx-[20px]'>
-            <button className='border h-[30px] w-[100px]  my-2 rounded-lg bg-blue-500 text-black font-semibold hover:bg-blue-400 hover:shadow-lg text-[12px]'>
+          <a href={CV} target="_blank" rel="noopener noreferrer" className='mx-[10px]'>
+            <button className='border h-[30px] w-[100px]  my-1 rounded-lg bg-blue-500 text-black font-semibold hover:bg-blue-400 hover:shadow-lg text-[12px]'>
               Download CV
             </button>
           </a>
