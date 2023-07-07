@@ -1,13 +1,26 @@
 import React, { useState, useEffect } from 'react';
+// import { NavLink } from 'react-router-dom';
 import { AiOutlineMenu } from 'react-icons/ai';
 import CV from '../static/Resume.pdf';
 
 function Navbar() {
   const [isNavbarSticky, setIsNavbarSticky] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
+      const sections = document.querySelectorAll('section'); 
+      let currentSection = '';
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 0 && rect.bottom > 0) {
+          currentSection = section.id;
+        }
+      });
+      
+      setActiveSection(currentSection);
+
       const isScrolled = window.scrollY > 500;
       setIsNavbarSticky(isScrolled);
       if(!isNavbarSticky) {
@@ -28,8 +41,10 @@ function Navbar() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
+  // console.log({activeSection:activeSection});
   // console.log("hello:", {menuOpen:menuOpen, isNavbarSticky:isNavbarSticky});
+
+
 
   return (
     <header
@@ -38,30 +53,30 @@ function Navbar() {
       }`}
     >
       <div className='flex uppercase font-bold text-xl lg:pl-8 ml-4 font-mono'>
-        HKSHAKIB
+        <a href='/'>HKSHAKIB</a>
       </div>
 
       <div className='hidden lg:flex lg:flex-1 justify-center items-center lg:gap-12'>
         <ul className='flex lg:gap-12 gap-4 text-[15px]'>
-          <li className='hover:text-blue-600 cursor-pointer'>
+          <li className={activeSection === 'home'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
             <a href='#home'>Home</a>
           </li>
-          <li className='hover:text-blue-600 cursor-pointer'>
+          <li className={activeSection === 'skills'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
             <a href='#skills'>Skills</a>
           </li>
-          <li className='hover:text-blue-600 cursor-pointer'>
+          <li className={activeSection === 'problem-solving'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
             <a href='#problem-solving'>Problem Solving</a>
           </li>
-          <li className='hover:text-blue-600 cursor-pointer'>
+          <li className={activeSection === 'experience'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
             <a href='#experience'>Experience</a>
           </li>
-          <li className='hover:text-blue-600 cursor-pointer'>
+          <li className={activeSection === 'projects'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
             <a href='#projects'>Projects</a>
           </li>
-          <li className='hover:text-blue-600 cursor-pointer'>
+          <li className={activeSection === 'education'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
             <a href='#education'>Education</a>
           </li>
-          <li className='hover:text-blue-600 cursor-pointer'>
+          <li className={activeSection === 'achivements'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
             <a href='#achivements'>Achivements</a>
           </li>
         </ul>
