@@ -41,7 +41,7 @@ function Navbar() {
         HKSHAKIB
       </div>
 
-      <div className='hidden lg:flex lg:flex-1 justify-center items-center lg:gap-12 border-b'>
+      <div className='hidden lg:flex lg:flex-1 justify-center items-center lg:gap-12'>
         <ul className='flex lg:gap-12 gap-4 text-[15px]'>
           <li className='hover:text-blue-600 cursor-pointer'>
             <a href='#home'>Home</a>
