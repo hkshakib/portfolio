@@ -23,7 +23,7 @@ function Navbar() {
   
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen && isNavbarSticky);
+    setMenuOpen(!menuOpen);
   };
 
   return (
