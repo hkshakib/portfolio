@@ -9,7 +9,7 @@ const Footer = () => {
         <div className='flex flex-col lg:flex-1 justify-start lg:pt-[50px] pl-4 pb-[50px] lg:pb-0'>
               <h1 className='text-[40px] lg:text-[56px] font-mono'>Contact ME</h1>
               <h2 className='font-mono lg:text-[30px]'>IF YOU WANT TO HIRE ME OR HAVE OTHER QUERIES, THEN KNOCK ME ANYTIME.</h2>
-              <h2 className='font-mono lg:text-[30px]'><span className='text-blue-500'>Email:</span> hkshakib.cse@gmail.com</h2>
+              <h2 className='font-mono lg:text-[30px]'><p className='text-blue-500'>Email:</p> hkshakib.cse@gmail.com</h2>
               <div className='flex basis-[10%] lg:w-[100%] gap-4 mt-[10px]'>
                 <button className='flex justify-center items-center text-[35px] gap-2 font-semibold'>
                     <a href="https://github.com/hkshakib" target="_blank" rel="noopener noreferrer"><AiOutlineGithub className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
