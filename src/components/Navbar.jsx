@@ -118,25 +118,25 @@ function Navbar() {
         <div className='lg:hidden absolute top-16 left-0 right-0 bg-white z-10 w-[100%] transition-all duration-1000 ease-in-out border-b shadow-lg p-1' ref={navRef}>
           <ul className='flex flex-col gap-4 text-[10px] text-black transition-all duration-500 ease-in p-4'>
             <li className={activeSection === 'home'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
-              <a href='#home'>Home</a>
+              <a href='#home' onClick={()=>setMenuOpen(!menuOpen)}>Home</a>
             </li>
             <li className={activeSection === 'skills'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
-              <a href='#skills'>Skills</a>
+              <a href='#skills' onClick={()=>setMenuOpen(!menuOpen)}>Skills</a>
             </li>
             <li className={activeSection === 'problem-solving'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
-              <a href='#problem-solving'>Problem Solving</a>
+              <a href='#problem-solving' onClick={()=>setMenuOpen(!menuOpen)}>Problem Solving</a>
             </li>
             <li className={activeSection === 'experience'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
-              <a href='#experience'>Experience</a>
+              <a href='#experience' onClick={()=>setMenuOpen(!menuOpen)}>Experience</a>
             </li>
             <li className={activeSection === 'projects'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
-              <a href='#projects'>Projects</a>
+              <a href='#projects' onClick={()=>setMenuOpen(!menuOpen)}>Projects</a>
             </li>
             <li className={activeSection === 'education'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
-              <a href='#education'>Education</a>
+              <a href='#education' onClick={()=>setMenuOpen(!menuOpen)}>Education</a>
             </li>
             <li className={activeSection === 'achivements'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
-              <a href='#achivements'>Achivements</a>
+              <a href='#achivements' onClick={()=>setMenuOpen(!menuOpen)}>Achivements</a>
             </li>
           </ul>
           <a href={CV} target="_blank" rel="noopener noreferrer" className='mx-[10px]'>
