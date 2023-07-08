@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-// import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import CV from '../static/Resume.pdf';
 
@@ -8,7 +7,10 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
+  const navRef = useRef(null);
+
   useEffect(() => {
+
     const handleScroll = () => {
       const sections = document.querySelectorAll('section'); 
       let currentSection = '';
@@ -18,24 +20,36 @@ function Navbar() {
           currentSection = section.id;
         }
       });
-      
       setActiveSection(currentSection);
-
       const isScrolled = window.scrollY > 0;
       setIsNavbarSticky(isScrolled);
     };
+    const handleCloseOutSide = (e) => {
+      // console.log("Current: ", navRef.current);
+      // console.log("Target", e.target);
+      // console.log("menuOpen: ",menuOpen);
+      if (!navRef?.current || navRef.current?.contains(e.target)) {
+        return;
+      }
+      e.stopPropagation();
+      setMenuOpen(false);
+    }
 
+
+    document.addEventListener('click', handleCloseOutSide, {capture: true});
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleCloseOutSide, {capture: true});
     };
 
-  }, [isNavbarSticky]);
+  }, [isNavbarSticky, menuOpen]);
 
   
 
   const toggleMenu = () => {
+    console.log({menuOpen:menuOpen});
     setMenuOpen(!menuOpen);
   };
 
@@ -101,27 +115,27 @@ function Navbar() {
       
 
       {menuOpen && (
-        <div className='lg:hidden absolute top-16 left-0 right-0 bg-white z-10 w-[100%] transition-all duration-1000 ease-in-out border-b shadow-lg p-1'>
+        <div className='lg:hidden absolute top-16 left-0 right-0 bg-white z-10 w-[100%] transition-all duration-1000 ease-in-out border-b shadow-lg p-1' ref={navRef}>
           <ul className='flex flex-col gap-4 text-[10px] text-black transition-all duration-500 ease-in p-4'>
-            <li className='hover:text-blue-600 cursor-pointer'>
+            <li className={activeSection === 'home'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
               <a href='#home'>Home</a>
             </li>
-            <li className='hover:text-blue-600 cursor-pointer'>
+            <li className={activeSection === 'skills'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
               <a href='#skills'>Skills</a>
             </li>
-            <li className='hover:text-blue-600 cursor-pointer'>
+            <li className={activeSection === 'problem-solving'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
               <a href='#problem-solving'>Problem Solving</a>
             </li>
-            <li className='hover:text-blue-600 cursor-pointer'>
-              <a href='#education'>Education</a>
-            </li>
-            <li className='hover:text-blue-600 cursor-pointer'>
-              <a href='#projects'>Projects</a>
-            </li>
-            <li className='hover:text-blue-600 cursor-pointer'>
+            <li className={activeSection === 'experience'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
               <a href='#experience'>Experience</a>
             </li>
-            <li className='hover:text-blue-600 cursor-pointer'>
+            <li className={activeSection === 'projects'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
+              <a href='#projects'>Projects</a>
+            </li>
+            <li className={activeSection === 'education'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
+              <a href='#education'>Education</a>
+            </li>
+            <li className={activeSection === 'achivements'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
               <a href='#achivements'>Achivements</a>
             </li>
           </ul>
