@@ -21,11 +21,8 @@ function Navbar() {
       
       setActiveSection(currentSection);
 
-      const isScrolled = window.scrollY > 500;
+      const isScrolled = window.scrollY > 0;
       setIsNavbarSticky(isScrolled);
-      if(!isNavbarSticky) {
-        setMenuOpen(false);
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -41,6 +38,7 @@ function Navbar() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
   // console.log({activeSection:activeSection});
   // console.log("hello:", {menuOpen:menuOpen, isNavbarSticky:isNavbarSticky});
 
@@ -95,8 +93,7 @@ function Navbar() {
           className='flex text-black cursor-pointer hover:text-gray-600 '
           onClick={toggleMenu}
         >
-          { (menuOpen && isNavbarSticky)? <AiOutlineMenu /> : "" }
-          { (!menuOpen && isNavbarSticky)? <AiOutlineMenu /> : "" }
+          { (menuOpen)? <AiOutlineMenu /> : <AiOutlineMenu /> }
 
         </button>
       </div>
@@ -104,7 +101,7 @@ function Navbar() {
       
 
       {menuOpen && (
-        <div className='lg:hidden absolute top-16 left-0 right-0 bg-white z-1000000 w-[100%] transition-all duration-1000 ease-in-out border-b shadow-lg p-1'>
+        <div className='lg:hidden absolute top-16 left-0 right-0 bg-white z-10 w-[100%] transition-all duration-1000 ease-in-out border-b shadow-lg p-1'>
           <ul className='flex flex-col gap-4 text-[10px] text-black transition-all duration-500 ease-in p-4'>
             <li className='hover:text-blue-600 cursor-pointer'>
               <a href='#home'>Home</a>
