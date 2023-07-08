@@ -24,6 +24,8 @@ function Navbar() {
       const isScrolled = window.scrollY > 0;
       setIsNavbarSticky(isScrolled);
     };
+
+    // Handling Outside Click
     const handleCloseOutSide = (e) => {
       // console.log("Current: ", navRef.current);
       // console.log("Target", e.target);
@@ -31,7 +33,7 @@ function Navbar() {
       if (!navRef?.current || navRef.current?.contains(e.target)) {
         return;
       }
-      e.stopPropagation();
+      e.stopPropagation(); // prevent the event from further propagating up the DOM tree. This means that the event won't trigger event handlers attached to ancestor elements. otherwise Humburger won't works on second click
       setMenuOpen(false);
     }
 
@@ -49,7 +51,7 @@ function Navbar() {
   
 
   const toggleMenu = () => {
-    console.log({menuOpen:menuOpen});
+    // console.log({menuOpen:menuOpen});
     setMenuOpen(!menuOpen);
   };
 
