@@ -46,10 +46,11 @@ const Home = () => {
                     <a href="https://twitter.com/HKibriaShakib" target="_blank" rel="noopener noreferrer"><AiOutlineTwitter className='bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]'/></a>
                 </button>
             </div>
+
         </div>
         
         <div className="flex flex-1 justify-end relative mt-4 lg:mt-0">
-            <img className="flex absolute max-w-[85%] top-[-70px] lg:top-[123px] left-0 right-[20px] bg-opacity-100" src={Avatar} alt="Avatar" />
+            <img className="flex absolute max-w-[85%] md:top-[67px] top-[-70px] lg:top-[123px] left-0 right-[20px] bg-opacity-100" src={Avatar} alt="Avatar" />
             <img className="max-w-[100%]" src={BgHome} alt="bg" />
         </div>
 
