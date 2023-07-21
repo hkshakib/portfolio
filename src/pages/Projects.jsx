@@ -2,15 +2,6 @@ import React from 'react';
 import ProjectWithLive from '../components/ProjectWithLive';
 import Project from '../components/Project';
 
-          // <Project 
-          //   Title={"StoreFront (Backend)"}
-          //   Summery={""}
-          //   Technologies={
-          //     ["Django", "Django Rest", "Djoser", "django Filters", "Session Authentication"]
-          //   }
-          //   CodeUrl={""}
-          // />
-
 const Projects = () => {
   return (
     <div className='flex flex-col justify-center'>

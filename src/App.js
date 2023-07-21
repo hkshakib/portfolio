@@ -8,6 +8,7 @@ import Education from "./pages/Education";
 import Footer from "./components/Footer";
 import Experience from "./pages/Experience";
 import Achivements from "./pages/Achivements";
+import Research from "./pages/Research";
 
 const App = () => {
 
@@ -34,6 +35,10 @@ const App = () => {
 
       <section id="projects" className="flex pt-[50px] lg:pt-[100px] items-center justify-center relative">
         <Projects/>
+      </section>
+
+      <section id="research" className="flex pt-[50px] lg:pt-[100px] items-center justify-center relative">
+        <Research/>
       </section>
 
       <section id="education" className="flex pt-[50px] lg:pt-[200px] relative">

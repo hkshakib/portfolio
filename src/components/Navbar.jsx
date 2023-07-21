@@ -72,9 +72,6 @@ function Navbar() {
 
       <div className='hidden lg:flex lg:flex-1 justify-center items-center lg:gap-12'>
         <ul className='flex lg:gap-12 gap-4 text-[15px]'>
-          <li className={activeSection === 'home'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
-            <a href='#home'>Home</a>
-          </li>
           <li className={activeSection === 'skills'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
             <a href='#skills'>Skills</a>
           </li>
@@ -86,6 +83,9 @@ function Navbar() {
           </li>
           <li className={activeSection === 'projects'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
             <a href='#projects'>Projects</a>
+          </li>
+          <li className={activeSection === 'research'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
+            <a href='#research'>Research</a>
           </li>
           <li className={activeSection === 'education'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
             <a href='#education'>Education</a>
@@ -119,9 +119,6 @@ function Navbar() {
       {menuOpen && (
         <div className='lg:hidden absolute top-16 left-0 right-0 bg-white z-10 w-[100%] transition-all duration-1000 ease-in-out border-b shadow-lg p-1' ref={navRef}>
           <ul className='flex flex-col gap-4 text-[10px] text-black transition-all duration-500 ease-in p-4'>
-            <li className={activeSection === 'home'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
-              <a href='#home' onClick={()=>setMenuOpen(!menuOpen)}>Home</a>
-            </li>
             <li className={activeSection === 'skills'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
               <a href='#skills' onClick={()=>setMenuOpen(!menuOpen)}>Skills</a>
             </li>
@@ -133,6 +130,9 @@ function Navbar() {
             </li>
             <li className={activeSection === 'projects'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
               <a href='#projects' onClick={()=>setMenuOpen(!menuOpen)}>Projects</a>
+            </li>
+            <li className={activeSection === 'research'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
+              <a href='#research' onClick={()=>setMenuOpen(!menuOpen)}>Research</a>
             </li>
             <li className={activeSection === 'education'? 'text-blue-600':'hover:text-blue-600 cursor-pointer'}>
               <a href='#education' onClick={()=>setMenuOpen(!menuOpen)}>Education</a>

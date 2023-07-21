@@ -13,7 +13,7 @@ const Project = ({Title, Summery, Technologies, CodeUrl}) => {
             <span className='text-[14px] lg:text[16px] pl-2 lg:pl-4 font-bold lg:pt-1'>
                 Used Technology:
             </span>
-            {Technologies.map((tech) =>
+            {Technologies && Technologies.map((tech) =>
                 <span className='text-[12px] font-mono pl-2 lg:pl-4'># {tech}</span>
             )}
         </div>
