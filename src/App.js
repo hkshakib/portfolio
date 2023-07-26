@@ -13,7 +13,7 @@ import Research from "./pages/Research";
 const App = () => {
 
   return (
-    <div className="w-full-screen bg-white font-inter">
+    <div className="w-full-screen bg-white font-inter flex flex-col gap-4">
       
       <Navbar />
 
@@ -21,7 +21,7 @@ const App = () => {
         <Home />
       </section>
 
-      <section id="skills" className="flex pt-2 lg:pt-[200px] items-center justify-center relative">
+      <section id="skills" className="flex pt-2 lg:pt-[100px] items-center justify-center relative">
         <Skills/>
       </section>
 
