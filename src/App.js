@@ -70,7 +70,7 @@ const App = () => {
         <Footer/>
       </section>
       <div
-        className={`fixed bottom-8 right-8 bg-gray-500 p-2 rounded-full text-white cursor-pointer ${
+        className={`fixed bottom-8 right-8 bg-gray-500 p-2 rounded-full text-white cursor-pointer animate-bounce ${
           isAtTop ? "hidden" : ""
         }`}
         onClick={() =>
