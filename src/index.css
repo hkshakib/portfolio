@@ -1,4 +1,23 @@
 @tailwind base;
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rebeccapurple cornflowerblue;
+  }
+  
+
+  *::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color:rebeccapurple;
+    border-radius: 14px;
+  }
 @tailwind components;
 @tailwind utilities;
 
