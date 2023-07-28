@@ -208,7 +208,7 @@ function Navbar() {
 
       <div className="hidden lg:flex lg:pr-8">
         <a href={CV} target="_blank" rel="noopener noreferrer">
-          <button className="border h-10 px-4 rounded-lg  text-black font-bold hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg text-sm">
+          <button className="border-2 border-indigo-700 h-10 px-4 rounded-lg  text-black font-bold hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg text-sm">
             IntellectuCurriculum
           </button>
         </a>

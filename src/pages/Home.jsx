@@ -49,8 +49,8 @@ const Home = () => {
 
         <div className="flex basis-[10%] lg:w-[100%] gap-4 mt-[10px]">
           <a href="#footer">
-            <button className="h-[30px] w-[100px] lg:h-[50px] lg:w-[180px] text-[12px] border rounded-[50px] text-black font-semibold hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg lg:text-[1rem]">
-              Contact Me
+            <button className="h-[30px] w-[100px] leading-7 lg:h-[50px] lg:w-[180px] text-[18px] border-2 border-indigo-700	 rounded-[50px] text-black hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg lg:text-[1rem]">
+              Say Hello
             </button>
           </a>
 
