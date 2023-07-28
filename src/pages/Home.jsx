@@ -29,8 +29,8 @@ const Home = () => {
           <h3 className="opacity-1 text-gray-400 text-[12px] lg:text-[16px]">
             Professional{" "}
           </h3>
-          <h6 className="font-semi-bold text-[12px] lg:text-[1rem]">
-            Web Developer
+          <h6 className="font-bold text-[#141c3a] text-[12px] lg:text-[1rem]">
+            FullStack Web Developer
           </h6>
         </div>
 
@@ -49,7 +49,7 @@ const Home = () => {
 
         <div className="flex basis-[10%] lg:w-[100%] gap-4 mt-[10px]">
           <a href="#footer">
-            <button className="h-[30px] w-[100px] leading-7 lg:h-[50px] lg:w-[180px] text-[18px] border-2 border-indigo-700	 rounded-[50px] text-black hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg lg:text-[1rem]">
+            <button className="h-[30px] w-[100px] lg:leading-7 lg:h-[50px] lg:w-[180px] lg:text-[18px] border lg:border-2 lg:border-indigo-700 rounded-[50px] text-white  lg:text-black bg-[#6E07F3] lg:bg-white hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg text-[1rem]">
               Say Hello
             </button>
           </a>
