@@ -179,7 +179,7 @@ function Navbar() {
               smooth={true}
               offset={-70}
               duration={800}
-              onClick={() => closeMenuAndScroll("eduvcation")}
+              onClick={() => closeMenuAndScroll("education")}
             >
               Education
             </Link>
@@ -208,8 +208,8 @@ function Navbar() {
 
       <div className="hidden lg:flex lg:pr-8">
         <a href={CV} target="_blank" rel="noopener noreferrer">
-          <button className="border h-10 px-4 rounded-lg bg-blue-500 text-white font-bold hover:bg-blue-400 hover:shadow-lg text-sm">
-            Download CV
+          <button className="border h-10 px-4 rounded-lg  text-black font-bold hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg text-sm">
+            IntellectuCurriculum
           </button>
         </a>
       </div>
