@@ -89,7 +89,7 @@ const Home = () => {
 
       <div className="flex flex-1 justify-end relative mt-16 lg:mt-0">
         <img
-          className="flex absolute max-w-[85%] md:top-[67px] top-[-70px] lg:top-[123px] left-0 right-[20px] bg-opacity-100"
+          className="flex absolute max-w-[85%] md:top-[67px] top-[-70px] lg:top-[123px] left-0 right-[20px] bg-opacity-100 brightness-125"
           src={Avatar}
           alt="Avatar"
         />
