@@ -2,7 +2,7 @@ import React from "react";
 
 const ResearchComponent = ({ Title, Summery, Technologies, CodeUrl }) => {
   return (
-    <div className="flex flex-col bg-[#FEFAF0] border h-[400px] w-[300px] lg:w-[400px] shadow-lg">
+    <div className="flex flex-col bg-[#FCF4FF] border h-[400px] w-[300px] lg:w-[400px] shadow-lg">
       <div className="flex justify-center bg-slate-800">
         <span className="text-white">Yet to be Published</span>
       </div>
