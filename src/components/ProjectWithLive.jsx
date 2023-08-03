@@ -1,4 +1,5 @@
 import React from "react";
+import { GrTechnology } from "react-icons/gr";
 
 const ProjectWithLive = () => {
   return (
@@ -19,14 +20,21 @@ const ProjectWithLive = () => {
         <span className="text-[12px] font-mono lg:pl-4">5. Memory Game</span>
         <span className="text-[12px] font-mono lg:pl-4">6. TicTacToe</span>
 
-        <h1 className="text-[14px] lg:pl-4 font-bold lg:pt-1">
+        <h1 className="text-[14px] lg:text[16px] pl-2 lg:pl-4 font-bold lg:pt-1 lg:pb-2 pb-1">
           Used Techonology:
         </h1>
-        <span className="text-[12px] font-mono lg:pl-4"># React JS</span>
-        <span className="text-[12px] font-mono lg:pl-4">
-          # React Router Dom
+        <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
+          <GrTechnology />
+          <span>React JS</span>
         </span>
-        <span className="text-[12px] font-mono lg:pl-4"># React ICONS</span>
+        <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
+          <GrTechnology />
+          <span>React Router Dom</span>
+        </span>
+        <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
+          <GrTechnology />
+          <span>React ICONS</span>
+        </span>
       </div>
 
       <div className="flex flex-1 justify-center items-end pb-3 gap-4">

@@ -1,4 +1,5 @@
 import React from "react";
+import { GrTechnology } from "react-icons/gr";
 
 const ResearchComponent = ({ Title, Summery, Technologies, CodeUrl }) => {
   return (
@@ -16,12 +17,21 @@ const ResearchComponent = ({ Title, Summery, Technologies, CodeUrl }) => {
           including issues related to prosody and intonation. <br />
           <br />
         </span>
-        <span className="text-[14px] lg:text[16px] pl-2 lg:pl-4 font-bold lg:pt-1">
+        <span className="text-[14px] lg:text[16px] pl-2 lg:pl-4 font-bold lg:pt-1 lg:pb-2 pb-1">
           Used Models:
         </span>
-        <span className="text-[12px] font-mono pl-2 lg:pl-4"># VITS</span>
-        <span className="text-[12px] font-mono pl-2 lg:pl-4"># Tecotron-2</span>
-        <span className="text-[12px] font-mono pl-2 lg:pl-4"># FastPitch</span>
+        <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
+          <GrTechnology />
+          <span>VITS</span>
+        </span>
+        <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
+          <GrTechnology />
+          <span>Tecotron-2</span>
+        </span>
+        <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
+          <GrTechnology />
+          <span>FastPitch</span>
+        </span>
 
         <span className="text-[12px] font-mono pl-2 lg:pl-4"></span>
       </div>

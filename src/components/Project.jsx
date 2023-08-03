@@ -1,4 +1,5 @@
 import React from "react";
+import { GrTechnology } from "react-icons/gr";
 
 const Project = ({ Title, Summery, Technologies, CodeUrl }) => {
   return (
@@ -8,12 +9,15 @@ const Project = ({ Title, Summery, Technologies, CodeUrl }) => {
       </div>
       <div className="flex flex-col">
         <span className="text-[14px] p-2 lg:p-4 text-gray-500">{Summery}</span>
-        <span className="text-[14px] lg:text[16px] pl-2 lg:pl-4 font-bold lg:pt-1">
+        <span className="text-[14px] lg:text[16px] pl-2 lg:pl-4 font-bold lg:pt-1 lg:pb-2 pb-1">
           Used Technology:
         </span>
         {Technologies &&
           Technologies.map((tech) => (
-            <span className="text-[12px] font-mono pl-2 lg:pl-4"># {tech}</span>
+            <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
+              <GrTechnology />
+              <span>{tech}</span>
+            </span>
           ))}
       </div>
       <div className="flex flex-1 justify-center items-end pb-3 gap-4">
