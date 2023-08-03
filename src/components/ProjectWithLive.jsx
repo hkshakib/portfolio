@@ -30,7 +30,7 @@ const ProjectWithLive = () => {
       </div>
 
       <div className="flex flex-1 justify-center items-end pb-3 gap-4">
-        <button className="border bg-white h-[40px] w-[100px] rounded hover:shadow-md">
+        <button className="bg-white h-[40px] w-[100px] border lg:border-0 rounded hover:border hover:border-indigo-700 hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-md">
           <a
             className="font-mono"
             href="https://github.com/hkshakib/reactfunbox"
@@ -38,7 +38,7 @@ const ProjectWithLive = () => {
             Code
           </a>
         </button>
-        <button className="border bg-white h-[40px] w-[100px] rounded hover:shadow-md">
+        <button className="bg-white h-[40px] w-[100px] border lg:border-0 rounded hover:border hover:border-indigo-700 hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-md">
           <a className="font-mono" href="https://reactfunbox.vercel.app/">
             Live
           </a>
