@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectWithLive from "../components/ProjectWithLive";
 import Project from "../components/Project";
+import ProjectLive from "../components/ProjectLive";
 
 const Projects = () => {
   return (
@@ -10,6 +11,7 @@ const Projects = () => {
       </div>
 
       <div className="flex flex-wrap gap-8 lg:p-12 justify-center">
+        <ProjectLive />
         <Project
           Title={"Project Manager"}
           Summery={
