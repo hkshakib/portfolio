@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import ProjectWithLive from "../components/ProjectWithLive";
 import Project from "../components/Project";
 import ProjectLive from "../components/ProjectLive";
@@ -10,7 +11,14 @@ const Projects = () => {
         <h1>Projects</h1>
       </div>
 
-      <div className="flex flex-wrap gap-8 lg:p-12 justify-center">
+      <motion.div
+        animate={{ x: 0 }}
+        transition={{ ease: "easeOut", duration: 2 }}
+        initial={{ x: 0, opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="flex flex-wrap gap-8 lg:p-12 justify-center"
+      >
         <ProjectLive />
         <Project
           Title={"Project Manager"}
@@ -102,7 +110,7 @@ const Projects = () => {
           Technologies={["React Js", "React Router Dom"]}
           CodeUrl={"https://github.com/hkshakib/blogfrontend"}
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

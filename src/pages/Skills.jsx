@@ -1,17 +1,31 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 import Image from "../static/skills.jpg";
 import { FaPooStorm } from "react-icons/fa";
 
 function Skills() {
   return (
     <div className="flex flex-col lg:flex-row">
-      <div className="flex lg:flex-1 lg:justify-end mr-[10px]">
+      <motion.div
+        animate={{ x: 0 }}
+        transition={{ ease: "easeOut", duration: 3 }}
+        initial={{ x: -700 }}
+        style={{ overflow: "hidden" }}
+        className="flex lg:flex-1 lg:justify-end mr-[10px]"
+      >
         <div className="flex lg:basis-[90%]">
           <img className="bg-contain" src={Image} alt="skills" />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-1 lg:justify-end">
+      <motion.div
+        animate={{ x: 0 }}
+        transition={{ ease: "easeOut", duration: 3 }}
+        initial={{ x: 850 }}
+        style={{ overflow: "hidden" }}
+        className="flex flex-1 lg:justify-end"
+      >
         <div className="flex lg:basis-[90%] flex-col lg:justify-start lg:items-start lg:pt-[50px] pl-4 lg:pl-12">
           <h1 className="text-[56px] font-mono">Skills</h1>
           <div className="flex flex-wrap justify-start items-center gap-2 lg:gap-2 mb-[10px]">
@@ -158,7 +172,7 @@ function Skills() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

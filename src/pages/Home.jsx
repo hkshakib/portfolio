@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaHandsClapping } from "react-icons/fa6";
 import {
   AiOutlineGithub,
@@ -12,7 +13,13 @@ import BgHome from "../static/BgHome.jpg";
 const Home = () => {
   return (
     <div className="flex flex-col lg:flex-row lg:h-[700px] w-[100%]">
-      <div className="flex flex-col flex-1 justify-center items-center mb-2 lg:items-start  lg:pl-[200px] lg:pr-[0] lg:pt-[260px] ">
+      <motion.div
+        animate={{ x: 0 }}
+        transition={{ ease: "easeOut", duration: 3 }}
+        initial={{ x: -700 }}
+        style={{ overflow: "hidden" }}
+        className="flex flex-col flex-1 overflow-hidden justify-center items-center mb-2 lg:items-start  lg:pl-[200px] lg:pr-[0] lg:pt-[260px] "
+      >
         <div className="flex lg:basis-[5%] flex-shrink-0 lg:w-[100%] gap-1">
           <p className="w-auto text-[#4A6CF7] font-semibold">Hey There</p>
           <FaHandsClapping />
@@ -85,16 +92,22 @@ const Home = () => {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-1 justify-end relative mt-16 lg:mt-0">
+      <motion.div
+        animate={{ x: 0 }}
+        transition={{ ease: "easeOut", duration: 3 }}
+        initial={{ x: 850 }}
+        style={{ overflow: "hidden" }}
+        className="flex flex-1 overflow-hidden justify-end relative mt-16 lg:mt-0"
+      >
         <img
           className="flex absolute max-w-[85%] md:top-[67px] top-[-70px] lg:top-[123px] left-0 right-[20px] bg-opacity-100 brightness-125"
           src={Avatar}
           alt="Avatar"
         />
         <img className="max-w-[100%]" src={BgHome} alt="bg" />
-      </div>
+      </motion.div>
     </div>
   );
 };
