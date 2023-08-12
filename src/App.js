@@ -1,19 +1,18 @@
-import React, {useState, useEffect} from "react";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Skills from "./pages/Skills";
-import ProblemSolving from "./pages/ProblemSolving";
-import Projects from "./pages/Projects";
-import Education from "./pages/Education";
-import Footer from "./components/Footer";
-import Experience from "./pages/Experience";
-import Achivements from "./pages/Achivements";
-import Research from "./pages/Research";
-import { FaArrowUp } from 'react-icons/fa';
-import { animateScroll as scroll } from 'react-scroll';
+import React, { useState, useEffect, lazy } from "react";
+import { FaArrowUp } from "react-icons/fa";
+import { animateScroll as scroll } from "react-scroll";
+const Navbar = lazy(() => import("./components/Navbar"));
+const Home = lazy(() => import("./pages/Home"));
+const Skills = lazy(() => import("./pages/Skills"));
+const ProblemSolving = lazy(() => import("./pages/ProblemSolving"));
+const Projects = lazy(() => import("./pages/Projects"));
+const Education = lazy(() => import("./pages/Education"));
+const Footer = lazy(() => import("./components/Footer"));
+const Experience = lazy(() => import("./pages/Experience"));
+const Achivements = lazy(() => import("./pages/Achivements"));
+const Research = lazy(() => import("./pages/Research"));
 
 const App = () => {
-
   const [isAtTop, setIsAtTop] = useState(true);
 
   useEffect(() => {
@@ -30,44 +29,66 @@ const App = () => {
 
   return (
     <div className="w-full-screen bg-white font-inter flex flex-col gap-4">
-      
       <Navbar />
-      
 
-      <section id="home" className="flex pt-[50px] items-center justify-center relative">
+      <section
+        id="home"
+        className="flex pt-[50px] items-center justify-center relative"
+      >
         <Home />
       </section>
 
-      <section id="skills" className="flex pt-2 lg:pt-[100px] items-center justify-center relative">
-        <Skills/>
+      <section
+        id="skills"
+        className="flex pt-2 lg:pt-[100px] items-center justify-center relative"
+      >
+        <Skills />
       </section>
 
-      <section id="problem-solving" className="flex pt-[50px] lg:pt-[200px] items-center justify-center relative">
-        <ProblemSolving/>
+      <section
+        id="problem-solving"
+        className="flex pt-[50px] lg:pt-[200px] items-center justify-center relative"
+      >
+        <ProblemSolving />
       </section>
 
-      <section id="experience" className="flex pt-[50px] lg:pt-[200px] lg:mb-[200px] items-center justify-center relative">
-        <Experience/>
+      <section
+        id="experience"
+        className="flex pt-[50px] lg:pt-[200px] lg:mb-[200px] items-center justify-center relative"
+      >
+        <Experience />
       </section>
 
-      <section id="projects" className="flex pt-[50px] lg:pt-[100px] items-center justify-center relative">
-        <Projects/>
+      <section
+        id="projects"
+        className="flex pt-[50px] lg:pt-[100px] items-center justify-center relative"
+      >
+        <Projects />
       </section>
 
-      <section id="research" className="flex pt-[50px] lg:pt-[100px] items-center justify-center relative">
-        <Research/>
+      <section
+        id="research"
+        className="flex pt-[50px] lg:pt-[100px] items-center justify-center relative"
+      >
+        <Research />
       </section>
 
       <section id="education" className="flex pt-[50px] lg:pt-[200px] relative">
-        <Education/>
+        <Education />
       </section>
 
-      <section id="achivements" className="flex pt-[50px] lg:pt-[200px] items-center justify-center relative">
-        <Achivements/>
+      <section
+        id="achivements"
+        className="flex pt-[50px] lg:pt-[200px] items-center justify-center relative"
+      >
+        <Achivements />
       </section>
 
-      <section id="footer" className="flex pt-[50px] lg:pt-[200px] items-center justify-center relative">
-        <Footer/>
+      <section
+        id="footer"
+        className="flex pt-[50px] lg:pt-[200px] items-center justify-center relative"
+      >
+        <Footer />
       </section>
       <div
         className={`fixed bottom-8 right-8 bg-gray-500 p-2 rounded-full text-white cursor-pointer animate-bounce ${
