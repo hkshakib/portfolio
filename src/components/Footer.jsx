@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-1 flex-wrap">
           <div className="flex flex-col lg:flex-1 justify-start items-center">
             <div className="flex lg:flex-1">
-              <h1 className="text-white text-[40px] lg:text-[56px] font-mono">
+              <h1 className="text-white text-[30px] p-4 lg:p-0 lg:text-[56px] font-mono">
                 Better Together
               </h1>
             </div>
