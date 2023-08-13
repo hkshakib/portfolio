@@ -3,7 +3,7 @@ import { GrTechnology } from "react-icons/gr";
 
 const Project = ({ Title, Summery, Technologies, CodeUrl }) => {
   return (
-    <div className="flex flex-col items-center  bg-[#FCF4FF] border h-[400px] w-[300px] lg:w-[400px] shadow-lg">
+    <div className="flex flex-col items-center  bg-[#FCF4FF] border h-[400px] w-[300px] lg:w-[400px] shadow-lg rounded-xl">
       <div className="flex justify-center lg:text-[18px] font-mono p-1 lg:pt-2 font-bold">
         <span>{Title}</span>
       </div>

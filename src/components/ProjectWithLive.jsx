@@ -3,7 +3,7 @@ import { GrTechnology } from "react-icons/gr";
 
 const ProjectWithLive = () => {
   return (
-    <div className="flex flex-col justify-center p-4 lg:p-0 lg:items-center bg-[#FCF4FF] border h-[400px] w-[300px] lg:w-[400px] shadow-lg">
+    <div className="flex flex-col justify-center p-4 lg:p-0 lg:items-center bg-[#FCF4FF] border h-[400px] w-[300px] lg:w-[400px] shadow-lg rounded-xl">
       <div className="flex justify-center text-[16px] lg:text-[18px] font-mono pl-4 lg:pl-0 lg:pt-2 font-bold">
         <span>React Fun Box</span>
       </div>
