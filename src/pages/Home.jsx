@@ -27,7 +27,7 @@ const Home = () => {
         </div>
 
         <div className="flex lg:basis-[5%] lg:w-[100%] mb-1">
-          <h6 className="font-bold text-[#090E34] lg:text-[40px]">
+          <h6 className="font-bold text-[#090E34] lg:text-[40px] animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-16">
             Humayun Kibria Shakib
           </h6>
         </div>
