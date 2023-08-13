@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "../static/skills.jpg";
 import { FaPooStorm } from "react-icons/fa";
 
-function Skills() {
+const Skills = () => {
   return (
     <div className="flex flex-col lg:flex-row">
       <motion.div
@@ -175,6 +175,6 @@ function Skills() {
       </motion.div>
     </div>
   );
-}
+};
 
 export default Skills;
