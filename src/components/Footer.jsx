@@ -9,7 +9,7 @@ import Email from "../static/email.png";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col w-[100%] pb-[10px] bg-[rebeccapurple] h-[400px]">
+    <div className="flex flex-col w-[100%] pb-[10px] bg-[rebeccapurple] h-[400px] rounded-t-3xl">
       <div className="flex flex-col flex-1 lg:flex-row">
         <div className="flex flex-col lg:flex-1 flex-wrap">
           <div className="flex flex-col lg:flex-1 justify-start items-center">
