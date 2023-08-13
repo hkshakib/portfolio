@@ -22,7 +22,7 @@ const Home = () => {
       >
         <div className="flex lg:basis-[5%] flex-shrink-0 lg:w-[100%] gap-1">
           <p className="w-auto text-[#4A6CF7] font-semibold">Hey There</p>
-          <FaHandsClapping />
+          <FaHandsClapping className="text-[#FFA500]" />
           <p className="w-auto text-[#4A6CF7] font-semibold"> I am </p>
         </div>
 
