@@ -13,8 +13,11 @@ const Project = ({ Title, Summery, Technologies, CodeUrl }) => {
           Used Technology:
         </span>
         {Technologies &&
-          Technologies.map((tech) => (
-            <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
+          Technologies.map((tech, index) => (
+            <span
+              key={index}
+              className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4"
+            >
               <GrTechnology />
               <span>{tech}</span>
             </span>
