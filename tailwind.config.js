@@ -12,7 +12,16 @@ module.exports = {
             visibility: "hidden",
           },
           "100%": {
-            width: "60%",
+            width: "56%",
+          },
+        },
+        mobiletyping: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden",
+          },
+          "100%": {
+            width: "80%",
           },
         },
         blink: {
@@ -26,6 +35,8 @@ module.exports = {
       },
       animation: {
         typing: "typing 8s steps(30) infinite alternate, blink 5s infinite",
+        mobiletyping:
+          "mobiletyping 8s steps(30) infinite alternate, blink 5s infinite",
       },
     },
   },
