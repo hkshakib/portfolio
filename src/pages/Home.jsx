@@ -27,7 +27,7 @@ const Home = () => {
         </div>
 
         <div className="flex lg:basis-[5%] lg:w-[100%] mb-1">
-          <h6 className="font-bold text-[#090E34] lg:text-[40px] lg:animate-typing animate-mobiletyping overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-16">
+          <h6 className="font-bold text-[#090E34] lg:text-[40px] lg:animate-typing animate-mobiletyping overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-4">
             Humayun Kibria Shakib
           </h6>
         </div>
@@ -102,7 +102,7 @@ const Home = () => {
         className="flex flex-1 overflow-hidden justify-end relative mt-16 lg:mt-0"
       >
         <img
-          className="flex absolute max-w-[85%] md:top-[67px] top-[-70px] lg:top-[123px] left-0 right-[20px] bg-opacity-100 brightness-125"
+          className="flex absolute max-w-[85%] top-[-55px] lg:top-[123px] left-0 right-[20px] bg-opacity-100 brightness-125"
           src={Avatar}
           alt="Avatar"
         />
