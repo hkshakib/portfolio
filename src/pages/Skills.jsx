@@ -55,7 +55,13 @@ const Skills = () => {
             <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
               Tailwind CSS |
             </h3>
-            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">MUI</h3>
+            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">MUI |</h3>
+            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
+              Chakra UI |
+            </h3>
+            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
+              Framer Motion
+            </h3>
           </div>
           <div className="flex flex-wrap justify-start items-center gap-1 lg:gap-2 mb-[10px]">
             <h2 className="text-blue-500 text-[14px] lg:text-[18px]">
