@@ -313,7 +313,7 @@ function Navbar() {
             rel="noopener noreferrer"
             className="mx-[10px]"
           >
-            <button className="border h-[40px] w-[200px]  my-1 rounded-lg bg-blue-500 text-black font-semibold hover:bg-blue-400 hover:shadow-lg text-[12px]">
+            <button className="border h-[40px] w-[200px]  my-1 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-400 hover:shadow-lg text-[12px]">
               IntellectuCurriculum
             </button>
           </a>
