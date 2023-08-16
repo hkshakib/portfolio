@@ -9,7 +9,7 @@ const Education = () => {
 
       <div className='flex'>
         <div className='flex'>
-          <img src={UniversityLogo} alt="UniversityLogo" className='h-[200px] md:h-[150px] lg:h-auto'/>
+          <img src={UniversityLogo} alt="UniversityLogo" className='md:h-[150px] lg:h-auto'/>
         </div>
         <div className='flex flex-col justify-center mb-[60px] border-b-[1px]'>
           <h1 className='font-bold text-[20px] lg:text-[30px] font-mono'>Leading University</h1>
