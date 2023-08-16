@@ -68,8 +68,8 @@ function Navbar() {
         <a href="/">HKSHAKIB</a>
       </div>
 
-      <div className="hidden lg:flex lg:flex-1 justify-center items-center lg:gap-12">
-        <ul className="flex lg:gap-12 gap-4 text-[15px]">
+      <div className="hidden lg:flex md:flex-1 justify-center items-center lg:gap-12">
+        <ul className="flex xl:gap-12 gap-4 text-[14px] xl:text-[16px]">
           <li
             className={
               activeSection === "skills"
@@ -208,13 +208,13 @@ function Navbar() {
 
       <div className="hidden lg:flex lg:pr-8">
         <a href={CV} target="_blank" rel="noopener noreferrer">
-          <button className="border border-indigo-700 h-10 px-4 rounded-xl  text-black font-bold hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg text-sm">
+          <button className="border border-indigo-700 h-[30px] w-[140px] xl:w-[200px] lg:h-[40px] px-4 rounded-xl  text-black font-bold hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg text-[10px] xl:text-[16px]">
             IntellectuCurriculum
           </button>
         </a>
       </div>
 
-      <div className="lg:hidden flex basis-[70%] justify-end gap-8">
+      <div className="lg:hidden flex flex-1 mr-2 lg:mr-0 lg:basis-[70%] justify-end gap-8">
         <button
           className="flex text-black cursor-pointer hover:text-gray-600 "
           onClick={toggleMenu}

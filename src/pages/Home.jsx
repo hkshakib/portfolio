@@ -12,56 +12,77 @@ import BgHome from "../static/BgHome.jpg";
 
 const Home = () => {
   return (
-    <div className="flex flex-col lg:flex-row lg:h-[700px] w-[100%]">
+    <div className="flex flex-1 flex-col lg:flex-row h-[700px]">
       <motion.div
         animate={{ x: 0 }}
         transition={{ ease: "easeOut", duration: 3 }}
         initial={{ x: -700 }}
         style={{ overflow: "hidden" }}
-        className="flex flex-col flex-1 overflow-hidden justify-center items-center mb-2 lg:items-start  lg:pl-[200px] lg:pr-[0] lg:pt-[260px] "
+        className="flex flex-col basis-[50%] justify-between items-center"
       >
-        <div className="flex lg:basis-[5%] flex-shrink-0 lg:w-[100%] gap-1">
-          <p className="w-auto text-[#4A6CF7] font-semibold">Hey There</p>
-          <FaHandsClapping className="text-[#FFA500]" />
-          <p className="w-auto text-[#4A6CF7] font-semibold"> I am </p>
+        <div className="flex basis-[40%] flex-col w-[100%] justify-center p-10">
+          <div className="flex flex-col">
+            <div className="flex">
+              <p className="w-auto text-[#4A6CF7] font-semibold mr-2">
+                Hey There
+              </p>
+              <FaHandsClapping className="text-[#FFA500] text-[16px] lg:text-[25px] animate-wavinghand" />
+              <p className="w-auto text-[#4A6CF7] font-semibold ml-2"> I am </p>
+            </div>
+
+            <div className="flex basis-[60%]">
+              <h6 className="font-bold text-[#090E34] md:text-[30px] lg:text-[35px] xl:text-[35px] animate-styping lg:animate-tablettyping xl:animate-typing sm:animate-mobiletyping overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-4">
+                Humayun Kibria Shakib
+              </h6>
+            </div>
+
+            <div className="flex flex-wrap gap-2 basis-[10%]">
+              <h3 className="opacity-1 text-gray-400">Professional </h3>
+              <h6 className="font-bold text-[#141c3a]">
+                FullStack Web Developer
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div className="w-[100%] flex pl-10 animate-wavinghand">
+          <p className="font-mono font-semibold">
+            Let's, Push The Limit, Beyond Infinite!
+          </p>
+        </div>
+        <div className="hidden w-[100%] lg:flex lg:basis-[50%] justify-center items-center">
+          <div className="opacity-1 text-gray-400 p-10">
+            <p>
+              Eager and motivated software engineer ready to turn ideas into
+              reality.
+            </p>
+            <p>
+              With a solid foundation in C/C++, JavaScript, Python, Django,
+              FastAPI, and many more.{" "}
+            </p>
+            <p>
+              I bring a fresh perspective and a passion for problem-solving to
+              every project.
+            </p>
+            <p>
+              Driven by a love for technology and a desire to make a positive
+              impact, I'm constantly seeking new challenges and opportunities to
+              grow.
+            </p>
+            <p>
+              In my free time, I enjoy tinkering with new tech, practicing, and
+              exploring new cultures. Let's build the future together!
+            </p>
+          </div>
         </div>
 
-        <div className="flex lg:basis-[5%] lg:w-[100%] mb-1">
-          <h6 className="font-bold text-[#090E34] lg:text-[40px] lg:animate-typing animate-mobiletyping overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-4">
-            Humayun Kibria Shakib
-          </h6>
-        </div>
-
-        <div className="flex flex-wrap lg:basis-[2%]  lg:w-[100%] mb-2 gap-2">
-          <h3 className="opacity-1 text-gray-400 text-[12px] lg:text-[16px]">
-            Professional{" "}
-          </h3>
-          <h6 className="font-bold text-[#141c3a] text-[12px] lg:text-[1rem]">
-            FullStack Web Developer
-          </h6>
-        </div>
-
-        <div className="hidden lg:flex basis-[30%] flex-wrap lg:w-[50%] mb-2">
-          <h3 className="opacity-1 text-gray-400">
-            Eager and motivated software engineer ready to turn ideas into
-            reality. With a solid foundation in C/C++, JavaScript, Python,
-            Django, FastAPI, and many more. I bring a fresh perspective and a
-            passion for problem-solving to every project. Driven by a love for
-            technology and a desire to make a positive impact, I'm constantly
-            seeking new challenges and opportunities to grow. In my free time, I
-            enjoy tinkering with new tech, practicing, and exploring new
-            cultures. Let's build the future together!
-          </h3>
-        </div>
-
-        <div className="flex basis-[10%] lg:w-[100%] gap-4 mt-[10px]">
+        <div className="flex flex-1 lg:basis-[10%] items-center lg:justify-center justify-start gap-8 w-[100%] pl-10 lg:pl-0">
           <a href="#footer">
-            <button className="h-[30px] w-[100px] lg:leading-7 lg:h-[50px] lg:w-[180px] lg:text-[18px] border lg:border-2 lg:border-indigo-700 rounded-[50px] text-white  lg:text-black bg-[#6E07F3] lg:bg-white hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg text-[1rem]">
+            <button className="h-[40px] w-[100px] md:h-[50px] md:w-[150px] lg:leading-7 lg:h-[50px] lg:w-[180px] lg:text-[18px] border lg:border-2 lg:border-indigo-700 rounded-[50px] text-white  lg:text-black bg-[#6E07F3] lg:bg-white hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg text-[14px]">
               Say Hello
             </button>
           </a>
 
-          <div className="flex justify-center items-center text-[35px] gap-2 font-semibold">
+          <div className="flex justify-center items-center text-[35px] md:gap-4 font-semibold">
             <a
               href="https://github.com/hkshakib"
               target="_blank"
@@ -99,14 +120,18 @@ const Home = () => {
         transition={{ ease: "easeOut", duration: 3 }}
         initial={{ x: 850 }}
         style={{ overflow: "hidden" }}
-        className="flex flex-1 overflow-hidden justify-end relative mt-16 lg:mt-0"
+        className="flex basis-[50%] relative"
       >
         <img
-          className="flex absolute max-w-[85%] top-[-55px] lg:top-[123px] left-0 right-[20px] bg-opacity-100 brightness-125"
+          className="flex absolute bottom-0 left-0 md:bottom-0 md:left-24 lg:bottom-0 lg:left-0 h-[400px] lg:h-[600px] bg-opacity-100 brightness-125"
           src={Avatar}
           alt="Avatar"
         />
-        <img className="max-w-[100%]" src={BgHome} alt="bg" />
+        <img
+          className="object-fit flex-1 overflow-hidden"
+          src={BgHome}
+          alt="bg"
+        />
       </motion.div>
     </div>
   );
