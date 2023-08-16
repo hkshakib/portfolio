@@ -73,7 +73,7 @@ function Navbar() {
           <li
             className={
               activeSection === "skills"
-                ? "text-blue-600"
+                ? "text-blue-600 animate-hFlip"
                 : "hover:text-blue-600 cursor-pointer"
             }
           >
@@ -92,7 +92,7 @@ function Navbar() {
           <li
             className={
               activeSection === "problem-solving"
-                ? "text-blue-600"
+                ? "text-blue-600  animate-hFlip"
                 : "hover:text-blue-600 cursor-pointer"
             }
           >
@@ -111,7 +111,7 @@ function Navbar() {
           <li
             className={
               activeSection === "experience"
-                ? "text-blue-600"
+                ? "text-blue-600 animate-hFlip"
                 : "hover:text-blue-600 cursor-pointer"
             }
           >
@@ -130,7 +130,7 @@ function Navbar() {
           <li
             className={
               activeSection === "projects"
-                ? "text-blue-600"
+                ? "text-blue-600 animate-hFlip"
                 : "hover:text-blue-600 cursor-pointer"
             }
           >
@@ -149,7 +149,7 @@ function Navbar() {
           <li
             className={
               activeSection === "research"
-                ? "text-blue-600"
+                ? "text-blue-600 animate-hFlip"
                 : "hover:text-blue-600 cursor-pointer"
             }
           >
@@ -168,7 +168,7 @@ function Navbar() {
           <li
             className={
               activeSection === "education"
-                ? "text-blue-600"
+                ? "text-blue-600 animate-hFlip"
                 : "hover:text-blue-600 cursor-pointer"
             }
           >
@@ -187,7 +187,7 @@ function Navbar() {
           <li
             className={
               activeSection === "achivements"
-                ? "text-blue-600"
+                ? "text-blue-600 animate-hFlip"
                 : "hover:text-blue-600 cursor-pointer"
             }
           >

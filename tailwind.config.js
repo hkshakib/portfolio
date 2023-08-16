@@ -1,3 +1,5 @@
+const { transform } = require("framer-motion");
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -60,6 +62,11 @@ module.exports = {
           "60%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(0.0deg)" },
         },
+        flipHorizontal: {
+          "100%": {
+            transform: "rotateY(360deg)",
+          },
+        },
       },
 
       animation: {
@@ -70,6 +77,7 @@ module.exports = {
           "tablettyping 9s steps(32) infinite alternate, blink 5s infinite",
         styping: "styping 9s steps(32) infinite alternate, blink 5s infinite",
         wavinghand: "wave 2s linear infinite",
+        hFlip: "flipHorizontal 2s infinite",
       },
     },
   },
