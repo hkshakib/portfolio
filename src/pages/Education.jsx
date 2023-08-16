@@ -9,7 +9,7 @@ const Education = () => {
 
       <div className='flex'>
         <div className='flex'>
-          <img src={UniversityLogo} alt="UniversityLogo" />
+          <img src={UniversityLogo} alt="UniversityLogo" className='h-[200px] md:h-[150px] lg:h-auto'/>
         </div>
         <div className='flex flex-col justify-center mb-[60px] border-b-[1px]'>
           <h1 className='font-bold text-[20px] lg:text-[30px] font-mono'>Leading University</h1>
@@ -18,6 +18,7 @@ const Education = () => {
           <h2 className='lg:text-[18px]'>Sylhet, Bangladesh.</h2>
         </div>
       </div>
+
       <div className='flex'>
         <div className='flex ml-[25px] lg:ml-[70px]'>
           <img className='h-[100px] w-[100px] lg:h-[200px] lg:w-[200px]' src={SchoolLogo} alt="SchoolLogo" />
