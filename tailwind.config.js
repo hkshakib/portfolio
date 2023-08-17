@@ -67,6 +67,11 @@ module.exports = {
             transform: "rotateY(360deg)",
           },
         },
+        openMenu: {
+          "0%": { transform: "scaleY(0)" },
+          "80%": { transform: "scaleY(1.2)" },
+          "100%": { transform: "scaleY(1)" },
+        },
       },
 
       animation: {
@@ -78,6 +83,7 @@ module.exports = {
         styping: "styping 9s steps(32) infinite alternate, blink 5s infinite",
         wavinghand: "wave 2s linear infinite",
         hFlip: "flipHorizontal 2s infinite",
+        openMenu: "openMenue .5s ease-in-out forwards",
       },
     },
   },

@@ -19,14 +19,14 @@ const Footer = () => {
               </h1>
             </div>
 
-            <div className="flex justify-center items-end lg:flex-1 lg:w-[100%] pl-8 pr-4 lg:p-0">
+            <div className="flex justify-center items-end lg:flex-1 lg:w-[100%] pl-8 pr-4">
               <p className="font-mono text-white text-[12px] lg:text-[18px] whitespace-wrap">
                 Let me take into a deeper experience, make a moment a lasting
                 conveyable memory.
               </p>
             </div>
 
-            <div className="flex flex-col lg:flex-1 w-[100%] justify-center items-center">
+            <div className="flex flex-col lg:flex-1 w-[100%] justify-center items-center lg:pl-8 lg:justify-normal lg:items-start xl:justify-center xl:items-center">
               <p className="font-mono text-white text-[12px] lg:text-[18px]">
                 Let me help build your tribe.
               </p>
@@ -37,7 +37,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex lg:flex-1 justify-center items-end pt-8 lg:pt-0">
+          <div className="flex lg:flex-1 justify-center items-end pt-8 lg:pt-0 pb-4">
             <div className="flex text-[35px] gap-4 lg:gap-12 font-semibold">
               <div>
                 <a
