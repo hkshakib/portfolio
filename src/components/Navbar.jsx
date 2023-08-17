@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, scroller } from "react-scroll";
 import { AiOutlineMenu } from "react-icons/ai";
+import { RxCross1 } from "react-icons/rx";
 import CV from "../static/Resume.pdf";
 
 function Navbar() {
@@ -219,13 +220,17 @@ function Navbar() {
           className="flex text-black cursor-pointer hover:text-gray-600 "
           onClick={toggleMenu}
         >
-          {menuOpen ? <AiOutlineMenu /> : <AiOutlineMenu />}
+          {menuOpen ? (
+            <RxCross1 className="text-[18px]" />
+          ) : (
+            <AiOutlineMenu className="text-[18px]" />
+          )}
         </button>
       </div>
 
       {menuOpen && (
         <div
-          className="lg:hidden absolute top-16 left-0 right-0 bg-white z-10 w-[100%] transition-all duration-1000 ease-in-out border-b shadow-lg p-1"
+          className="lg:hidden absolute top-16 left-0 right-0 bg-white z-10 w-[100%] transition-opacity duration-3000 ease-in-out border-b shadow-lg p-1 border-t-[1px]"
           ref={navRef}
         >
           <ul className="flex flex-col gap-4 text-[10px] text-black transition-all duration-500 ease-in p-4">
