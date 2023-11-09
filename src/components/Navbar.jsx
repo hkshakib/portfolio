@@ -330,6 +330,17 @@ function Navbar() {
                 Achivements
               </a>
             </li>
+            <li
+              className={
+                activeSection === "resume"
+                  ? "text-blue-600"
+                  : "hover:text-blue-600 cursor-pointer"
+              }
+            >
+              <a href="#resume" onClick={() => setMenuOpen(!menuOpen)}>
+                Resume
+              </a>
+            </li>
           </ul>
           <a
             href={CV}
