@@ -226,13 +226,13 @@ function Navbar() {
         </ul>
       </div>
 
-      <div className="hidden lg:flex lg:pr-8">
+      {/* <div className="hidden lg:flex lg:pr-8">
         <a href={CV} target="_blank" rel="noopener noreferrer">
           <button className="border border-indigo-700 h-[30px] w-[140px] xl:w-[200px] lg:h-[40px] px-4 rounded-xl  text-black font-bold hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg text-[10px] xl:text-[16px]">
             IntellectuCurriculum
           </button>
         </a>
-      </div>
+      </div> */}
 
       <div className="lg:hidden flex flex-1 mr-2 lg:mr-0 lg:basis-[70%] justify-end gap-8">
         <button
