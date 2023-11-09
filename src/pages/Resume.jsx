@@ -320,6 +320,69 @@ const Resume = () => {
                   Champions, National ICT FEST 2018
                 </div>
               </div>
+              <div className="flex flex-col gap-4 pb-20 text-[14px]">
+                <h3 className="text-[28px] text-[#313C4E] font-semibold pb-4">
+                  COMPETITIVE PROGRAMMING
+                </h3>
+                <div className="flex flex-col gap-4">
+                  <span className="flex gap-4 font-[20px]">
+                    &#8226;
+                    <span>Codeforces: Specialist, Max-rating: 1543</span>
+                  </span>
+
+                  <h3 className="flex pl-4 basis-[50%] text-[14px] italic text-gray-500">
+                    Handle: _Bohemian
+                  </h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  <span className="flex gap-4 font-[20px]">
+                    &#8226;
+                    <span>Codechef: 4*, Max-rating: 1938</span>
+                  </span>
+
+                  <h3 className="flex pl-4 basis-[50%] text-[14px] italic text-gray-500">
+                    Handle: hkshakib
+                  </h3>
+                </div>
+                <div className="flex gap-4">
+                  <span className="font-[20px]">&#8226;</span>
+                  ICPC ID
+                </div>
+                <div className="flex gap-4">
+                  <span className="font-[20px]">&#8226;</span>
+                  Solved More then 3000+ algorithmic and general problems.
+                </div>
+              </div>
+              <div className="flex flex-col gap-4 pb-20 text-[14px]">
+                <h3 className="text-[28px] text-[#313C4E] font-semibold pb-4">
+                  OTHER ACTIVITIES
+                </h3>
+                <div className="flex flex-col gap-4">
+                  <span className="font-[20px]">
+                    ᠆ Judge and Setter of the several Intra University
+                    Programming Competition
+                  </span>
+                </div>
+                <div className="flex flex-col gap-4">
+                  <span className="flex gap-4 font-[20px]">
+                    ᠆ Arranged and took several workshops on programming and
+                    problem-solving
+                  </span>
+                </div>
+                <div className="flex gap-4">
+                  ᠆ Arranged a one vs one individual programming contest.
+                </div>
+                <div className="flex gap-4">
+                  ᠆ Mentored juniors in 1-on-1 mode
+                </div>
+                <span className="flex gap-4 font-[20px]">
+                  ᠆ ACM And Workshop Coordinator Lead
+                </span>
+
+                <h3 className="flex pl-4 basis-[50%] text-[14px] italic text-gray-500">
+                  Leading University Computer Club
+                </h3>
+              </div>
             </div>
           </div>
         </div>
