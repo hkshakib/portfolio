@@ -4,15 +4,21 @@ import { CgWebsite } from "react-icons/cg";
 import { ImGithub } from "react-icons/im";
 import { TbDeviceMobileFilled } from "react-icons/tb";
 import { BsLinkedin } from "react-icons/bs";
+import CV from "../static/Resume.pdf";
 
 const Resume = () => {
   return (
     <>
       <div className="flex flex-1 flex-col border p-10 ">
-        <div className="flex justify-center">
-          <h1 className="text-[35px] lg:text-[56px] font-mono mb-[50px]">
-            RESUME
-          </h1>
+        <div className="flex justify-center items-center mb-10">
+          <h1 className="text-[35px] lg:text-[56px] font-mono">RESUME</h1>
+          <div className="hidden lg:flex lg:pl-24">
+            <a href={CV} target="_blank" rel="noopener noreferrer">
+              <button className="border border-indigo-700 h-[30px] w-[140px] xl:w-[200px] lg:h-[40px] px-4 rounded-xl  text-black font-bold hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg text-[10px] xl:text-[16px]">
+                Download
+              </button>
+            </a>
+          </div>
         </div>
         <div className="flex flex-col divide-y-4 divide-black">
           <div className="flex flex-col basis-[10%] pt-4">
