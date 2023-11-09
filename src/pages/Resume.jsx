@@ -289,6 +289,37 @@ const Resume = () => {
                   </div>
                 </div>
               </div>
+              <div className="flex flex-col gap-4 pb-20 text-[14px]">
+                <h3 className="text-[28px] text-[#313C4E] font-semibold pb-4">
+                  ACHIVEMENTS
+                </h3>
+                <div className="flex gap-4">
+                  <span className="font-[20px]">&#8226;</span>Participated in
+                  ICPC Dhaka Regional 2021(BUBT).
+                </div>
+                <div className="flex gap-4">
+                  <span className="font-[20px]">&#8226;</span>
+                  8th Among Private University in ICPC Preliminary 2021.
+                </div>
+                <div className="flex gap-4">
+                  <span className="font-[20px]">&#8226;</span>
+                  Champions, Mathophobic Skyvers, LU Intra University
+                  Programming Competition 2020.
+                </div>
+                <div className="flex gap-4">
+                  <span className="font-[20px]">&#8226;</span>
+                  Champions, LUZeroIQ, LU Intra University Programming
+                  Competition 2021.
+                </div>
+                <div className="flex gap-4">
+                  <span className="font-[20px]">&#8226;</span>
+                  Top 6 in Bangladesh, LUZeroIQ, IEEE Extreme 14.
+                </div>
+                <div className="flex gap-4">
+                  <span className="font-[20px]">&#8226;</span>ICT Quiz
+                  Champions, National ICT FEST 2018
+                </div>
+              </div>
             </div>
           </div>
         </div>
