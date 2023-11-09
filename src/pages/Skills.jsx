@@ -88,7 +88,10 @@ const Skills = () => {
               NoSQL DB:
             </h2>
             <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
-              Firebase
+              Firebase |
+            </h3>
+            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
+              Supabase
             </h3>
           </div>
           <div className="flex flex-wrap justify-start items-center gap-1 lg:gap-2 mb-[10px] ">
@@ -105,6 +108,9 @@ const Skills = () => {
             <h2 className="text-blue-500 text-[14px] lg:text-[18px]">
               Fimiliar With:
             </h2>
+            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
+              Design Pattern |
+            </h3>
             <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
               Redux |
             </h3>
