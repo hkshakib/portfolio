@@ -401,13 +401,13 @@ const Resume = () => {
           </h1>
         </div>
         <div className="flex flex-col divide-y-4 divide-black">
-          <div className="flex flex-col pt-4">
+          <div className="flex flex-col pt-4 pl-4">
             <span className="text-[16px] md:text-[26px] lg:text-[46px] font-semibold leading-10 text-[#313C4E]">
               Humayun kibria shakib
             </span>
-            <span className="text-[14px] md:text-[16px] lg:text-[22px] text-gray-500 pt-2 pb-5">
-              Competitive Programmer | Python | Django | REST | React | React
-              Query
+            <span className="flex flex-wrap text-[12px] md:text-[16px] lg:text-[22px] text-gray-500 pt-2 pb-5">
+              Competitive Programmer | Python | Django <br /> REST | React |
+              React Query
             </span>
           </div>
           <div className="flex flex-col basis-[10%] pt-4 pb-4 pl-4">
