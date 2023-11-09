@@ -1,6 +1,7 @@
 import React, { useState, useEffect, lazy } from "react";
 import { FaArrowUp } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
+import Resume from "./pages/Resume";
 const Navbar = lazy(() => import("./components/Navbar"));
 const Home = lazy(() => import("./pages/Home"));
 const Skills = lazy(() => import("./pages/Skills"));
@@ -82,6 +83,13 @@ const App = () => {
         className="flex pt-[50px] lg:pt-[200px] items-center justify-center relative"
       >
         <Achivements />
+      </section>
+
+      <section
+        id="resume"
+        className="flex pt-[50px] lg:pt-[200px] items-center justify-center relative"
+      >
+        <Resume />
       </section>
 
       <section

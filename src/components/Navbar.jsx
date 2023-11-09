@@ -204,6 +204,25 @@ function Navbar() {
               Achivements
             </Link>
           </li>
+          <li
+            className={
+              activeSection === "resume"
+                ? "text-blue-600 animate-hFlip"
+                : "hover:text-blue-600 cursor-pointer"
+            }
+          >
+            <Link
+              activeClass="active"
+              to="resume"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={800}
+              onClick={() => closeMenuAndScroll("resume")}
+            >
+              Resume
+            </Link>
+          </li>
         </ul>
       </div>
 
