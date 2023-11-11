@@ -52,25 +52,16 @@ const Home = () => {
         <div className="hidden w-[100%] lg:flex lg:basis-[50%] justify-center items-center">
           <div className="opacity-1 text-gray-400 p-10">
             <p>
-              Eager and motivated software engineer ready to turn ideas into
-              reality.
+              Hey there! 👋 I'm a <span className="font-bold text-black">full-stack</span> sorcerer who weaves web wonders with Django Rest and React. 
             </p>
             <p>
-              With a solid foundation in C/C++, JavaScript, Python, Django,
-              FastAPI, and many more.{" "}
+            🧙‍♂️ Fluent in the magical languages of <span className="font-bold text-black">Python, C++, and JavaScript,</span> I bring your digital dreams to life. 
             </p>
             <p>
-              I bring a fresh perspective and a passion for problem-solving to
-              every project.
+            💻✨ From the backend wizardry to the front-end artistry using <span className="font-bold text-black">Tailwind CSS,</span> I'm on a quest to make the internet a more enchanting place, one line of code at a time. 
             </p>
             <p>
-              Driven by a love for technology and a desire to make a positive
-              impact, I'm constantly seeking new challenges and opportunities to
-              grow.
-            </p>
-            <p>
-              In my free time, I enjoy tinkering with new tech, practicing, and
-              exploring new cultures. Let's build the future together!
+            🌐 Ready to embark on this coding adventure together? Let's craft some digital magic! 🚀🔮
             </p>
           </div>
         </div>
