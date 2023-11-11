@@ -411,7 +411,7 @@ const Resume = () => {
             </span>
           </div>
           <div className="flex flex-col basis-[10%] pt-4 pb-4 pl-4">
-            <div className="flex flex-col basis-[50%] gap-4">
+            <div className="flex flex-col gap-4">
               <span className="flex items-center gap-4">
                 <MdEmail /> hkshakib.cse@gmail.com
               </span>
@@ -421,8 +421,6 @@ const Resume = () => {
               <span className="flex items-center gap-4">
                 <ImGithub /> github.com/hkshakib
               </span>
-            </div>
-            <div className="flex flex-col basis-[50%] gap-8">
               <span className="flex items-center gap-4">
                 <TbDeviceMobileFilled /> +880-1710889028
               </span>
