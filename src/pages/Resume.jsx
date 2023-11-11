@@ -9,7 +9,7 @@ import CV from "../static/Resume.pdf";
 const Resume = () => {
   return (
     <>
-      <div className="hidden lg:flex flex-1 flex-col border p-10">
+      <div className="hidden lg:flex flex-1 flex-col border p-10 ml-4">
         <div className="flex justify-center items-center mb-10">
           <h1 className="text-[35px] lg:text-[56px] font-mono">RESUME</h1>
           <div className="hidden lg:flex lg:pl-24">
