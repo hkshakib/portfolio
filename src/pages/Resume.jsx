@@ -9,7 +9,7 @@ import CV from "../static/Resume.pdf";
 const Resume = () => {
   return (
     <>
-      <div className="hidden lg:flex flex-1 flex-col border p-10 ">
+      <div className="hidden lg:flex flex-1 flex-col border p-10">
         <div className="flex justify-center items-center mb-10">
           <h1 className="text-[35px] lg:text-[56px] font-mono">RESUME</h1>
           <div className="hidden lg:flex lg:pl-24">
@@ -400,7 +400,7 @@ const Resume = () => {
             RESUME
           </h1>
         </div>
-        <div className="flex flex-col divide-y-4 divide-black">
+        <div className="flex flex-col divide-y-4 divide-black pr-4">
           <div className="flex flex-col pt-4 pl-4">
             <span className="text-[16px] md:text-[26px] lg:text-[46px] font-semibold leading-10 text-[#313C4E]">
               Humayun kibria shakib
