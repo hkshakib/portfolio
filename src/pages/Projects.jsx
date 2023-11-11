@@ -19,6 +19,22 @@ const Projects = () => {
         viewport={{ once: true }}
         className="flex flex-wrap gap-8 lg:p-12 justify-center"
       >
+        <Project
+          Title={"Luxehaven"}
+          Summery={
+            "I have developed a complete E-commerce backend system that includes user registration, login functionality, product browsing, cart management, and a customizable admin panel."
+          }
+          Technologies={[
+            "Django",
+            "Django Rest",
+            "Djoser",
+            "django Filters",
+            "JWT Authentication",
+            "drf-Nexted-Router",
+            "Pillow",
+          ]}
+          CodeUrl={"https://github.com/hkshakib/luxehaven"}
+        />
         <ProjectLive />
         <Project
           Title={"Project Manager"}
