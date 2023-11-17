@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, scroller } from "react-scroll";
 import { AiOutlineMenu } from "react-icons/ai";
+
+import { motion } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";
 import CV from "../static/Resume.pdf";
 
@@ -238,19 +240,28 @@ function Navbar() {
         <button
           className="flex text-black cursor-pointer hover:text-gray-600 "
           onClick={toggleMenu}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -20 }}
         >
           {menuOpen ? (
-            <RxCross1 className="text-[18px]" />
+            <motion.div>
+              <RxCross1 className="text-[25px] text-blue-700" />
+            </motion.div>
           ) : (
-            <AiOutlineMenu className="text-[18px]" />
+            <motion.div>
+              <AiOutlineMenu className="text-[25px] text-blue-700" />
+            </motion.div>
           )}
         </button>
       </div>
 
       {menuOpen && (
-        <div
+        <motion.div
           className="lg:hidden absolute top-16 left-0 right-0 bg-white z-10 w-[100%] transition-opacity duration-300 ease-in-out border-b shadow-lg p-1 border-t-[1px]"
           ref={navRef}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: menuOpen ? 1 : 0, y: menuOpen ? 0 : -20 }}
         >
           <ul className="flex flex-col gap-4 text-[10px] text-black transition-all duration-500 ease-in p-4">
             <li
@@ -352,7 +363,7 @@ function Navbar() {
               IntellectuCurriculum
             </button>
           </a>
-        </div>
+        </motion.div>
       )}
     </header>
   );
