@@ -21,3 +21,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.skills {
+  @apply text-gray-500 text-[12px] lg:text-[1rem];
+}
+
+.skillsTitle {
+  @apply flex flex-wrap justify-start items-center gap-1 lg:gap-2 mb-[10px];
+}
+
+.skillsDesc {
+  @apply text-blue-500 text-[14px] lg:text-[18px];
+}
+
+.profficientSkills {
+  @apply text-gray-500 ml-4 text-[12px] lg:text-[18px];
+}
