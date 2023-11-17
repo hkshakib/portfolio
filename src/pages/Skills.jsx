@@ -130,6 +130,23 @@ const Skills = () => {
               Web Scraping
             </h3>
           </div>
+          <div className="flex flex-wrap justify-start items-center gap-1 lg:gap-2 mb-[10px]">
+            <h2 className="text-blue-500 text-[14px] lg:text-[18px]">
+              Machine Learning:
+            </h2>
+            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">NLP |</h3>
+            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">TTS |</h3>
+            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">VITS |</h3>
+            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
+              FastPitch |
+            </h3>
+            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
+              Tecotron |
+            </h3>
+            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
+              Data Processing
+            </h3>
+          </div>
 
           <h1 className="pt-6 text-[15px] lg:text-[20px]">Proficient in:</h1>
 
