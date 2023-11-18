@@ -1,14 +1,14 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { FaHandsClapping } from "react-icons/fa6";
+import React from "react";
 import {
+  AiOutlineFacebook,
   AiOutlineGithub,
   AiOutlineLinkedin,
-  AiOutlineFacebook,
   AiOutlineTwitter,
 } from "react-icons/ai";
-import Avatar from "../static/avatar.png";
+import { FaHandsClapping } from "react-icons/fa6";
 import BgHome from "../static/BgHome.jpg";
+import Avatar from "../static/avatar.png";
 
 const Home = () => {
   return (

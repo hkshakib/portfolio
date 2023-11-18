@@ -1,5 +1,5 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
 import CF from "../static/CF.png";
 import CC from "../static/codechef.png";
 import LC from "../static/leetcode.png";

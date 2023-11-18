@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link, scroller } from "react-scroll";
+import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { Link, scroller } from "react-scroll";
 
 import { motion } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";

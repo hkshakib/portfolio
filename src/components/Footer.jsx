@@ -1,8 +1,8 @@
 import React from "react";
 import {
+  AiOutlineFacebook,
   AiOutlineGithub,
   AiOutlineLinkedin,
-  AiOutlineFacebook,
   AiOutlineTwitter,
 } from "react-icons/ai";
 import Email from "../static/email.png";

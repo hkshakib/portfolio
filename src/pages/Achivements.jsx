@@ -1,7 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
-import AchivmentImage from "../static/Achivment.jpg";
+import React from "react";
 import Achivement from "../components/Achivement";
+import AchivmentImage from "../static/Achivment.jpg";
 
 const Achivements = () => {
   return (

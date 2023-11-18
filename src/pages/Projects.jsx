@@ -1,8 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
-import ProjectWithLive from "../components/ProjectWithLive";
+import React from "react";
 import Project from "../components/Project";
 import ProjectLive from "../components/ProjectLive";
+import ProjectWithLive from "../components/ProjectWithLive";
 
 const Projects = () => {
   return (
