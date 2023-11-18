@@ -39,7 +39,7 @@ const Skills = () => {
       >
         <div className="flex lg:basis-[90%] flex-col lg:justify-start lg:items-start lg:pt-[50px] pl-4 lg:pl-12">
           <h1 className="text-[56px] font-mono">Skills</h1>
-          <div className="flex flex-wrap justify-start items-center gap-2 lg:gap-2 mb-[10px]">
+          <div className="skillsTitle">
             <h2 className="skillsDesc">Languages:</h2>
             <h3 className="skills">C++ |</h3>
             <h3 className="skills">Python |</h3>
