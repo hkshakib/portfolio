@@ -22,6 +22,7 @@
 @tailwind utilities;
 
 
+/* Skiils */
 .skills {
   @apply text-gray-500 text-[12px] lg:text-[1rem];
 }
@@ -36,4 +37,8 @@
 
 .profficientSkills {
   @apply text-gray-500 ml-4 text-[12px] lg:text-[18px];
+}
+
+.fimilarSkills {
+  @apply text-gray-500 text-[12px] lg:text-[1rem];
 }

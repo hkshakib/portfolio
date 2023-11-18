@@ -4,6 +4,17 @@ import { motion } from "framer-motion";
 import Image from "../static/skills.jpg";
 import { FaPooStorm } from "react-icons/fa";
 
+const skillsData = [
+  "C++",
+  "Python",
+  "JavaScript",
+  "Algorithomic Problem Solving",
+  "Backend",
+  "Frontend",
+  "Competitive Programming",
+  "Data Structure and Algorithms",
+];
+
 const Skills = () => {
   return (
     <div className="flex flex-col lg:flex-row">
@@ -72,27 +83,13 @@ const Skills = () => {
             <h2 className="text-blue-500 text-[14px] lg:text-[18px]">
               Fimiliar With:
             </h2>
-            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
-              Design Pattern |
-            </h3>
-            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
-              Redux |
-            </h3>
-            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
-              Celery |
-            </h3>
-            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
-              Celery Beat |
-            </h3>
-            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
-              React Query |
-            </h3>
-            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
-              Flutter |
-            </h3>
-            <h3 className="text-gray-500 text-[12px] lg:text-[1rem]">
-              Web Scraping
-            </h3>
+            <h3 className="fimilarSkills">Design Pattern |</h3>
+            <h3 className="fimilarSkills">Redux |</h3>
+            <h3 className="fimilarSkills">Celery |</h3>
+            <h3 className="fimilarSkills">Celery Beat |</h3>
+            <h3 className="fimilarSkills">React Query |</h3>
+            <h3 className="fimilarSkills">Flutter |</h3>
+            <h3 className="fimilarSkills">Web Scraping</h3>
           </div>
           <div className="skillsTitle">
             <h2 className="skillsDesc">Machine Learning:</h2>
@@ -105,39 +102,12 @@ const Skills = () => {
           </div>
 
           <h1 className="pt-6 text-[15px] lg:text-[20px]">Proficient in:</h1>
-
           <div className="flex flex-col">
-            <div className="flex items-center">
-              <FaPooStorm /> <h3 className="profficientSkills">C++</h3>
-            </div>
-            <div className="flex items-center">
-              <FaPooStorm /> <h3 className="profficientSkills">Python</h3>
-            </div>
-            <div className="flex items-center">
-              <FaPooStorm /> <h3 className="profficientSkills">JavaScript</h3>
-            </div>
-            <div className="flex items-center">
-              <FaPooStorm />{" "}
-              <h3 className="profficientSkills">
-                Algorithomic Problem Solving
-              </h3>
-            </div>
-            <div className="flex items-center">
-              <FaPooStorm /> <h3 className="profficientSkills">Backend</h3>
-            </div>
-            <div className="flex items-center">
-              <FaPooStorm /> <h3 className="profficientSkills">Frontend</h3>
-            </div>
-            <div className="flex items-center">
-              <FaPooStorm />{" "}
-              <h3 className="profficientSkills">Competitive Programming</h3>
-            </div>
-            <div className="flex items-center">
-              <FaPooStorm />{" "}
-              <h3 className="profficientSkills">
-                Data Structure and Algorithms
-              </h3>
-            </div>
+            {skillsData.map((skill, index) => (
+              <div className="flex items-center" key={index}>
+                <FaPooStorm /> <h3 className="profficientSkills">{skill}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </motion.div>
