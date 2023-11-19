@@ -1,10 +1,29 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { motion } from "framer-motion";
-import React from "react";
 import CF from "../static/CF.png";
 import CC from "../static/codechef.png";
 import LC from "../static/leetcode.png";
 
 const ProblemSolving = () => {
+  const [codeForcesData, setCodeForcesData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://codeforces.com/api/user.info?handles=_Bohemian"
+        );
+        setCodeForcesData(response.data);
+      } catch (error) {
+        console.error("Error fetching Codeforces data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  console.log(codeForcesData);
   return (
     <div className="flex flex-col">
       <h1 className="flex justify-center text-[35px] lg:text-[56px] font-mono mb-[20px]">
@@ -16,7 +35,7 @@ const ProblemSolving = () => {
           animate={{ x: 0 }}
           transition={{ ease: "easeOut", duration: 3 }}
           initial={{ x: -700 }}
-          style={{overflow: "hidden"}}
+          style={{ overflow: "hidden" }}
           className="flex lg:flex-1 bg-[#FCF4FF] h-[250px] lg:h-[400px] lg:w-[100%] shadow-lg border rounded-md"
         >
           <div className="flex flex-1 flex-col">
@@ -34,10 +53,11 @@ const ProblemSolving = () => {
             <div className="flex justify-around items-center pt-10 pr-2 pl-2 lg:pl-0 lg:pr-0 ">
               <div className="flex flex-col items-center bg-white h-[100px] w-[150px] rounded-lg border">
                 <h1 className="uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2">
-                  SPECIALIST
+                  {codeForcesData && codeForcesData.result[0].maxRank}
                 </h1>
                 <h2 className="text-[10px] lg:text-[12px] font-mono text-[#4E4FEB] p-2">
-                  Highest Ratings: 1543
+                  Highest Ratings:
+                  {codeForcesData && codeForcesData.result[0].maxRating}
                 </h2>
               </div>
 
@@ -70,7 +90,7 @@ const ProblemSolving = () => {
           initial={{ x: 0, opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          style={{overflow: "hidden"}}
+          style={{ overflow: "hidden" }}
           className="flex lg:flex-1 bg-[#FEFAF0] h-[250px] lg:h-[400px] lg:w-[400px] shadow-lg border rounded-md"
         >
           <div className="flex flex-1 flex-col">
@@ -121,7 +141,7 @@ const ProblemSolving = () => {
           animate={{ x: 0 }}
           transition={{ ease: "easeOut", duration: 3 }}
           initial={{ x: 850 }}
-          style={{overflow: "hidden"}}
+          style={{ overflow: "hidden" }}
           className="flex lg:flex-1 bg-[#FFF4F4] h-[250px] lg:h-[400px] lg:w-[400px] shadow-lg border rounded-md"
         >
           <div className="flex flex-1 flex-col">
