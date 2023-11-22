@@ -13,7 +13,7 @@ const Experience = lazy(() => import("./pages/Experience"));
 const Achivements = lazy(() => import("./pages/Achivements"));
 const Research = lazy(() => import("./pages/Research"));
 const Resume = lazy(() => import("./pages/Resume"));
-const Blogs = lazy(() => import("./pages/Blogs"));
+const Blogs = lazy(() => import("./blog/Blogs"));
 
 const App = () => {
   const [isAtTop, setIsAtTop] = useState(true);
