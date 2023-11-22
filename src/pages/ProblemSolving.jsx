@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import CF from "../static/CF.png";
 import CC from "../static/codechef.png";
 import LC from "../static/leetcode.png";
@@ -23,7 +23,6 @@ const ProblemSolving = () => {
     fetchData();
   }, []);
 
-  console.log(codeForcesData);
   return (
     <div className="flex flex-col">
       <h1 className="flex justify-center text-[35px] lg:text-[56px] font-mono mb-[20px]">
