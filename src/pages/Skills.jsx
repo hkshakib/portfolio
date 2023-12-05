@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
-import React from "react";
+import { GrUserExpert } from "react-icons/gr";
 
-import { FaPooStorm } from "react-icons/fa";
 import Image from "../static/skills.jpg";
-
 import { skills, skillsData } from "../static/Data";
 
 const Skills = () => {
@@ -45,7 +43,7 @@ const Skills = () => {
           <div className="flex flex-col">
             {skillsData.map((skill, index) => (
               <div className="flex items-center" key={index}>
-                <FaPooStorm /> <h3 className="profficientSkills">{skill}</h3>
+                <GrUserExpert /> <h3 className="profficientSkills">{skill}</h3>
               </div>
             ))}
           </div>

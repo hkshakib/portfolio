@@ -56,6 +56,6 @@ export const skills = [
   },
   {
     category: "Machine Learning",
-    skills: ["NLP", "TTS", "VITS", "FastPitch", "Tecotron", "Data Processing"],
+    skills: ["Supervised", "Unsupervised", "Text-To-Speech", "Clustering"],
   },
 ];
