@@ -35,43 +35,52 @@ const ProblemSolving = () => {
           transition={{ ease: "easeOut", duration: 3 }}
           initial={{ x: -700 }}
           style={{ overflow: "hidden" }}
-          className="flex lg:flex-1 bg-[#FCF4FF] h-[250px] lg:h-[400px] lg:w-[100%] shadow-lg border rounded-md"
+          className="flex lg:flex-1 bg-[#FCF4FF] h-[250px] lg:h-[400px] lg:w-[100%] shadow-lg rounded-md"
         >
           <div className="flex flex-1 flex-col">
             <div className="flex justify-center items-center">
               <img
-                className="h-[50px] w-[50px] lg:h-[100px] lg:w-[100px]"
+                className="h-[40px] w-[40px] lg:h-[90px] lg:w-[90px]"
                 src={CF}
                 alt=""
               />
-              <h1 className="lg:ml-[10px] lg:pt-[30px] text-[20px] lg:text-[30px] font-mono">
-                Codeforces
+              <h1 className="lg:ml-[10px] text-[20px] lg:text-[30px]">
+                CodeForces
               </h1>
             </div>
 
-            <div className="flex justify-around items-center pt-10 pr-2 pl-2 lg:pl-0 lg:pr-0 ">
-              <div className="flex flex-col items-center bg-white h-[100px] w-[150px] rounded-lg border">
-                <h1 className="uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2">
+            <div className="flex justify-around items-center pt-10 pr-2 pl-2 lg:pl-0 lg:pr-0">
+              <div className="flex flex-col justify-center items-center bg-white h-[100px] w-[150px] rounded-lg">
+                <h1 className="uppercase font-mono lg:text-[16px] text-[12px] mb-[10px]">
                   {codeForcesData && codeForcesData.result[0].maxRank}
                 </h1>
-                <h2 className="text-[10px] lg:text-[12px] font-mono text-[#4E4FEB] p-2">
-                  Highest Ratings:
-                  {codeForcesData && codeForcesData.result[0].maxRating}
-                </h2>
+                <h1 className="flex flex-col justify-center items-center text-[10px] lg:text-[12px]">
+                  <span className="flex text-[12px] lg:text-[16px] text-[#4E4FEB]">
+                    {codeForcesData && codeForcesData.result[0].maxRating}
+                  </span>
+                  <span className="uppercase text-[10px] lg:text-[12px]">
+                    Highest Ratings
+                  </span>
+                </h1>
               </div>
 
-              <div className="flex flex-col items-center bg-white h-[100px] w-[150px] rounded-lg border ml-2 lg:ml-0">
-                <h1 className="uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2">
+              <div className="flex flex-col justify-center items-center bg-white h-[100px] w-[150px] rounded-lg  ml-2 lg:ml-0">
+                <h1 className="uppercase font-mono lg:text-[16px] text-[12px] mb-[10px]">
                   Total Solved
                 </h1>
-                <h2 className="text-[10px] lg:text-[12px] font-mono text-[#4E4FEB] p-2">
-                  1559 Problems
-                </h2>
+                <h1 className="flex flex-col justify-center items-center text-[10px] lg:text-[12px]">
+                  <span className="flex text-[12px] lg:text-[16px] text-[#4E4FEB]">
+                    1560
+                  </span>
+                  <span className="uppercase text-[10px] lg:text-[12px]">
+                    Problems
+                  </span>
+                </h1>
               </div>
             </div>
 
             <div className="flex flex-1 lg:flex-0 justify-center items-end p-4">
-              <button className="flex justify-center items-center border w-[100px] h-[30px] bg-blue-800 rounded-md text-white">
+              <button className="flex justify-center items-center border w-[120px] h-[35px] bg-blue-800 rounded-md text-white">
                 <a
                   className="text-[12px]"
                   href="https://codeforces.com/profile/_Bohemian"
@@ -90,41 +99,51 @@ const ProblemSolving = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           style={{ overflow: "hidden" }}
-          className="flex lg:flex-1 bg-[#FEFAF0] h-[250px] lg:h-[400px] lg:w-[400px] shadow-lg border rounded-md"
+          className="flex lg:flex-1 bg-[#FEFAF0] h-[250px] lg:h-[400px] lg:w-[400px] shadow-lg  rounded-md"
         >
           <div className="flex flex-1 flex-col">
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center ">
               <img
-                className="h-[50px] w-[50px] lg:h-[100px] lg:w-[100px]"
+                className="h-[40px] w-[40px] lg:h-[90px] lg:w-[90px]"
                 src={CC}
                 alt=""
               />
-              <h1 className="lg:ml-[10px] lg:pt-[30px] text-[20px] lg:text-[30px] font-mono">
+              <h1 className="lg:ml-[10px] text-[20px] lg:text-[30px]">
                 CodeChef
               </h1>
             </div>
 
             <div className="flex justify-around items-center pt-10 pr-2 pl-2 lg:pl-0 lg:pr-0">
-              <div className="flex flex-col items-center bg-white h-[100px] w-[150px]  rounded-lg border">
-                <h1 className="uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2">
+              <div className="flex flex-col justify-center items-center bg-white h-[100px] w-[150px] rounded-lg ">
+                <h1 className="uppercase font-mono lg:text-[16px] text-[12px] mb-[10px]">
                   4*
                 </h1>
-                <h2 className="text-[10px] lg:text-[12px] font-mono text-[#4E4FEB] p-2">
-                  Highest Ratings: 1810
-                </h2>
+                <h1 className="flex flex-col justify-center items-center text-[10px] lg:text-[12px]">
+                  <span className="flex text-[12px] lg:text-[16px] text-[#4E4FEB]">
+                    1810
+                  </span>
+                  <span className="uppercase text-[10px] lg:text-[12px]">
+                    Highest Ratings
+                  </span>
+                </h1>
               </div>
-              <div className="flex flex-col items-center bg-white h-[100px] w-[150px] rounded-lg border ml-2 lg:ml-0">
-                <h1 className="uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2">
+              <div className="flex flex-col justify-center items-center bg-white h-[100px] w-[150px] rounded-lg ml-2 lg:ml-0">
+                <h1 className="uppercase font-mono lg:text-[16px] text-[12px] mb-[10px]">
                   Total Solved
                 </h1>
-                <h2 className="text-[10px] lg:text-[12px] font-mono text-[#4E4FEB] p-2">
-                  280 Problems
-                </h2>
+                <h1 className="flex flex-col justify-center items-center text-[10px] lg:text-[12px]">
+                  <span className="flex text-[12px] lg:text-[16px] text-[#4E4FEB]">
+                    280
+                  </span>
+                  <span className="uppercase text-[12px] lg:text-[14px]">
+                    Problems
+                  </span>
+                </h1>
               </div>
             </div>
 
             <div className="flex flex-1 lg:flex-0 justify-center items-end p-4">
-              <button className="flex justify-center items-center border w-[100px] h-[30px] bg-blue-800 rounded-md text-white">
+              <button className="flex justify-center items-center border w-[120px] h-[35px] bg-blue-800 rounded-md text-white">
                 <a
                   className="text-[12px]"
                   href="https://www.codechef.com/users/hkshakib"
@@ -135,45 +154,58 @@ const ProblemSolving = () => {
             </div>
           </div>
         </motion.div>
-
         <motion.div
           animate={{ x: 0 }}
-          transition={{ ease: "easeOut", duration: 3 }}
-          initial={{ x: 850 }}
+          transition={{ ease: "easeOut", duration: 2 }}
+          initial={{ x: 0, opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           style={{ overflow: "hidden" }}
-          className="flex lg:flex-1 bg-[#FFF4F4] h-[250px] lg:h-[400px] lg:w-[400px] shadow-lg border rounded-md"
+          className="flex lg:flex-1 bg-[#FFF4F4] h-[250px] lg:h-[400px] lg:w-[400px] shadow-lg rounded-md"
         >
           <div className="flex flex-1 flex-col">
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center pt-3">
               <img
-                className="h-[50px] w-[50px] lg:h-[100px] lg:w-[100px] pt-4"
+                className="h-[40px] w-[40px] lg:h-[80px] lg:w-[80px]"
                 src={LC}
                 alt=""
               />
-              <h1 className="lg:ml-[10px] lg:pt-[30px] text-[20px] lg:text-[30px] font-mono">
+              <h1 className="lg:ml-[10px] text-[20px] lg:text-[30px]">
                 LeetCode
               </h1>
             </div>
+
             <div className="flex justify-around items-center pt-10 pr-2 pl-2 lg:pl-0 lg:pr-0">
-              <div className="flex flex-col items-center bg-white h-[100px] w-[150px] rounded-lg border">
-                <h1 className="uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2">
-                  Max Streak
+              <div className="flex flex-col justify-center items-center bg-white h-[100px] w-[150px] rounded-lg">
+                <h1 className="uppercase font-mono lg:text-[16px] text-[12px] mb-[10px]">
+                  Max streak
                 </h1>
-                <h2 className="text-[10px] lg:text-[12px] font-mono text-[#4E4FEB] p-2">
-                  35
-                </h2>
+                <h1 className="flex flex-col justify-center items-center text-[10px] lg:text-[12px]">
+                  <span className="flex text-[12px] lg:text-[16px] text-[#4E4FEB]">
+                    35
+                  </span>
+                  <span className="uppercase text-[12px] lg:text-[14px]">
+                    Days
+                  </span>
+                </h1>
               </div>
-              <div className="flex flex-col items-center bg-white h-[100px] w-[150px] rounded-lg border ml-2 lg:ml-0">
-                <h1 className="uppercse font-mono lg:text-[16px] text-[12px] mb-[10px] lg:p-2 p-2">
+              <div className="flex flex-col justify-center items-center bg-white h-[100px] w-[150px] rounded-lg ml-2 lg:ml-0">
+                <h1 className="uppercase font-mono lg:text-[16px] text-[12px] mb-[10px]">
                   Total Solved
                 </h1>
-                <h2 className="text-[10px] lg:text-[12px] font-mono text-[#4E4FEB] p-2">
-                  113 Problems
-                </h2>
+                <h1 className="flex flex-col justify-center items-center text-[10px] lg:text-[12px]">
+                  <span className="flex text-[12px] lg:text-[16px] text-[#4E4FEB]">
+                    113
+                  </span>
+                  <span className="uppercase text-[12px] lg:text-[14px]">
+                    Problems
+                  </span>
+                </h1>
               </div>
             </div>
+
             <div className="flex flex-1 lg:flex-0 justify-center items-end p-4">
-              <button className="flex justify-center items-center border w-[100px] h-[30px] bg-blue-800 rounded-md text-white">
+              <button className="flex justify-center items-center border w-[120px] h-[35px] bg-blue-800 rounded-md text-white">
                 <a
                   className="text-[12px]"
                   href="https://leetcode.com/humayun_kibria/"
