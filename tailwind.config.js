@@ -13,8 +13,8 @@ module.exports = {
             width: "0%",
             visibility: "hidden",
           },
-          "100%": {
-            width: "65%",
+          "90%": {
+            width: "47%",
           },
         },
         tablettyping: {
@@ -81,7 +81,7 @@ module.exports = {
         tablettyping:
           "tablettyping 9s steps(32) infinite alternate, blink 5s infinite",
         styping: "styping 9s steps(32) infinite alternate, blink 5s infinite",
-        wavinghand: "wave 2s linear infinite",
+        wavinghand: "wave 4s linear infinite",
         hFlip: "flipHorizontal 2s infinite",
         openMenu: "openMenue .5s ease-in-out forwards",
       },

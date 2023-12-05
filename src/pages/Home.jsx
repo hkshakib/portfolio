@@ -52,16 +52,26 @@ const Home = () => {
         <div className="hidden w-[100%] lg:flex lg:basis-[50%] justify-center items-center">
           <div className="opacity-1 text-gray-400 p-10">
             <p>
-              Hey there! 👋 I'm a <span className="font-bold text-black">full-stack</span> sorcerer who weaves web wonders with Django Rest and React. 
+              Hey there! 👋 I'm a{" "}
+              <span className="font-bold text-black">full-stack</span> sorcerer
+              who weaves web wonders with Django Rest and React.
             </p>
             <p>
-            🧙‍♂️ Fluent in the magical languages of <span className="font-bold text-black">Python, C++, and JavaScript,</span> I bring your digital dreams to life. 
+              🧙‍♂️ Fluent in the magical languages of{" "}
+              <span className="font-bold text-black">
+                Python, C++, and JavaScript,
+              </span>{" "}
+              I bring your digital dreams to life.
             </p>
             <p>
-            💻✨ From the backend wizardry to the front-end artistry using <span className="font-bold text-black">Tailwind CSS,</span> I'm on a quest to make the internet a more enchanting place, one line of code at a time. 
+              💻✨ From the backend wizardry to the front-end artistry using{" "}
+              <span className="font-bold text-black">Tailwind CSS,</span> I'm on
+              a quest to make the internet a more enchanting place, one line of
+              code at a time.
             </p>
             <p>
-            🌐 Ready to embark on this coding adventure together? Let's craft some digital magic! 🚀🔮
+              🌐 Ready to embark on this coding adventure together? Let's craft
+              some digital magic! 🚀🔮
             </p>
           </div>
         </div>
