@@ -89,28 +89,28 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiOutlineGithub className="bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]" />
+              <AiOutlineGithub className="HomeIcon" />
             </a>
             <a
               href="https://www.linkedin.com/in/hkshakib/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiOutlineLinkedin className="bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]" />
+              <AiOutlineLinkedin className="HomeIcon" />
             </a>
             <a
               href="https://web.facebook.com/Humayun.kibria.shakib/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiOutlineFacebook className="bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]" />
+              <AiOutlineFacebook className="HomeIcon" />
             </a>
             <a
               href="https://twitter.com/HKibriaShakib"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiOutlineTwitter className="bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]" />
+              <AiOutlineTwitter className="HomeIcon" />
             </a>
           </div>
         </div>
