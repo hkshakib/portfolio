@@ -38,7 +38,7 @@ const ProblemSolving = () => {
           className="flex lg:flex-1 bg-[#FCF4FF] h-[250px] lg:h-[400px] lg:w-[100%] shadow-lg rounded-md"
         >
           <div className="flex flex-1 flex-col">
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center pt-3 lg:pt-0">
               <img
                 className="h-[40px] w-[40px] lg:h-[90px] lg:w-[90px]"
                 src={CF}
@@ -102,7 +102,7 @@ const ProblemSolving = () => {
           className="flex lg:flex-1 bg-[#FEFAF0] h-[250px] lg:h-[400px] lg:w-[400px] shadow-lg  rounded-md"
         >
           <div className="flex flex-1 flex-col">
-            <div className="flex justify-center items-center ">
+            <div className="flex justify-center items-center pt-3 lg:pt-0">
               <img
                 className="h-[40px] w-[40px] lg:h-[90px] lg:w-[90px]"
                 src={CC}
