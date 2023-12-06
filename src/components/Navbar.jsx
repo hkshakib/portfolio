@@ -360,7 +360,7 @@ function Navbar() {
             className="mx-[10px]"
           >
             <button className="border h-[40px] w-[200px]  my-1 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-400 hover:shadow-lg text-[12px]">
-              IntellectuCurriculum
+              Download Resume
             </button>
           </a>
         </motion.div>
