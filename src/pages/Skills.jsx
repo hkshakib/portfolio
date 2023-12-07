@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { GrUserExpert } from "react-icons/gr";
 
-import Image from "../static/skills.jpg";
+import Image from "../static/work.gif";
 import { skills, skillsData } from "../static/Data";
 
 const Skills = () => {
@@ -12,9 +12,9 @@ const Skills = () => {
         transition={{ ease: "easeOut", duration: 3 }}
         initial={{ x: -700 }}
         style={{ overflow: "hidden" }}
-        className="flex lg:flex-1 lg:justify-end mr-[10px]"
+        className="flex lg:flex-1 lg:justify-center mr-[10px]"
       >
-        <div className="flex lg:basis-[90%]">
+        <div className="flex lg:basis-[100%]">
           <img className="bg-contain" src={Image} alt="skills" />
         </div>
       </motion.div>

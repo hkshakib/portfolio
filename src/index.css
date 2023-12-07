@@ -24,7 +24,7 @@
 
 /* Skiils */
 .skills {
-  @apply text-gray-500 text-[12px] lg:text-[1rem];
+  @apply text-gray-400 text-[12px] lg:text-[1rem];
 }
 
 .skillsTitle {
@@ -32,15 +32,15 @@
 }
 
 .skillsDesc {
-  @apply text-blue-500 text-[14px] lg:text-[18px];
+  @apply text-[#33CCCC] text-[14px] lg:text-[18px];
 }
 
 .profficientSkills {
-  @apply text-gray-500 ml-4 text-[12px] lg:text-[18px];
+  @apply text-gray-400 ml-4 text-[12px] lg:text-[18px];
 }
 
 .fimilarSkills {
-  @apply text-gray-500 text-[12px] lg:text-[1rem];
+  @apply text-gray-400 text-[12px] lg:text-[1rem];
 }
 
 
