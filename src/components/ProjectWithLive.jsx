@@ -1,38 +1,39 @@
 import React from "react";
-import { GrTechnology } from "react-icons/gr";
+import Cpu from "../static/cpu.png";
 
 const ProjectWithLive = () => {
   return (
-    <div className="flex flex-col justify-center p-4 lg:p-0 lg:items-center bg-[#FCF4FF] border h-[400px] w-[300px] lg:w-[400px] shadow-lg rounded-xl">
-      <div className="flex justify-center text-[16px] lg:text-[18px] font-mono pl-4 lg:pl-0 lg:pt-2 font-bold">
-        <span>React Fun Box</span>
+    <div className="flex flex-col gap-4 justify-center p-4 lg:p-0 lg:items-center bg-[#FCF4FF] border h-[400px] w-[350px] lg:w-[400px] shadow-lg rounded-xl">
+      <div className="flex justify-center p-1 lg:pt-2">
+        <span className="text-[18px] lg:text-[20px] font-mono font-bold">
+          React Fun Box
+        </span>
       </div>
 
-      <div className="flex flex-col">
-        <p className="text-[14px] lg:p-4 text-gray-500">
+      <div className="flex flex-col pl-4 gap-1">
+        <span className="text-[14px] lg:p-4 text-gray-500">
           This is the combinations of 6 apps. I implemented those for learning
           purpose. Those Apps are,
-        </p>
+        </span>
         <span className="text-[12px] font-mono lg:pl-4">1. Calculator</span>
         <span className="text-[12px] font-mono lg:pl-4">2. To-Do List</span>
         <span className="text-[12px] font-mono lg:pl-4">3. Quiz</span>
         <span className="text-[12px] font-mono lg:pl-4">4. Snake</span>
         <span className="text-[12px] font-mono lg:pl-4">5. Memory Game</span>
         <span className="text-[12px] font-mono lg:pl-4">6. TicTacToe</span>
+      </div>
 
-        <h1 className="text-[14px] lg:text[16px] pl-2 lg:pl-4 font-bold lg:pt-1 lg:pb-2 pb-1">
-          Used Techonology:
-        </h1>
+      <div className="flex flex-wrap pl-4 gap-4">
         <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-          <GrTechnology />
+          <img src={Cpu} alt="" className="h-5 w-5" />
           <span>React JS</span>
         </span>
         <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-          <GrTechnology />
+          <img src={Cpu} alt="" className="h-5 w-5" />
           <span>React Router Dom</span>
         </span>
         <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-          <GrTechnology />
+          <img src={Cpu} alt="" className="h-5 w-5" />
           <span>React ICONS</span>
         </span>
       </div>
