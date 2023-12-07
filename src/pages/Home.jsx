@@ -78,12 +78,12 @@ const Home = () => {
 
         <div className="flex flex-1 lg:basis-[10%] items-center lg:justify-center justify-start gap-8 w-[100%] pl-10 lg:pl-0">
           <a href="#footer">
-            <button className="h-[40px] w-[100px] md:h-[50px] md:w-[150px] lg:leading-7 lg:h-[50px] lg:w-[180px] lg:text-[18px] border lg:border-2 lg:border-indigo-700 rounded-[50px] text-white  lg:text-black bg-[#6E07F3] lg:bg-white hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg text-[14px]">
+            <button className="hidden md:flex h-[40px] w-[100px] md:h-[50px] md:w-[150px] lg:leading-7 lg:h-[50px] lg:w-[180px] lg:text-[18px] border lg:border-2 lg:border-indigo-700 rounded-[50px] text-white  lg:text-black bg-[#6E07F3] lg:bg-white hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg text-[14px]">
               Say Hello
             </button>
           </a>
 
-          <div className="flex justify-center items-center text-[35px] md:gap-4 font-semibold">
+          <div className="flex justify-center items-center text-[35px] gap-10 md:gap-4 font-semibold">
             <a
               href="https://github.com/hkshakib"
               target="_blank"
