@@ -22,7 +22,7 @@ const Projects = () => {
         <Project
           Title={"Luxehaven"}
           Summery={
-            "I have developed a complete E-commerce backend system that includes user registration, login functionality, product browsing, cart management, and a customizable admin panel."
+            "A complete E-commerce backend system that includes user registration, login functionality, product browsing, cart management, and a customizable admin panel."
           }
           Technologies={[
             "Django",
