@@ -23,7 +23,7 @@ module.exports = {
             visibility: "hidden",
           },
           "100%": {
-            width: "100%",
+            width: "55%",
           },
         },
         mobiletyping: {
@@ -37,11 +37,11 @@ module.exports = {
         },
         styping: {
           "0%": {
-            width: "0%",
+            width: "5%",
             visibility: "hidden",
           },
           "100%": {
-            width: "80%",
+            width: "55%",
           },
         },
         blink: {
