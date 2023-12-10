@@ -393,7 +393,7 @@ const Resume = () => {
           </div>
         </div>
       </div>
-      <div className="lg:hidden flex flex-col ml-[15px]">
+      <div className="lg:hidden flex flex-col">
         <div className="flex justify-center items-center mb-10">
           <h1 className="text-[25px] md:text-[35px] lg:text-[56px] font-mono">
             RESUME
