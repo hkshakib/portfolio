@@ -3,8 +3,8 @@ import Cpu from "../static/cpu.png";
 
 const Project = ({ Title, Summery, Technologies, CodeUrl }) => {
   return (
-    <div className="flex flex-col items-center bg-[#FCF4FF] border h-[400px] w-[350px] lg:w-[400px] shadow-lg rounded-xl gap-4">
-      <div className="flex justify-center p-1 lg:pt-2">
+    <div className="flex flex-col items-center bg-[#FCF4FF] border h-[400px] w-[350px] lg:w-[400px] shadow-lg rounded-xl gap-4 lg:p-1">
+      <div className="flex justify-center p-1 lg:pt-1">
         <span className="text-[18px] lg:text-[20px] font-mono font-bold">
           {Title}
         </span>

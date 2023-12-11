@@ -3,7 +3,7 @@ import Cpu from "../static/cpu.png";
 
 const ProjectWithLive = () => {
   return (
-    <div className="flex flex-col gap-4 justify-center p-4 lg:p-0 lg:items-center bg-[#FCF4FF] border h-[400px] w-[350px] lg:w-[400px] shadow-lg rounded-xl">
+    <div className="flex flex-col gap-4 justify-center p-4 lg:p-1 lg:items-center bg-[#FCF4FF] border h-[400px] w-[350px] lg:w-[400px] shadow-lg rounded-xl">
       <div className="flex justify-center p-1 lg:pt-2">
         <span className="text-[18px] lg:text-[20px] font-mono font-bold">
           React Fun Box
