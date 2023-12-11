@@ -37,46 +37,35 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex lg:flex-1 justify-center items-end pt-8 lg:pt-0 pb-4">
-            <div className="flex text-[35px] gap-4 lg:gap-12 font-semibold">
-              <div>
-                <a
-                  href="https://github.com/hkshakib"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <AiOutlineGithub className="bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]" />
-                </a>
-              </div>
-
-              <div>
-                <a
-                  href="https://www.linkedin.com/in/hkshakib/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <AiOutlineLinkedin className="bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]" />
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://web.facebook.com/Humayun.kibria.shakib/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <AiOutlineFacebook className="bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]" />
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://twitter.com/HKibriaShakib"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <AiOutlineTwitter className="bg-[#F2f4F8] rounded text-blue-700 hover:bg-white hover:text-[36px]" />
-                </a>
-              </div>
-            </div>
+          <div className="flex justify-center items-center text-[35px] gap-10 md:gap-10 font-semibold pt-4">
+            <a
+              href="https://github.com/hkshakib"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AiOutlineGithub className="HomeIcon bg-white" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hkshakib/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AiOutlineLinkedin className="HomeIcon bg-white" />
+            </a>
+            <a
+              href="https://web.facebook.com/Humayun.kibria.shakib/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AiOutlineFacebook className="HomeIcon bg-white" />
+            </a>
+            <a
+              href="https://twitter.com/HKibriaShakib"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AiOutlineTwitter className="HomeIcon bg-white" />
+            </a>
           </div>
         </div>
 

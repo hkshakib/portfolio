@@ -67,8 +67,11 @@ function Navbar() {
         isNavbarSticky ? "sticky top-0 bg-white border-b" : ""
       }`}
     >
-      <div className="flex uppercase font-bold text-xl lg:pl-8 ml-4 font-mono">
-        <a href="/">HKSHAKIB</a>
+      <div className="flex font-bold text-xl lg:pl-8 ml-4 font-mono">
+        <a href="/">
+          <span className="text-blue-600">HKS</span>
+          <span>hakib</span>
+        </a>
       </div>
 
       <div className="hidden lg:flex md:flex-1 justify-center items-center lg:gap-12">
