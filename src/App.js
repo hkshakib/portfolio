@@ -32,7 +32,9 @@ const App = () => {
     };
   }, []);
 
-  if (lastPath === "blogs") {
+  const isBlogsPage = lastPath.toLowerCase() === "blogs";
+
+  if (isBlogsPage) {
     return (
       <>
         <div className="w-full-screen bg-white font-inter flex flex-col gap-4">
