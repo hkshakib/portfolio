@@ -105,7 +105,7 @@ const App = () => {
 
         <section
           id="resume"
-          className="flex pt-[50px] lg:pt-[200px] items-center justify-center relative"
+          className="none lg:flex pt-[50px] lg:pt-[200px] items-center justify-center relative"
         >
           <Resume />
         </section>
