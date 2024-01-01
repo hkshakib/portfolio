@@ -1,6 +1,7 @@
 import axios from "axios";
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { FaRegHand } from "react-icons/fa6";
 import CF from "../static/CF.png";
 import CC from "../static/codechef.png";
 import LC from "../static/leetcode.png";
@@ -82,10 +83,13 @@ const ProblemSolving = () => {
             <div className="flex flex-1 lg:flex-0 justify-center items-end p-4">
               <button className="flex justify-center items-center border w-[120px] h-[35px] bg-blue-800 rounded-md text-white">
                 <a
-                  className="text-[12px]"
+                  className="text-[14px]"
                   href="https://codeforces.com/profile/_Bohemian"
                 >
-                  Bohemian
+                  <span className="flex gap-2 justify-center items-center">
+                    <FaRegHand className="h-5 w-5" />
+                    <span>Bohemian</span>
+                  </span>
                 </a>
               </button>
             </div>
@@ -145,10 +149,13 @@ const ProblemSolving = () => {
             <div className="flex flex-1 lg:flex-0 justify-center items-end p-4">
               <button className="flex justify-center items-center border w-[120px] h-[35px] bg-blue-800 rounded-md text-white">
                 <a
-                  className="text-[12px]"
+                  className="text-[14px]"
                   href="https://www.codechef.com/users/hkshakib"
                 >
-                  hkshakib
+                  <span className="flex gap-2 justify-center items-center">
+                    <FaRegHand className="h-5 w-5" />
+                    <span>hkshakib</span>
+                  </span>
                 </a>
               </button>
             </div>
@@ -205,12 +212,15 @@ const ProblemSolving = () => {
             </div>
 
             <div className="flex flex-1 lg:flex-0 justify-center items-end p-4">
-              <button className="flex justify-center items-center border w-[120px] h-[35px] bg-blue-800 rounded-md text-white">
+              <button className="flex justify-center items-center border w-[150px] h-[35px] bg-blue-800 rounded-md text-white">
                 <a
-                  className="text-[12px]"
+                  className="text-[14px]"
                   href="https://leetcode.com/humayun_kibria/"
                 >
-                  humayun_kibria
+                  <span className="flex gap-2 justify-center items-center">
+                    <FaRegHand className="h-5 w-5" />
+                    <span>humayun_kibria</span>
+                  </span>
                 </a>
               </button>
             </div>
