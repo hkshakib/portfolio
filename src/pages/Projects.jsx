@@ -52,7 +52,7 @@ const Projects = () => {
         />
         <ProjectWithLive />
         <Project
-          Title={"Personal Protfolio"}
+          Title={"Protfolio"}
           Summery={
             "I designed and built a visually appealing and responsive portfolio website using React and Tailwind CSS. The website consists of a single page with distinct sections, such as Home, Skills, Problem Solving, Education, Achivements, and Contact."
           }
