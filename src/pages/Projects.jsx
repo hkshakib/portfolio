@@ -28,9 +28,9 @@ const Projects = () => {
             "Django",
             "Django Rest",
             "Djoser",
-            "django Filters",
+            "Django Filters",
             "JWT Authentication",
-            "drf-Nexted-Router",
+            "Drf-Nexted-Router",
             "Pillow",
           ]}
           CodeUrl={"https://github.com/hkshakib/luxehaven"}
@@ -69,7 +69,7 @@ const Projects = () => {
             "Django",
             "Django Rest",
             "Djoser",
-            "django Filters",
+            "Django Filters",
             "Session Authentication",
           ]}
           CodeUrl={"https://github.com/hkshakib/storefront2"}
@@ -113,7 +113,7 @@ const Projects = () => {
           Technologies={[
             "Django",
             "Django Rest",
-            "React Js",
+            "React",
             "React Router",
             "Custom Hooks",
           ]}
@@ -132,4 +132,3 @@ const Projects = () => {
 };
 
 export default Projects;
-// FCF4FF

@@ -1,5 +1,5 @@
 import React from "react";
-import Cpu from "../static/cpu.png";
+import { SiReact } from "react-icons/si";
 
 const ProjectWithLive = () => {
   return (
@@ -25,15 +25,15 @@ const ProjectWithLive = () => {
 
       <div className="flex flex-wrap pl-4 gap-4">
         <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-          <img src={Cpu} alt="" className="h-5 w-5" />
-          <span>React JS</span>
+          <SiReact className="h-5 w-5" />
+          <span>React</span>
         </span>
         <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-          <img src={Cpu} alt="" className="h-5 w-5" />
+          <SiReact className="h-5 w-5" />
           <span>React Router Dom</span>
         </span>
         <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-          <img src={Cpu} alt="" className="h-5 w-5" />
+          <SiReact className="h-5 w-5" />
           <span>React ICONS</span>
         </span>
       </div>

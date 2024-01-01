@@ -1,5 +1,6 @@
 import React from "react";
-import Cpu from "../static/cpu.png";
+import { SiReact, SiJavascript } from "react-icons/si";
+import { PiWebhooksLogo } from "react-icons/pi";
 
 const ProjectLive = () => {
   return (
@@ -19,23 +20,23 @@ const ProjectLive = () => {
 
         <div className="flex flex-wrap gap-4">
           <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-            <img src={Cpu} alt="" className="h-5 w-5" />
+            <SiReact className="h-5 w-5" />
             <span>React JS</span>
           </span>
           <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-            <img src={Cpu} alt="" className="h-5 w-5" />
+            <SiReact className="h-5 w-5" />
             <span>VITE</span>
           </span>
           <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-            <img src={Cpu} alt="" className="h-5 w-5" />
+            <SiJavascript alt="" className="h-5 w-5" />
             <span>TypeScript</span>
           </span>
           <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-            <img src={Cpu} alt="" className="h-5 w-5" />
+            <PiWebhooksLogo className="h-5 w-5" />
             <span>Custom Hooks</span>
           </span>
           <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-            <img src={Cpu} alt="" className="h-5 w-5" />
+            <SiReact className="h-5 w-5" />
             <span>React ICONS</span>
           </span>
         </div>

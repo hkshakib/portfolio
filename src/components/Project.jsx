@@ -1,5 +1,71 @@
 import React from "react";
-import Cpu from "../static/cpu.png";
+
+import { BiLogoDjango } from "react-icons/bi";
+import {
+  SiReact,
+  SiJavascript,
+  SiVitess,
+  SiJsonwebtokens,
+  SiRedux,
+  SiMui,
+  SiCss3,
+  SiSessionize,
+} from "react-icons/si";
+import { SiFramework7 } from "react-icons/si";
+import { LuRouter } from "react-icons/lu";
+import { FaMattressPillow } from "react-icons/fa6";
+import { PiWebhooksLogo } from "react-icons/pi";
+import { TfiLayoutWidthDefault } from "react-icons/tfi";
+
+const getIconByTechnology = (technology) => {
+  console.log("Tech name: ", technology);
+  switch (technology.toLowerCase()) {
+    case "django":
+      return <BiLogoDjango className="h-5 w-5" />;
+    case "react":
+      return <SiReact className="h-5 w-5" />;
+    case "react js":
+      return <SiReact className="h-5 w-5" />;
+    case "django rest":
+      return <SiFramework7 className="h-5 w-5" />;
+    case "typescript":
+      return <SiJavascript className="h-5 w-5" />;
+    case "djoser":
+      return <BiLogoDjango className="h-5 w-5" />;
+    case "vite":
+      return <SiVitess className="h-5 w-5" />;
+    case "jwt authentication":
+      return <SiJsonwebtokens className="h-5 w-5" />;
+    case "django filters":
+      return <BiLogoDjango className="h-5 w-5" />;
+    case "drf-nexted-router":
+      return <LuRouter className="h-5 w-5" />;
+    case "pillow":
+      return <FaMattressPillow className="h-5 w-5" />;
+    case "react router dom":
+      return <LuRouter className="h-5 w-5" />;
+    case "react router":
+      return <LuRouter className="h-5 w-5" />;
+    case "react-redux":
+      return <SiRedux className="h-5 w-5" />;
+    case "react toolkit":
+      return <SiRedux className="h-5 w-5" />;
+    case "material ui":
+      return <SiMui className="h-5 w-5" />;
+    case "tailwind css":
+      return <SiCss3 className="h-5 w-5" />;
+    case "django simple-jwt":
+      return <SiJsonwebtokens className="h-5 w-5" />;
+    case "session authentication":
+      return <SiSessionize className="h-5 w-5" />;
+    case "hooks":
+      return <PiWebhooksLogo className="h-5 w-5" />;
+    case "custom hooks":
+      return <PiWebhooksLogo className="h-5 w-5" />;
+    default:
+      return <TfiLayoutWidthDefault className="h-5 w-5" />;
+  }
+};
 
 const Project = ({ Title, Summery, Technologies, CodeUrl }) => {
   return (
@@ -18,7 +84,7 @@ const Project = ({ Title, Summery, Technologies, CodeUrl }) => {
                 key={index}
                 className="flex items-center gap-2 lg:pr-2 text-[12px] font-mono lg:pl-4"
               >
-                <img src={Cpu} alt="" className="h-5 w-5" />
+                {getIconByTechnology(tech)}
                 <span>{tech}</span>
               </span>
             ))}
