@@ -4,6 +4,7 @@ import { Link, scroller } from "react-scroll";
 
 import { motion } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";
+import { SlCloudDownload } from "react-icons/sl";
 import CV from "../static/Resume.pdf";
 
 function Navbar() {
@@ -266,12 +267,12 @@ function Navbar() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: menuOpen ? 1 : 0, y: menuOpen ? 0 : -20 }}
         >
-          <ul className="flex flex-col gap-4 text-[10px] text-black transition-all duration-500 ease-in p-4">
+          <ul className="flex flex-col gap-4 text-[16px] text-black transition-all duration-500 ease-in p-4">
             <li
               className={
                 activeSection === "skills"
-                  ? "text-blue-600"
-                  : "hover:text-blue-600 cursor-pointer"
+                  ? "text-blue-600 border-b-[1px]"
+                  : "hover:text-blue-600 cursor-pointer border-b-[1px]"
               }
             >
               <a href="#skills" onClick={() => setMenuOpen(!menuOpen)}>
@@ -281,8 +282,8 @@ function Navbar() {
             <li
               className={
                 activeSection === "problem-solving"
-                  ? "text-blue-600"
-                  : "hover:text-blue-600 cursor-pointer"
+                  ? "text-blue-600 border-b-[1px]"
+                  : "hover:text-blue-600 cursor-pointer border-b-[1px]"
               }
             >
               <a href="#problem-solving" onClick={() => setMenuOpen(!menuOpen)}>
@@ -292,8 +293,8 @@ function Navbar() {
             <li
               className={
                 activeSection === "experience"
-                  ? "text-blue-600"
-                  : "hover:text-blue-600 cursor-pointer"
+                  ? "text-blue-600 border-b-[1px]"
+                  : "hover:text-blue-600 cursor-pointer border-b-[1px]"
               }
             >
               <a href="#experience" onClick={() => setMenuOpen(!menuOpen)}>
@@ -303,8 +304,8 @@ function Navbar() {
             <li
               className={
                 activeSection === "projects"
-                  ? "text-blue-600"
-                  : "hover:text-blue-600 cursor-pointer"
+                  ? "text-blue-600 border-b-[1px]"
+                  : "hover:text-blue-600 cursor-pointer border-b-[1px]"
               }
             >
               <a href="#projects" onClick={() => setMenuOpen(!menuOpen)}>
@@ -314,8 +315,8 @@ function Navbar() {
             <li
               className={
                 activeSection === "research"
-                  ? "text-blue-600"
-                  : "hover:text-blue-600 cursor-pointer"
+                  ? "text-blue-600 border-b-[1px]"
+                  : "hover:text-blue-600 cursor-pointer border-b-[1px]"
               }
             >
               <a href="#research" onClick={() => setMenuOpen(!menuOpen)}>
@@ -325,8 +326,8 @@ function Navbar() {
             <li
               className={
                 activeSection === "education"
-                  ? "text-blue-600"
-                  : "hover:text-blue-600 cursor-pointer"
+                  ? "text-blue-600 border-b-[1px]"
+                  : "hover:text-blue-600 cursor-pointer border-b-[1px]"
               }
             >
               <a href="#education" onClick={() => setMenuOpen(!menuOpen)}>
@@ -336,8 +337,8 @@ function Navbar() {
             <li
               className={
                 activeSection === "achivements"
-                  ? "text-blue-600"
-                  : "hover:text-blue-600 cursor-pointer"
+                  ? "text-blue-600 border-b-[1px]"
+                  : "hover:text-blue-600 cursor-pointer border-b-[1px]"
               }
             >
               <a href="#achivements" onClick={() => setMenuOpen(!menuOpen)}>
@@ -347,8 +348,8 @@ function Navbar() {
             <li
               className={
                 activeSection === "resume"
-                  ? "text-blue-600"
-                  : "hover:text-blue-600 cursor-pointer"
+                  ? "text-blue-600 border-b-[1px]"
+                  : "hover:text-blue-600 cursor-pointer border-b-[1px]"
               }
             >
               <a href="#resume" onClick={() => setMenuOpen(!menuOpen)}>
@@ -362,8 +363,11 @@ function Navbar() {
             rel="noopener noreferrer"
             className="mx-[10px]"
           >
-            <button className="border h-[40px] w-[200px]  my-1 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-400 hover:shadow-lg text-[12px]">
-              Download Resume
+            <button className="flex justify-center items-center border h-[40px] w-[200px]  my-1 rounded-lg bg-blue-500 text-white hover:bg-blue-400 hover:shadow-lg text-[13px]">
+              <span className="flex gap-4 justify-center items-center">
+                <SlCloudDownload className="w-5 h-5"/>
+                <span>Download Resume</span>
+              </span>
             </button>
           </a>
         </motion.div>
