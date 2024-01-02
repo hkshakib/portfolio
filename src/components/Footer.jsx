@@ -8,6 +8,7 @@ import {
 import Email from "../static/email.png";
 
 const Footer = () => {
+  const curYear = new Date().getFullYear();
   return (
     <div className="flex flex-col w-[100%] pb-[10px] bg-[rebeccapurple] h-[400px] rounded-t-3xl">
       <div className="flex flex-col flex-1 lg:flex-row">
@@ -79,7 +80,7 @@ const Footer = () => {
       </div>
 
       <div className="flex basis-[10%] justify-center items-center text-white">
-        <h2>All Right Reseved @HKShakib 2023</h2>
+        <h2>All Right Reseved @HKShakib {curYear}</h2>
       </div>
     </div>
   );
