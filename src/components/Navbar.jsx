@@ -69,10 +69,17 @@ function Navbar() {
       }`}
     >
       <div className="flex font-bold text-xl lg:pl-8 ml-4 font-mono">
-        <a href="/">
+        <motion.a
+         initial={{
+          rotate: "0deg"
+        }}
+        animate={{
+          rotate: "360deg"
+        }}
+         href="/">
           <span className="text-blue-600">HKS</span>
           <span>hakib</span>
-        </a>
+        </motion.a>
       </div>
 
       <div className="hidden lg:flex md:flex-1 justify-center items-center lg:gap-12">
@@ -242,15 +249,22 @@ function Navbar() {
 
       <div className="lg:hidden flex flex-1 mr-2 lg:mr-0 lg:basis-[70%] justify-end gap-8">
         <button
-          className="flex text-black cursor-pointer hover:text-gray-600 "
+          className="flex text-black cursor-pointer hover:text-gray-600"
           onClick={toggleMenu}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -20 }}
         >
           {menuOpen ? (
-            <motion.div>
-              <RxCross1 className="text-[25px] text-blue-700" />
+            <motion.div
+              initial={{
+                rotate: "0deg"
+              }}
+              animate={{
+                rotate: "180deg"
+              }}
+            >
+              <RxCross1 className="text-[25px] font-bold text-blue-700" />
             </motion.div>
           ) : (
             <motion.div>
