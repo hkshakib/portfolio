@@ -6,29 +6,15 @@ import { motion } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";
 import { SlCloudDownload } from "react-icons/sl";
 import CV from "../static/Resume.pdf";
+import useScroll from "../hooks/useScroll";
 
 function Navbar() {
-  const [isNavbarSticky, setIsNavbarSticky] = useState(false);
+  const { activeSection, isNavbarSticky } = useScroll();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
 
   const navRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      let currentSection = "";
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= 100 && rect.bottom > 0) {
-          currentSection = section.id;
-        }
-      });
-      setActiveSection(currentSection);
-      const isScrolled = window.scrollY > 0;
-      setIsNavbarSticky(isScrolled);
-    };
-
     const handleCloseOutSide = (e) => {
       if (!navRef?.current || navRef.current?.contains(e.target)) {
         return;
@@ -38,15 +24,13 @@ function Navbar() {
     };
 
     document.addEventListener("click", handleCloseOutSide, { capture: true });
-    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("click", handleCloseOutSide, {
         capture: true,
       });
     };
-  }, [isNavbarSticky, menuOpen]);
+  }, [menuOpen]);
 
   const closeMenuAndScroll = (sectionId) => {
     setMenuOpen(false);
@@ -239,13 +223,6 @@ function Navbar() {
         </ul>
       </div>
 
-      {/* <div className="hidden lg:flex lg:pr-8">
-        <a href={CV} target="_blank" rel="noopener noreferrer">
-          <button className="border border-indigo-700 h-[30px] w-[140px] xl:w-[200px] lg:h-[40px] px-4 rounded-xl  text-black font-bold hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg text-[10px] xl:text-[16px]">
-            IntellectuCurriculum
-          </button>
-        </a>
-      </div> */}
 
       <div className="lg:hidden flex flex-1 mr-2 lg:mr-0 lg:basis-[70%] justify-end gap-8">
         <button
