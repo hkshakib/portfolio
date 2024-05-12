@@ -267,7 +267,7 @@ function Navbar() {
                 duration: 1,
               }}
             >
-              <RxCross1 className="text-[25px] font-extrabold text-blue-700" />
+              <RxCross1 className="text-[35px] font-extrabold text-blue-700" />
             </motion.div>
           ) : (
             <motion.div>
