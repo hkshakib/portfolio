@@ -263,8 +263,11 @@ function Navbar() {
               animate={{
                 rotate: "180deg"
               }}
+              transition={{
+                duration: 1,
+              }}
             >
-              <RxCross1 className="text-[25px] font-bold text-blue-700" />
+              <RxCross1 className="text-[25px] font-extrabold text-blue-700" />
             </motion.div>
           ) : (
             <motion.div>
