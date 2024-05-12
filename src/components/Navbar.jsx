@@ -1,12 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
+
+import { SlCloudDownload } from "react-icons/sl";
 import { AiOutlineMenu } from "react-icons/ai";
-import { Link, scroller } from "react-scroll";
+import { RxCross1 } from "react-icons/rx";
+
+import { Link } from "react-scroll";
+
+import useScroll from "../hooks/useScroll";
+import { closeMenuAndScroll } from "../utils/navUtils";
 
 import { motion } from "framer-motion";
-import { RxCross1 } from "react-icons/rx";
-import { SlCloudDownload } from "react-icons/sl";
+
 import CV from "../static/Resume.pdf";
-import useScroll from "../hooks/useScroll";
 
 function Navbar() {
   const { activeSection, isNavbarSticky } = useScroll();
@@ -32,14 +37,8 @@ function Navbar() {
     };
   }, [menuOpen]);
 
-  const closeMenuAndScroll = (sectionId) => {
-    setMenuOpen(false);
-    scroller.scrollTo(sectionId, {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-      offset: -70,
-    });
+  const handleCloseMenuAndScroll = (sectionId) => {
+    closeMenuAndScroll(sectionId, setMenuOpen)
   };
 
   const toggleMenu = () => {
@@ -82,7 +81,7 @@ function Navbar() {
               smooth={true}
               offset={-70}
               duration={800}
-              onClick={() => closeMenuAndScroll("skills")}
+              onClick={() => handleCloseMenuAndScroll("skills")}
             >
               Skills
             </Link>
@@ -101,7 +100,7 @@ function Navbar() {
               smooth={true}
               offset={-70}
               duration={800}
-              onClick={() => closeMenuAndScroll("problem-solving")}
+              onClick={() => handleCloseMenuAndScroll("problem-solving")}
             >
               Problem Solving
             </Link>
@@ -120,7 +119,7 @@ function Navbar() {
               smooth={true}
               offset={-70}
               duration={800}
-              onClick={() => closeMenuAndScroll("experience")}
+              onClick={() => handleCloseMenuAndScroll("experience")}
             >
               Experience
             </Link>
@@ -139,7 +138,7 @@ function Navbar() {
               smooth={true}
               offset={-70}
               duration={800}
-              onClick={() => closeMenuAndScroll("projects")}
+              onClick={() => handleCloseMenuAndScroll("projects")}
             >
               Projects
             </Link>
@@ -158,7 +157,7 @@ function Navbar() {
               smooth={true}
               offset={-70}
               duration={800}
-              onClick={() => closeMenuAndScroll("research")}
+              onClick={() => handleCloseMenuAndScroll("research")}
             >
               Research
             </Link>
@@ -177,7 +176,7 @@ function Navbar() {
               smooth={true}
               offset={-70}
               duration={800}
-              onClick={() => closeMenuAndScroll("education")}
+              onClick={() => handleCloseMenuAndScroll("education")}
             >
               Education
             </Link>
@@ -196,7 +195,7 @@ function Navbar() {
               smooth={true}
               offset={-70}
               duration={800}
-              onClick={() => closeMenuAndScroll("achivements")}
+              onClick={() => handleCloseMenuAndScroll("achivements")}
             >
               Achivements
             </Link>
@@ -215,7 +214,7 @@ function Navbar() {
               smooth={true}
               offset={-70}
               duration={800}
-              onClick={() => closeMenuAndScroll("resume")}
+              onClick={() => handleCloseMenuAndScroll("resume")}
             >
               Resume
             </Link>
