@@ -1,5 +1,3 @@
-import React from "react";
-
 import { BiLogoDjango } from "react-icons/bi";
 import {
   SiReact,
@@ -11,11 +9,11 @@ import {
   SiCss3,
   SiSessionize,
 } from "react-icons/si";
-import { SiFramework7 } from "react-icons/si";
-import { LuRouter } from "react-icons/lu";
+import { TfiLayoutWidthDefault } from "react-icons/tfi";
 import { FaMattressPillow } from "react-icons/fa6";
 import { PiWebhooksLogo } from "react-icons/pi";
-import { TfiLayoutWidthDefault } from "react-icons/tfi";
+import { SiFramework7 } from "react-icons/si";
+import { LuRouter } from "react-icons/lu";
 
 const getIconByTechnology = (technology) => {
   console.log("Tech name: ", technology);

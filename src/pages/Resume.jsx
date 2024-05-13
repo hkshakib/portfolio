@@ -1,9 +1,9 @@
-import React from "react";
+import { TbDeviceMobileFilled } from "react-icons/tb";
 import { BsLinkedin } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
 import { ImGithub } from "react-icons/im";
 import { MdEmail } from "react-icons/md";
-import { TbDeviceMobileFilled } from "react-icons/tb";
+
 import CV from "../static/Resume.pdf";
 
 const Resume = () => {

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+
 import Achivement from "../components/Achivement";
 import AchivmentImage from "../static/Achivment.jpg";
 

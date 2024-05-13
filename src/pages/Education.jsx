@@ -1,4 +1,3 @@
-import React from 'react';
 import SchoolLogo from "../static/school.gif";
 import UniversityLogo from "../static/unilogo.png";
 

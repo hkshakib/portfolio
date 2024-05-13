@@ -6,10 +6,12 @@ import { RxCross1 } from "react-icons/rx";
 
 import { Link } from "react-scroll";
 
+import { motion } from "framer-motion";
+
 import useScroll from "../hooks/useScroll";
+
 import { closeMenuAndScroll } from "../utils/navUtils";
 
-import { motion } from "framer-motion";
 
 import CV from "../static/Resume.pdf";
 

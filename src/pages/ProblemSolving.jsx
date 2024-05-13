@@ -1,7 +1,11 @@
-import axios from "axios";
-import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
+
 import { FaRegHand } from "react-icons/fa6";
+
+import axios from "axios";
+
+import { motion } from "framer-motion";
+
 import CF from "../static/CF.png";
 import CC from "../static/codechef.png";
 import LC from "../static/leetcode.png";

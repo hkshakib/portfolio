@@ -1,4 +1,3 @@
-import React from 'react';
 
 const OnlineJudge = ({Name, Designation, RatingsOrMaxStreak, Text, Problems, Handle, Url, PhotoUrl}) => {
   return (

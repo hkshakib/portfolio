@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import React from "react";
 import {
   AiOutlineFacebook,
   AiOutlineGithub,
@@ -7,6 +5,9 @@ import {
   AiOutlineTwitter,
 } from "react-icons/ai";
 import { FaHandsClapping } from "react-icons/fa6";
+
+import { motion } from "framer-motion";
+
 import BgHome from "../static/BgHome.jpg";
 import Avatar from "../static/avatar.png";
 

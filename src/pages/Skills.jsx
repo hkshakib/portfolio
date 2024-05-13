@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+
 import { GrUserExpert } from "react-icons/gr";
 
-import Image from "../static/work.gif";
 import { skills, skillsData } from "../static/Data";
+import Image from "../static/work.gif";
 
 const Skills = () => {
   return (

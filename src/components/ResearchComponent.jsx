@@ -1,4 +1,3 @@
-import React from "react";
 import { GrTechnology } from "react-icons/gr";
 
 const ResearchComponent = ({ Title, Summery, Technologies, CodeUrl }) => {

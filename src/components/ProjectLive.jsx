@@ -1,4 +1,3 @@
-import React from "react";
 import { SiReact, SiJavascript } from "react-icons/si";
 import { PiWebhooksLogo } from "react-icons/pi";
 
