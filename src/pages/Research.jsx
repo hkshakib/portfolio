@@ -12,7 +12,7 @@ const Research = () => {
         animate={{ x: 0 }}
         transition={{ ease: "easeIn", duration: 2 }}
         initial={{ x: -1000 }}
-        className="flex flex-wrap gap-8 lg:p-12 justify-center"
+        className="flex flex-wrap gap-8 p-6 lg:p-12 justify-center"
       >
         <AiProject/>
       </motion.div>
