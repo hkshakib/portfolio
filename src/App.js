@@ -103,12 +103,12 @@ const App = () => {
           <Achivements />
         </section>
 
-        <section
+        {/* <section
           id="resume"
           className="none lg:flex pt-[50px] lg:pt-[200px] items-center justify-center relative"
         >
           <Resume />
-        </section>
+        </section> */}
 
         <section
           id="footer"

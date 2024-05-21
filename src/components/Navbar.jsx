@@ -22,7 +22,7 @@ const navItems = [
   { id: "research", label: "Research" },
   { id: "education", label: "Education" },
   { id: "achievements", label: "Achievements" },
-  { id: "resume", label: "Resume" }
+  // { id: "resume", label: "Resume" }
 ];
 
 function Navbar() {
