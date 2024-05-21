@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-
-import ResearchComponent from "../components/ResearchComponent";
+import AiProject from "../components/AiProject";
 
 const Research = () => {
   return (
@@ -15,7 +14,7 @@ const Research = () => {
         initial={{ x: -1000 }}
         className="flex flex-wrap gap-8 lg:p-12 justify-center"
       >
-        <ResearchComponent Title={"Prosody-Controlled Text-To-Speech"} />
+        <AiProject/>
       </motion.div>
     </div>
   );
