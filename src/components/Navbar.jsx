@@ -69,7 +69,7 @@ function Navbar() {
       </div>
 
       <div className="hidden lg:flex md:flex-1 justify-center items-center lg:gap-12">
-        <ul className="flex xl:gap-12 gap-4 text-[14px] xl:text-[16px]">
+        <ul className="flex xl:gap-12 gap-4 text-[14px] xl:text-[16px] text-[#090E34]">
           {navItems.map((item) => (
             <li
               key={item.id}
@@ -123,7 +123,7 @@ function Navbar() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <ul className="flex flex-col gap-4 text-[16px] text-black transition-all duration-500 ease-in p-4">
+          <ul className="flex flex-col gap-4 text-[16px] text-[#090E34] transition-all duration-500 ease-in p-4">
             {navItems.map((item, index) => (
               <motion.li
                 key={item.id}
