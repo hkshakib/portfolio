@@ -1,9 +1,12 @@
 import blogs from "../DummyData";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
+import { MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+
 
 const BlogShowcase = () => {
   return (
-    <div className="flex h-[100vh] p-10 font-modefor flex-wrap justify-around gap-16">
+    <div className="flex p-10 font-modefor flex-wrap justify-around gap-16">
       {blogs.map((blog) => (
         <div
           key={blog.id}
@@ -40,6 +43,23 @@ const BlogShowcase = () => {
           </div>
         </div>
       ))}
+      <div className="flex justify-center items-center gap-4">
+        <div className="flex text-gray-400 text-[18px] gap-4">
+          <MdKeyboardDoubleArrowLeft className="cursor-pointer"/>
+          <GrFormPrevious className="cursor-pointer"/>
+        </div>
+        <div className="flex gap-4">
+          <span className="cursor-pointer">1</span>
+          <span className="cursor-pointer text-gray-400">2</span>
+          <span className="cursor-pointer text-gray-400">3</span>
+          <span className="cursor-pointer text-gray-400">4</span>
+          <span className="cursor-pointer text-gray-400">5</span>
+        </div>
+        <div className="flex text-gray-400 text-[18px] gap-4">
+          <GrFormNext className="cursor-pointer"/>
+          <MdKeyboardDoubleArrowRight className="cursor-pointer"/>
+        </div>
+      </div>
     </div>
   );
 };
