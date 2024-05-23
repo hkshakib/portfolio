@@ -1,4 +1,3 @@
-
 import BlogShowcase from "./components/BlogShowcase";
 import Categories from "./components/Categories";
 import Content from "./components/Content";
@@ -7,9 +6,9 @@ const Blogs = () => {
   return (
     <div className="flex flex-col w-full h-[100vh] bg-[#FAF9F7] font-modefor">
       <Navbar />
-      <Content/>
-      <Categories/>
-      <BlogShowcase/>
+      <Content />
+      <Categories />
+      <BlogShowcase />
     </div>
   );
 };
