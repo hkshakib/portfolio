@@ -1,14 +1,9 @@
-import React from "react";
+import BlogBg from '../static/blogBg.png';
 
 const Content = () => {
   return (
-    <div className="flex flex-1 p-1">
-      <div className="flex flex-col basis-[80%] border border-r-1 p-10">
-        <div className="">Slider</div>
-      </div>
-      <div className="flex flex-1 justify-center pt-5">
-        <h3>Recently Added</h3>
-      </div>
+    <div className="flex flex-1">
+      <img className='h-[80vh] w-full bg-cover bg-no-repeat border' src={BlogBg} alt="" />
     </div>
   );
 };
