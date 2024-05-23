@@ -4,7 +4,7 @@ import Content from "./components/Content";
 import Navbar from "./components/Navbar";
 const Blogs = () => {
   return (
-    <div className="flex flex-col w-full h-[100vh]">
+    <div className="flex flex-col w-full h-[100vh] font-modefor">
       <Navbar />
       <Content/>
       <Categories/>
