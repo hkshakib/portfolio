@@ -12,7 +12,7 @@ const Footer = lazy(() => import("./components/Footer"));
 const Experience = lazy(() => import("./pages/Experience"));
 const Achivements = lazy(() => import("./pages/Achivements"));
 const Research = lazy(() => import("./pages/Research"));
-const Resume = lazy(() => import("./pages/Resume"));
+// const Resume = lazy(() => import("./pages/Resume"));
 const Blogs = lazy(() => import("./blog/Blogs"));
 
 const App = () => {

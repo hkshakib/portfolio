@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <div className="flex h-[100px] p-5 items-center justify-around border bg-[#FAF9F7]">
+    <div className="flex h-[100px] p-5 items-center justify-around border bg-[#FAF9F7] mt-2">
       <div className="flex"></div>
       <div className="flex text-[24px]">
       <motion.a

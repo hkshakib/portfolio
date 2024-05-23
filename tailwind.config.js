@@ -85,6 +85,9 @@ module.exports = {
         hFlip: "flipHorizontal 2s infinite",
         openMenu: "openMenue .5s ease-in-out forwards",
       },
+      fontFamily: {
+        modefor: ["Wix Madefor Text"],
+      }
     },
   },
   plugins: [require("tailwindcss-font-inter")],
