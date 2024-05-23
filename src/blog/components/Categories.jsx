@@ -1,8 +1,26 @@
+import { useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 const Categories = () => {
+    const [isNavbarSticky, setIsNavbarSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      console.log(scrollPosition);
+      const navbarOffset = 835;
+      setIsNavbarSticky(scrollPosition > navbarOffset);
+      console.log(isNavbarSticky);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, );
   return (
-    <div className="flex justify-around items-center p-5 font-modefor border">
+    <div className={`flex justify-around items-center p-5 font-modefor border ${
+        isNavbarSticky ? " bg-white border-b fixed top-0 left-0 right-0 z-50 " : ""
+      }`}>
         <div className="flex gap-8 justify-between items-center text-[14px] tracking-widest">
             <a href="/programming">
                 <span className="cursor-pointer hover:underline">Programming</span>
