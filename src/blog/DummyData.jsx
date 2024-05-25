@@ -141,4 +141,19 @@ const blogs = [
   },
 ];
 
+const generateContent = () => {
+  let content = "";
+  for (let i = 0; i < 100; i++) {
+    content += "This is line " + (i + 1) + " of the blog content.\n";
+  }
+  return content;
+};
+
+// Generate content for each blog
+blogs.forEach((blog) => {
+  blog.content = generateContent();
+});
+
+
+
 export default blogs;
