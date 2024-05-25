@@ -26,16 +26,14 @@ const BlogModal = ({ blog, onClose }) => {
         >
           <ImCross className="text-[20px]"/>
         </button>
-        <div className="text-center md:text-[20px] lg:text-[30px] font-bold mb-4 z-[9999]">{blog.title}</div>
         <div className="flex justify-center">
             <img src={blog.photo} alt={blog.title} className="w-[50%] h-[50vh] mb-4 bg-cover" />
-
-
         </div>
         <div className="flex justify-center text-gray-700 mb-4 p-10">
           {blog.author} - {blog.date}
         </div>
-        <div className="flex justify-center">
+        <div className="flex flex-col justify-center items-center">
+          <div className="text-center md:text-[20px] lg:text-[30px] font-bold mb-4 z-[9999]">{blog.title}</div>
           <article className="text-[16px] prose lg:prose-xl">{blog.content}</article>
         </div>
       </div>
