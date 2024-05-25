@@ -35,7 +35,7 @@ const BlogModal = ({ blog, onClose }) => {
         <div className="text-gray-700 mb-4 p-10">
           {blog.author} - {blog.date}
         </div>
-        <div className="text-gray-700 text-[20px] p-10">{blog.content}</div>
+        <p className="flex flex-wrap text-gray-700 text-[16px] p-20">{blog.content}</p>
       </div>
 
     </div>,
