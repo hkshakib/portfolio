@@ -53,7 +53,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`flex justify-start lg:justify-center items-center h-16 z-10 lg:w-full font-inter pt-4 pr-2 pb-2 ${
+      className={`flex justify-start lg:justify-center items-center h-16 z-10 lg:w-full font-inter pt-4 pr-2 pb-2 shadow-md ${
         isNavbarSticky ? "sticky top-0 bg-white border-b" : ""
       }`}
     >
