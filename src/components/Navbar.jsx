@@ -69,7 +69,7 @@ const Navbar = () => {
       </div>
 
       <div className="hidden lg:flex md:flex-1 justify-center items-center lg:gap-12">
-        <ul className="flex xl:gap-12 gap-4 text-[14px] xl:text-[16px] text-[#090E34]">
+        <ul className="flex xl:gap-12 gap-4 text-[14px] tracking-wider xl:text-[16px] text-[#090E34]">
           {navItems.map((item) => (
             <li
               key={item.id}
