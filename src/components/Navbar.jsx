@@ -118,7 +118,7 @@ const Navbar = () => {
 
       {menuOpen && (
         <motion.div
-          className="lg:hidden absolute top-16 left-0 right-0 bg-white z-10 w-full transition-opacity duration-300 ease-in-out border-b shadow-lg p-1 border-t-[1px]"
+          className="lg:hidden h-[100vh] absolute top-16 left-0 right-0 bg-white z-10 w-full transition-opacity duration-300 ease-in-out border-b shadow-lg p-1 border-t-[1px]"
           ref={navRef}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
