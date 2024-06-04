@@ -25,7 +25,7 @@ const navItems = [
   // { id: "resume", label: "Resume" }
 ];
 
-function Navbar() {
+const Navbar = () => {
   const { activeSection, isNavbarSticky } = useScroll();
   const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef(null);
