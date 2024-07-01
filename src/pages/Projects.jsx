@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import ProjectWithLive from "../components/ProjectWithLive";
 import ProjectLive from "../components/ProjectLive";
 import Project from "../components/Project";
+import IssueTrackerLive from "../components/IssueTrackerLive";
 
 const Projects = () => {
   return (
@@ -39,6 +40,7 @@ const Projects = () => {
             ]}
             CodeUrl={"https://github.com/hkshakib/luxehaven"}
           />
+          <IssueTrackerLive />
           <ProjectLive />
           <Project
             Title={"Project Manager"}
