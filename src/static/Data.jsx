@@ -12,7 +12,7 @@ export const skillsData = [
 export const skills = [
   {
     category: "Languages",
-    skills: ["C++", "Python", "C", "JavaScript", "JAVA", "Dart"],
+    skills: ["C++", "Python", "C", "JavaScript", "TypeScript", "JAVA", "Dart"],
   },
   {
     category: "Frontend",
@@ -23,12 +23,13 @@ export const skills = [
       "Tailwind CSS",
       "MUI",
       "Chakra UI",
+      "Radix UI",
       "Framer Motion",
     ],
   },
   {
     category: "Backend",
-    skills: ["Django", "Django REST", "FastAPI"],
+    skills: ["Django", "Django REST", "FastAPI", "Next JS"],
   },
   {
     category: "SQL DB",
@@ -40,18 +41,21 @@ export const skills = [
   },
   {
     category: "DevOps",
-    skills: ["Git", "Github", "Docker"],
+    skills: ["Git", "Github", "Docker", "Vercel", "Railway"],
   },
   {
     category: "Fimiliar With",
     skills: [
       "Design Pattern",
       "Redux",
+      "Redux Toolkit",
       "Celery",
       "Celery Beat",
       "React Query",
       "Flutter",
       "Web Scraping",
+      "Zod",
+      "Next Auth",
     ],
   },
   {
