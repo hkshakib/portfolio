@@ -94,6 +94,25 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
+      <a
+            href={CV}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-4 hidden lg:block"
+          >
+            <motion.button
+              className="flex justify-center items-center border h-[40px] w-[200px] my-1 rounded-lg bg-blue-500 text-white hover:bg-blue-400 hover:shadow-lg text-[13px]"
+              initial={{ x: "100%", opacity: 0 }}
+              animate={{ x: "0%", opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <span className="flex gap-4 justify-center items-center">
+                <SlCloudDownload className="w-5 h-5" />
+                <span className="text-[14px]">Download Resume</span>
+              </span>
+            </motion.button>
+          </a>
+      
 
       <div className="lg:hidden flex flex-1 mr-2 lg:mr-0 lg:basis-[70%] justify-end gap-8">
         <button
