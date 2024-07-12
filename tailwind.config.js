@@ -4,6 +4,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(90deg, #33CCCC 67%, #ccf381 33%)',
+      },
       colors: {
         BgCustom: "rgba(243, 246, 246, var(1))",
       },
