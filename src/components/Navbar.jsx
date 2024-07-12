@@ -13,17 +13,9 @@ import useScroll from "../hooks/useScroll";
 import { closeMenuAndScroll } from "../utils/navUtils";
 
 import CV from "../static/Resume.pdf";
+import { navItems } from "../static/Data";
 
-const navItems = [
-  { id: "skills", label: "Skills" },
-  { id: "problem-solving", label: "Problem Solving" },
-  { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
-  { id: "research", label: "Research" },
-  { id: "education", label: "Education" },
-  { id: "achivements", label: "Achievements" },
-  // { id: "resume", label: "Resume" }
-];
+
 
 const Navbar = () => {
   const { activeSection, isNavbarSticky } = useScroll();

@@ -1,14 +1,9 @@
-import {
-  AiOutlineFacebook,
-  AiOutlineGithub,
-  AiOutlineLinkedin,
-  AiOutlineTwitter,
-} from "react-icons/ai";
 import { FaHandsClapping } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 import BgHome from "../static/BgHome.jpg";
 import Avatar from "../static/avatar.png";
+import { description, socialLinks } from "../static/Data";
 
 const Home = () => {
   return (
@@ -23,35 +18,7 @@ const Home = () => {
     </section>
   );
 };
-const socialLinks = [
-  {
-    href: "https://github.com/hkshakib",
-    icon: AiOutlineGithub,
-    label: "Github",
-  },
-  {
-    href: "https://www.linkedin.com/in/hkshakib/",
-    icon: AiOutlineLinkedin,
-    label: "LinkedIn",
-  },
-  {
-    href: "https://web.facebook.com/Humayun.kibria.shakib/",
-    icon: AiOutlineFacebook,
-    label: "Facebook",
-  },
-  {
-    href: "https://twitter.com/HKibriaShakib",
-    icon: AiOutlineTwitter,
-    label: "Twitter",
-  },
-];
 
-const description = [
-  "Hey there! 👋 I'm a full-stack sorcerer who weaves web wonders with Django Rest and React.",
-  "🧙‍♂️ Fluent in the magical languages of Python, C++, and JavaScript, I bring your digital dreams to life.",
-  "💻✨ From the backend wizardry to the front-end artistry using Tailwind CSS, I'm on a quest to make the internet a more enchanting place, one line of code at a time.",
-  "🌐 Ready to embark on this coding adventure together? Let's craft some digital magic! 🚀🔮",
-];
 
 const Photo = () => {
   return (

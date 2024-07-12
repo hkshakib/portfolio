@@ -2,22 +2,10 @@ import { motion } from "framer-motion";
 
 import AchivmentImage from "../static/Achivment.jpg";
 import Achivement from "../components/Achivement";
+import { achievementsData } from "../static/Data";
 
 const Achivements = () => {
-  const achievementsData = [
-    "Participated in ICPC Dhaka Regional 2021 (BUBT).",
-    "8th Among Private Universities in ICPC Preliminary 2021.",
-    "Top 10 in NSU ICE Fest Inter University Programming Contest 2020.",
-    "Champions, Mathophobic Skyvers, LU Intra University Programming Competition 2020.",
-    "Champions, LUZeroIQ, LU Intra University Programming Competition 2021.",
-    "Top 6 in Bangladesh, LUZeroIQ, IEEE Extreme 14.",
-    "Top 10 In Country Wise Ranking, Codeforces Round 643 (Div. 2).",
-    "National ICT Quiz Champions 2018.",
-    "LU Intra University ICT Quiz Champions 2018.",
-    "LU Intra University ICT Quiz Champions 2019.",
-    "LU Intra University ICT Quiz Champions 2020.",
-    "LU Intra University ICT Quiz Champions 2021.",
-  ];
+
   const renderAchievements = (achievements) => {
     return achievements.map((text, index) => (
       <Achivement key={index} Text={text} />
