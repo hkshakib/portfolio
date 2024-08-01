@@ -20,22 +20,20 @@ const Experience = () => {
           >
             <div className="w-full h-full bg-[#FCF4FF] rounded-md p-2 md:pl-4">
               <h1 className="text-black text-xl font-medium py-1">
-                Junior Software Engineer (Part-Time)
+                Software Engineer (Freelance)
               </h1>
               <h2 className="text-black text-[16px] font-normal py-1">
-                March 2021 - January 2022
+                February 2022 - Present
               </h2>
               <p className="text-gray-500 sm:text-sm text-xs">
-                During my tenure at LIILAB, I worked as a backend developer for
-                8 months and contributed to the development of PCBuilder, a
-                comprehensive full-stack website. PCBuilder is a user-friendly
-                platform designed to assist individuals who lack knowledge about
-                purchasing PCs. It enables users to easily navigate through the
-                website, select desired PC components, and build their own
-                customized PC based on their specific requirements. Through my
-                involvement in this project, I gained valuable experience in
-                Django development and contributed to creating a seamless and
-                intuitive user experience for PC enthusiasts.
+              • Created multiple client portfolio site with React and Next.js and Implemented dynamic content management and SEO optimization.<br/>
+
+              • Built Issue Management App with React, Next.js, and Django REST.
+                Includes task creation, management, and user authentication.<br/>
+
+              • Developed some personal projects with React, Next.js, and Django REST.
+                Features Markdown editor, commenting system, and user authentication.
+              • Preparing for IELTS and GRE exams for higher studies abroad.
               </p>
             </div>
           </motion.div>
@@ -58,6 +56,33 @@ const Experience = () => {
             animate={{ x: 0 }}
             transition={{ ease: "easeOut", duration: 3 }}
             initial={{ x: 850 }}
+            style={{ overflow: "hidden" }}
+            className="col-span-4 w-full h-full "
+          >
+            <div className="w-full h-full bg-[#FCF4FF] rounded-md p-2 md:pl-4">
+              <h1 className="text-black text-xl font-medium py-1">
+                Junior Software Engineer
+              </h1>
+              <h2 className="text-black text-[16px] font-normal py-1">
+                March 2021 - January 2022
+              </h2>
+              <p className="text-gray-500 sm:text-sm text-xs">
+              • Utilized Django’s Object-Relational Mapping (ORM) to create a dynamic product page that empowers users to select
+                and customize various PC components according to their preferences and requirements.<br/>
+
+              • Crafted a visually appealing and intuitive user interface using HTML and CSS, ensuring a seamless browsing experience
+                for users as they navigate through the available component options.<br/>
+
+              • Leveraged Django’s Model-View-Template (MVT) architecture to ensure maintainable and scalable code, facilitating
+                future enhancements and feature additions.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            animate={{ x: 0 }}
+            transition={{ ease: "easeOut", duration: 3 }}
+            initial={{ x: -700 }}
             style={{ overflow: "hidden" }}
             className="col-span-4 w-full h-full "
           >
@@ -85,11 +110,24 @@ const Experience = () => {
               </p>
             </div>
           </motion.div>
-
+          <div className="relative col-span-1 w-full h-full flex justify-center items-center">
+            <div className="h-full w-1 bg-indigo-300"></div>
+            <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
+              3
+            </div>
+          </div>
+          <div className="col-span-4 w-full h-full"></div>
+          <div className="col-span-4 w-full h-full"></div>
+          <div className="relative col-span-1 w-full h-full flex justify-center items-center">
+            <div className="h-full w-1 bg-indigo-300"></div>
+            <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
+              4
+            </div>
+          </div>
           <motion.div
             animate={{ x: 0 }}
             transition={{ ease: "easeOut", duration: 3 }}
-            initial={{ x: -700 }}
+            initial={{ x: 850 }}
             style={{ overflow: "hidden" }}
             className="col-span-4 w-full h-full "
           >
@@ -116,13 +154,6 @@ const Experience = () => {
               </p>
             </div>
           </motion.div>
-          <div className="relative col-span-1 w-full h-full flex justify-center items-center">
-            <div className="h-full w-1 bg-indigo-300"></div>
-            <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
-              3
-            </div>
-          </div>
-          <div className="col-span-4 w-full h-full"></div>
         </div>
       </div>
     </section>
