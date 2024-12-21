@@ -11,6 +11,40 @@ const Experience = () => {
           Experience
         </h1>
         <div className="max-w-7xl mx-auto w-full grid grid-cols-9 px-2">
+          <div className="col-span-4 w-full h-full"></div>
+          <div className="relative col-span-1 w-full h-full flex justify-center items-center">
+            <div className="h-full w-1 bg-indigo-300"></div>
+            <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
+              1
+            </div>
+          </div>
+
+          <motion.div
+            animate={{ x: 0 }}
+            transition={{ ease: "easeOut", duration: 3 }}
+            initial={{ x: 850 }}
+            style={{ overflow: "hidden" }}
+            className="col-span-4 w-full h-full "
+          >
+            <div className="w-full h-full bg-[#FCF4FF] rounded-md p-2 md:pl-4">
+              <h1 className="text-black text-xl font-medium py-1">
+                Machine Learning Engineer
+              </h1>
+              <h2 className="text-black text-[16px] font-normal py-1">
+                Bright Sight Solution, London, United Kingdom
+              </h2>
+              <h2 className="text-black text-[14px] font-normal py-1">
+                October 2024 - Present
+              </h2>
+              <p className="text-gray-500 sm:text-sm text-xs">
+                • Led migration of enterprise-scale databases (10M+ records)
+                from Alteryx to Databricks SQL.
+                <br />• Designed data pipelines and optimization strategies to
+                enhance query performance and processing efficiency.
+              </p>
+            </div>
+          </motion.div>
+
           <motion.div
             animate={{ x: 0 }}
             transition={{ ease: "easeOut", duration: 3 }}
@@ -22,25 +56,27 @@ const Experience = () => {
               <h1 className="text-black text-xl font-medium py-1">
                 Software Engineer (Freelance)
               </h1>
-              <h2 className="text-black text-[16px] font-normal py-1">
-                February 2022 - Present
+              <h2 className="text-black text-[14px] font-normal py-1">
+                February 2022 - October 2024
               </h2>
               <p className="text-gray-500 sm:text-sm text-xs">
-              • Created multiple client portfolio site with React and Next.js and Implemented dynamic content management and SEO optimization.<br/>
-
-              • Built Issue Management App with React, Next.js, and Django REST.
-                Includes task creation, management, and user authentication.<br/>
-
-              • Developed some personal projects with React, Next.js, and Django REST.
-                Features Markdown editor, commenting system, and user authentication.
-              • Preparing for IELTS and GRE exams for higher studies abroad.
+                • Created multiple client portfolio site with React and Next.js
+                and Implemented dynamic content management and SEO optimization.
+                <br />
+                • Built Issue Management App with React, Next.js, and Django
+                REST. Includes task creation, management, and user
+                authentication.
+                <br />• Developed some personal projects with React, Next.js,
+                and Django REST. Features Markdown editor, commenting system,
+                and user authentication. • Preparing for IELTS and GRE exams for
+                higher studies abroad.
               </p>
             </div>
           </motion.div>
           <div className="relative col-span-1 w-full h-full flex justify-center items-center">
             <div className="h-full w-1 bg-indigo-300"></div>
             <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
-              1
+              2
             </div>
           </div>
           <div className="col-span-4 w-full h-full"></div>
@@ -49,9 +85,10 @@ const Experience = () => {
           <div className="relative col-span-1 w-full h-full flex justify-center items-center">
             <div className="h-full w-1 bg-indigo-300"></div>
             <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
-              2
+              3
             </div>
           </div>
+
           <motion.div
             animate={{ x: 0 }}
             transition={{ ease: "easeOut", duration: 3 }}
@@ -64,17 +101,23 @@ const Experience = () => {
                 Junior Software Engineer
               </h1>
               <h2 className="text-black text-[16px] font-normal py-1">
+                LIILab, Sylhet, Bangladesh
+              </h2>
+              <h2 className="text-black text-[14px] font-normal py-1">
                 March 2021 - January 2022
               </h2>
               <p className="text-gray-500 sm:text-sm text-xs">
-              • Utilized Django’s Object-Relational Mapping (ORM) to create a dynamic product page that empowers users to select
-                and customize various PC components according to their preferences and requirements.<br/>
-
-              • Crafted a visually appealing and intuitive user interface using HTML and CSS, ensuring a seamless browsing experience
-                for users as they navigate through the available component options.<br/>
-
-              • Leveraged Django’s Model-View-Template (MVT) architecture to ensure maintainable and scalable code, facilitating
-                future enhancements and feature additions.
+                • Utilized Django’s Object-Relational Mapping (ORM) to create a
+                dynamic product page that empowers users to select and customize
+                various PC components according to their preferences and
+                requirements.
+                <br />
+                • Crafted a visually appealing and intuitive user interface
+                using HTML and CSS, ensuring a seamless browsing experience for
+                users as they navigate through the available component options.
+                <br />• Leveraged Django’s Model-View-Template (MVT)
+                architecture to ensure maintainable and scalable code,
+                facilitating future enhancements and feature additions.
               </p>
             </div>
           </motion.div>
@@ -113,7 +156,7 @@ const Experience = () => {
           <div className="relative col-span-1 w-full h-full flex justify-center items-center">
             <div className="h-full w-1 bg-indigo-300"></div>
             <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
-              3
+              4
             </div>
           </div>
           <div className="col-span-4 w-full h-full"></div>
@@ -121,7 +164,7 @@ const Experience = () => {
           <div className="relative col-span-1 w-full h-full flex justify-center items-center">
             <div className="h-full w-1 bg-indigo-300"></div>
             <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
-              4
+              5
             </div>
           </div>
           <motion.div
