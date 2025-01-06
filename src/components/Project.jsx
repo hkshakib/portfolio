@@ -16,7 +16,6 @@ import { SiFramework7 } from "react-icons/si";
 import { LuRouter } from "react-icons/lu";
 
 const getIconByTechnology = (technology) => {
-  console.log("Tech name: ", technology);
   switch (technology.toLowerCase()) {
     case "django":
       return <BiLogoDjango className="h-5 w-5" />;
