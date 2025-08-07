@@ -1,4 +1,9 @@
-import { AiOutlineFacebook, AiOutlineGithub, AiOutlineLinkedin, AiOutlineTwitter } from "react-icons/ai";
+import {
+  AiOutlineFacebook,
+  AiOutlineGithub,
+  AiOutlineLinkedin,
+  AiOutlineTwitter,
+} from "react-icons/ai";
 
 export const skillsData = [
   "C++",
@@ -116,8 +121,8 @@ export const socialLinks = [
 ];
 
 export const description = [
-  "Hey there! 👋 I'm a full-stack sorcerer who weaves web wonders with Django Rest and React.",
-  "🧙‍♂️ Fluent in the magical languages of Python, C++, and JavaScript, I bring your digital dreams to life.",
-  "💻✨ From the backend wizardry to the front-end artistry using Tailwind CSS, I'm on a quest to make the internet a more enchanting place, one line of code at a time.",
-  "🌐 Ready to embark on this coding adventure together? Let's craft some digital magic! 🚀🔮",
+  "Hey there! 👋 I'm Shakib — a full-stack engineer blending AI, FinTech, and sleek UI into powerful web experiences.",
+  "⚡ I build with FastAPI, React, Tailwind, and a bit of glassmorphism magic to keep things fast, secure, and beautiful.",
+  "💡 From backend logic to frontend finesse, I turn complex ideas into smooth, user-focused products.",
+  "🚀 Currently crafting AI-powered tools at CopyAd AI — let's build something brilliant together!",
 ];

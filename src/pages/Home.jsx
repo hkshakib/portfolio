@@ -12,13 +12,12 @@ const Home = () => {
       className="flex pt-[50px] items-center justify-center relative"
     >
       <div className="flex flex-1 flex-col lg:flex-row h-[700px]">
-        <PersonalInfo/>
+        <PersonalInfo />
         <Photo />
       </div>
     </section>
   );
 };
-
 
 const Photo = () => {
   return (
@@ -85,10 +84,12 @@ const PersonalInfo = () => {
             <p key={index}>
               {text.split(" ").map((word, i) =>
                 word.includes("full-stack") ||
-                word.includes("Python") ||
-                word.includes("C++") ||
-                word.includes("JavaScript") ||
-                word.includes("Tailwind CSS") ? (
+                word.includes("FinTech") ||
+                word.includes("FastAPI") ||
+                word.includes("React") ||
+                word.includes("glassmorphism") ||
+                word.includes("CopyAd") ||
+                word.includes("Tailwind") ? (
                   <span key={i} className="font-bold text-black">
                     {word}{" "}
                   </span>
