@@ -6,8 +6,8 @@ import {
 } from "react-icons/ai";
 
 export const skillsData = [
-  "C++",
   "Python",
+  "C++",
   "JavaScript",
   "Algorithomic Problem Solving",
   "Backend",
@@ -19,7 +19,7 @@ export const skillsData = [
 export const skills = [
   {
     category: "Languages",
-    skills: ["C++", "Python", "C", "JavaScript", "TypeScript", "JAVA", "Dart"],
+    skills: ["Python", "C++", "C", "JavaScript", "TypeScript", "JAVA", "Dart"],
   },
   {
     category: "Frontend",
@@ -48,7 +48,7 @@ export const skills = [
   },
   {
     category: "DevOps",
-    skills: ["Git", "Github", "Docker", "Vercel", "Railway"],
+    skills: ["Git", "Github", "Stripe", "Docker", "Vercel", "Railway"],
   },
   {
     category: "Fimiliar With",
@@ -63,6 +63,7 @@ export const skills = [
       "Web Scraping",
       "Zod",
       "Next Auth",
+      "Wordpress",
     ],
   },
   {
