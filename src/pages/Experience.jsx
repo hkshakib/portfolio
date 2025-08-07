@@ -11,6 +11,58 @@ const Experience = () => {
           Experience
         </h1>
         <div className="max-w-7xl mx-auto w-full grid grid-cols-9 px-2">
+          <motion.div
+            animate={{ x: 0 }}
+            transition={{ ease: "easeOut", duration: 3 }}
+            initial={{ x: -700 }}
+            style={{ overflow: "hidden" }}
+            className="col-span-4 w-full h-full "
+          >
+            <div className="w-full h-full bg-[#FCF4FF] rounded-md p-2 md:pl-4">
+              <h1 className="text-black text-xl font-medium py-1">
+                Software Engineer (AI/ML)
+              </h1>
+              <h2 className="text-black text-[16px] font-normal py-1">
+                CopyAD AI, London, United Kingdom
+              </h2>
+              <h2 className="text-black text-[14px] font-normal py-1">
+                May 2025 - Present
+              </h2>
+              <p className="text-gray-500 sm:text-sm text-xs">
+                • Developed and maintained a full-stack AIaaS fintech plat- form
+                using FastAPI, React, TypeScript, and Tailwind CSS to deliver
+                AI-powered ad solutions for businesses across global markets
+                <br />
+                • Built secure and scalable web features, including SSR, lazy
+                loading, and protected routes to ensure optimal per- formance
+                and user experience
+                <br />
+                • Integrated Stripe for subscription management and pay- ments
+                and Supabase for authentication, database, and role-based access
+                control
+                <br />
+                • Applied secure coding practices and handled subscrip- tion
+                logic with PCI-compliant Stripe integration, aligning with
+                fintech standards
+                <br />
+                • Collaborated with a cross-functional team to deliver user-
+                centered UI/UX using Framer Motion, glassmorphism de- sign, and
+                responsive layouts
+                <br />
+                • Led development of new AI tools and dashboards using FastAPI,
+                OpenAI APIs, and PostgreSQL, improving user engagement by 40
+                <br />• Optimized SEO, routing, and page load speed using Re-
+                act Router and metadata best practices
+              </p>
+            </div>
+          </motion.div>
+          <div className="relative col-span-1 w-full h-full flex justify-center items-center">
+            <div className="h-full w-1 bg-indigo-300"></div>
+            <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
+              2
+            </div>
+          </div>
+          <div className="col-span-4 w-full h-full"></div>
           <div className="col-span-4 w-full h-full"></div>
           <div className="relative col-span-1 w-full h-full flex justify-center items-center">
             <div className="h-full w-1 bg-indigo-300"></div>
@@ -34,7 +86,7 @@ const Experience = () => {
                 Bright Sight Solution, London, United Kingdom
               </h2>
               <h2 className="text-black text-[14px] font-normal py-1">
-                October 2024 - Present
+                October 2024 - April 2025
               </h2>
               <p className="text-gray-500 sm:text-sm text-xs">
                 • Led migration of enterprise-scale databases (10M+ records)
