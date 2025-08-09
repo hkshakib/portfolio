@@ -15,8 +15,6 @@ import { closeMenuAndScroll } from "../utils/navUtils";
 import CV from "../static/Resume.pdf";
 import { navItems } from "../static/Data";
 
-
-
 const Navbar = () => {
   const { activeSection, isNavbarSticky } = useScroll();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,7 +29,9 @@ const Navbar = () => {
 
     document.addEventListener("click", handleCloseOutside, { capture: true });
     return () => {
-      document.removeEventListener("click", handleCloseOutside, { capture: true });
+      document.removeEventListener("click", handleCloseOutside, {
+        capture: true,
+      });
     };
   }, [menuOpen]);
 
@@ -45,16 +45,12 @@ const Navbar = () => {
 
   return (
     <header
-      className={`flex justify-start lg:justify-center items-center h-16 z-10 lg:w-full font-inter pt-4 pr-2 pb-2 shadow-md ${
+      className={`flex justify-start lg:justify-center items-center h-16 z-10 lg:w-full font-inter pt-4 pr-2 pb-2 ${
         isNavbarSticky ? "sticky top-0 bg-white border-b" : ""
       }`}
     >
       <div className="flex font-bold text-xl lg:pl-8 ml-4 font-mono">
-        <motion.a
-          initial={{ rotate: 0 }}
-          animate={{ rotate: 360 }}
-          href="/"
-        >
+        <motion.a initial={{ rotate: 0 }} animate={{ rotate: 360 }} href="/">
           <span className="text-blue-600">HKS</span>
           <span>hakib</span>
         </motion.a>
@@ -87,24 +83,23 @@ const Navbar = () => {
         </ul>
       </div>
       <a
-            href={CV}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-4 hidden lg:block"
-          >
-            <motion.button
-              className="flex justify-center items-center border h-[40px] w-[200px] my-1 rounded-lg bg-blue-500 text-white hover:bg-blue-400 hover:shadow-lg text-[13px]"
-              initial={{ x: "100%", opacity: 0 }}
-              animate={{ x: "0%", opacity: 1 }}
-              transition={{ duration: 1 }}
-            >
-              <span className="flex gap-4 justify-center items-center">
-                <SlCloudDownload className="w-5 h-5" />
-                <span className="text-[14px]">Download Resume</span>
-              </span>
-            </motion.button>
-          </a>
-      
+        href={CV}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mx-4 hidden lg:block"
+      >
+        <motion.button
+          className="flex justify-center items-center border h-[40px] w-[200px] my-1 rounded-lg bg-blue-500 text-white hover:bg-blue-400 hover:shadow-lg text-[13px]"
+          initial={{ x: "100%", opacity: 0 }}
+          animate={{ x: "0%", opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <span className="flex gap-4 justify-center items-center">
+            <SlCloudDownload className="w-5 h-5" />
+            <span className="text-[14px]">Download Resume</span>
+          </span>
+        </motion.button>
+      </a>
 
       <div className="lg:hidden flex flex-1 mr-2 lg:mr-0 lg:basis-[70%] justify-end gap-8">
         <button
@@ -175,6 +170,6 @@ const Navbar = () => {
       )}
     </header>
   );
-}
+};
 
 export default Navbar;
