@@ -9,85 +9,74 @@ import Email from "../static/email.png";
 
 const Footer = () => {
   const curYear = new Date().getFullYear();
+
   return (
-    <section
+    <footer
       id="footer"
-      className="flex pt-[50px] lg:pt-[200px] items-center justify-center relative"
+      className="relative flex flex-col items-center justify-center px-6 py-12 overflow-hidden"
     >
-      <div className="flex flex-col w-[100%] pb-[10px] bg-[rebeccapurple] h-[400px] rounded-t-3xl">
-        <div className="flex flex-col flex-1 lg:flex-row">
-          <div className="flex flex-col lg:flex-1 flex-wrap">
-            <div className="flex flex-col lg:flex-1 justify-start items-center">
-              <div className="flex lg:flex-1">
-                <h1 className="text-white text-[30px] p-4 lg:p-0 lg:text-[56px] font-mono">
-                  Better Together
-                </h1>
-              </div>
+      <div className="absolute inset-0 -z-10 bg-[#0e0e1a]" />
+      <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-purple-500/20 blur-3xl" />
+      <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-indigo-500/20 blur-3xl" />
+      <div className="w-full max-w-7xl rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 shadow-xl p-8 lg:p-12">
+        <div className="flex flex-col lg:flex-row gap-10">
+          <div className="flex flex-col flex-1 text-center lg:text-left">
+            <h1 className="text-white text-3xl lg:text-5xl font-mono font-bold">
+              Better Together
+            </h1>
+            <p className="mt-4 text-gray-300 text-sm lg:text-lg">
+              Let me take you into a deeper experience, make a moment a lasting,
+              conveyable memory. Let me help build your tribe.
+            </p>
 
-              <div className="flex justify-center items-end lg:flex-1 lg:w-[100%] pl-8 pr-4">
-                <p className="font-mono text-white text-[12px] lg:text-[18px] whitespace-wrap">
-                  Let me take into a deeper experience, make a moment a lasting
-                  conveyable memory.
-                </p>
-              </div>
-
-              <div className="flex flex-col lg:flex-1 w-[100%] justify-center items-center lg:pl-8 lg:justify-normal lg:items-start xl:justify-center xl:items-center">
-                <p className="font-mono text-white text-[12px] lg:text-[18px]">
-                  Let me help build your tribe.
-                </p>
-                <h2 className="font-mono lg:text-[20px] text-white pt-10">
-                  <span className="text-blue-500">Email:</span>{" "}
-                  hkshakib.cse@gmail.com
-                </h2>
-              </div>
-            </div>
-
-            <div className="flex justify-center items-center text-[35px] gap-10 md:gap-10 font-semibold pt-4">
-              <a
-                href="https://github.com/hkshakib"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineGithub className="HomeIcon bg-white" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/hkshakib/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineLinkedin className="HomeIcon bg-white" />
-              </a>
-              <a
-                href="https://web.facebook.com/Humayun.kibria.shakib/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineFacebook className="HomeIcon bg-white" />
-              </a>
-              <a
-                href="https://twitter.com/HKibriaShakib"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter className="HomeIcon bg-white" />
-              </a>
+            <h2 className="mt-6 font-mono text-gray-300 text-sm lg:text-lg">
+              <span className="text-emerald-400">Email:</span>{" "}
+              hkshakib.cse@gmail.com
+            </h2>
+            <div className="flex justify-center lg:justify-start gap-6 mt-6 text-2xl">
+              {[
+                {
+                  href: "https://github.com/hkshakib",
+                  icon: <AiOutlineGithub />,
+                },
+                {
+                  href: "https://www.linkedin.com/in/hkshakib/",
+                  icon: <AiOutlineLinkedin />,
+                },
+                {
+                  href: "https://web.facebook.com/Humayun.kibria.shakib/",
+                  icon: <AiOutlineFacebook />,
+                },
+                {
+                  href: "https://twitter.com/HKibriaShakib",
+                  icon: <AiOutlineTwitter />,
+                },
+              ].map((social, i) => (
+                <a
+                  key={i}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-white/10 border border-white/20 text-white hover:bg-emerald-700 hover:text-white transition-all duration-300"
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </div>
-
-          <div className="hidden lg:flex lg:flex-1 justify-center items-center lg:p-0 p-8">
+          <div className="flex justify-center lg:justify-end items-center">
             <img
-              className="h-[200px] w-[200px] rounded-lg"
               src={Email}
-              alt="Email"
+              alt="Email Illustration"
+              className="h-48 w-48 lg:h-56 lg:w-56 rounded-lg shadow-lg"
             />
           </div>
         </div>
-
-        <div className="flex basis-[10%] justify-center items-center text-white">
-          <h2>All Right Reseved @HKShakib {curYear}</h2>
-        </div>
       </div>
-    </section>
+      <div className="mt-8 text-center text-gray-400 text-sm">
+        © {curYear} All Rights Reserved | HKShakib
+      </div>
+    </footer>
   );
 };
 

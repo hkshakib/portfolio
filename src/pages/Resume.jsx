@@ -1,785 +1,323 @@
-import { TbDeviceMobileFilled } from "react-icons/tb";
-import { BsLinkedin } from "react-icons/bs";
-import { CgWebsite } from "react-icons/cg";
-import { ImGithub } from "react-icons/im";
-import { MdEmail } from "react-icons/md";
+import { motion } from "framer-motion";
+import { SlCloudDownload } from "react-icons/sl";
+import { FiExternalLink } from "react-icons/fi";
+const RESUME_URL = "../static/Resume.pdf";
 
-import CV from "../static/Resume.pdf";
+const SUMMARY =
+  "I build fast, secure, and user-focused web apps with FastAPI, React, and Tailwind — currently shaping fintech tools at CopyAd AI. Passionate about scalable, smart experiences that make tech useful and accessible.";
 
-const Resume = () => {
+const EXPERIENCE = [
+  {
+    role: "Software Engineer",
+    org: "CopyAd AI · London, England",
+    period: "May 2024 – Present",
+    bullets: [
+      "Developed full-stack AIaaS fintech platform (FastAPI, React, TypeScript, Tailwind).",
+      "Built SSR, lazy loading, protected routes; optimized performance and UX.",
+      "Integrated Stripe (subs/payments) and Supabase (auth, DB, RBAC).",
+      "Implemented secure coding & PCI-compliant flows; SEO + routing improvements.",
+      "Shipped new AI tools (OpenAI) + dashboards; improved user engagement by ~40%.",
+    ],
+  },
+  {
+    role: "Machine Learning Engineer",
+    org: "Spark Sight Solution · London, England",
+    period: "Oct 2024 – Apr 2025",
+    bullets: [
+      "Migrated 10M+ records Alteryx → Databricks SQL.",
+      "Designed pipelines & query optimization strategies.",
+    ],
+  },
+  {
+    role: "Software Engineer",
+    org: "LIILab · Sylhet, Bangladesh",
+    period: "Mar 2021 – Jan 2022",
+    bullets: [
+      "Product customization system with Django ORM & REST; +25% engagement.",
+      "Responsive UI cut bounce rate by 30%, boosted session duration 45%.",
+      "Django MVT optimizations led to 40% faster deployments.",
+    ],
+  },
+];
+
+const SKILLS = [
+  { label: "Languages", items: ["Python", "TypeScript", "C++"] },
+  {
+    label: "Frontend",
+    items: [
+      "React",
+      "Next.js (App Router)",
+      "Tailwind CSS",
+      "Redux",
+      "RTK",
+      "Framer Motion",
+    ],
+  },
+  { label: "Backend", items: ["FastAPI", "Django REST", "Node.js"] },
+  { label: "APIs", items: ["REST", "Stripe", "OpenAI APIs", "Supabase"] },
+  {
+    label: "Databases",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Supabase", "Firebase", "SQLite"],
+  },
+  { label: "Cloud & DevOps", items: ["Vercel", "Render", "GitHub", "CI/CD"] },
+  { label: "Testing & Tools", items: ["Unit Testing", "Jest"] },
+  {
+    label: "Core",
+    items: [
+      "Algorithms",
+      "Data Structures",
+      "OOP",
+      "System Design",
+      "ML",
+      "RL",
+    ],
+  },
+  { label: "Other", items: ["SSR", "ISR", "Responsive Design"] },
+];
+
+const PROJECTS = [
+  {
+    name: "CopyAd — AI Ad Copy Platform",
+    stack: [
+      "React",
+      "FastAPI",
+      "OpenAI",
+      "Tailwind",
+      "Stripe",
+      "Supabase",
+      "React Query",
+      "Zustand",
+    ],
+    bullets: [
+      "AI-powered ad copy across channels; 40% higher engagement.",
+      "Scalable component system w/ lazy loading & protected routes.",
+      "Supabase auth + DB; secure user data handling.",
+    ],
+    links: [{ label: "copyad.ai", href: "https://copyad.ai" }],
+  },
+  {
+    name: "LUXHAVEN (Backend)",
+    stack: ["Python", "Django", "REST"],
+    bullets: [
+      "Scalable e-commerce backend for 1000+ concurrent users.",
+      "Auth, products, cart, orders; optimized ORM queries.",
+    ],
+    links: [{ label: "GitHub", href: "https://github.com/hkshakib/luxehaven" }],
+  },
+];
+
+const EDUCATION = [
+  {
+    school: "University of Hertfordshire",
+    degree: "MSc in Artificial Intelligence and Robotics",
+    period: "Sep 2024 – Present",
+    location: "Hatfield, England",
+  },
+  {
+    school: "Leading University",
+    degree: "BSc in Computer Science and Engineering",
+    period: "Feb 2018 – July 2022",
+    location: "Sylhet, Bangladesh",
+  },
+];
+
+const COMPETITIVE = [
+  "Codeforces: SPECIALIST · Max 1543 · _Bohemian",
+  "CodeChef: 4★ · Max 1938 · hkshakib",
+  "ICPC Dhaka Regional 2021 (BUBT); ICPC ID: KHLU6288934E",
+  "Solved 3000+ problems across online judges",
+];
+
+const ACHIEVEMENTS = [
+  "Participated in ICPC Dhaka Regional 2021 (BUBT)",
+  "Ranked Top 6 in Bangladesh · LUZeroIQ, IEEE Xtreme 14",
+];
+
+export default function ResumeSection() {
   return (
-    <div className="hidden lg:flex">
-      <div className="hidden lg:flex flex-1 flex-col border p-10 ml-4">
-        <div className="flex justify-center items-center mb-10">
-          <h1 className="text-[35px] lg:text-[56px] font-mono">RESUME</h1>
-          <div className="hidden lg:flex lg:pl-24">
-            <a href={CV} target="_blank" rel="noopener noreferrer">
-              <button className="border border-indigo-700 h-[30px] w-[140px] xl:w-[200px] lg:h-[40px] px-4 rounded-xl  text-black font-bold hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-lg text-[10px] xl:text-[16px]">
-                Download
-              </button>
-            </a>
-          </div>
-        </div>
-        <div className="flex flex-col divide-y-4 divide-black">
-          <div className="flex flex-col basis-[10%] pt-4">
-            <span className="text-[46px] font-semibold leading-10 text-[#313C4E]">
-              Humayun kibria shakib
-            </span>
-            <span className="text-[22px] text-gray-500 pt-2 pb-5">
-              Competitive Programmer | Python | Django | REST | React | React
-              Query
-            </span>
-          </div>
-          <div className="flex basis-[10%] pt-4 pb-4 pl-4">
-            <div className="flex flex-col basis-[50%] gap-4">
-              <span className="flex items-center gap-4">
-                <MdEmail /> hkshakib.cse@gmail.com
-              </span>
-              <span className="flex items-center gap-4">
-                <CgWebsite /> hkshakib.me
-              </span>
-              <span className="flex items-center gap-4">
-                <ImGithub /> github.com/hkshakib
-              </span>
-            </div>
-            <div className="flex flex-col basis-[50%] gap-8">
-              <span className="flex items-center gap-4">
-                <TbDeviceMobileFilled /> +880-1710889028
-              </span>
-              <span className="flex items-center gap-4">
-                <BsLinkedin /> linkedin.com/in/hkshakib
-              </span>
-            </div>
-          </div>
-          <div className="flex pl-4 pb-4 pt-4">
-            <div className="flex flex-col basis-[50%]">
-              <div className="flex flex-col pb-20">
-                <h3 className="text-[28px] text-[#313C4E] font-semibold pb-4">
-                  Education
-                </h3>
-                <h3 className="text-[20px] font-semibold">BSc in CSE</h3>
-                <h3 className="text-[20px]">Leading University, Sylhet</h3>
-                <div className="flex">
-                  <h3 className="flex basis-[50%] text-[14px] italic text-gray-500">
-                    02/2018 - 07/2022
-                  </h3>
-                  <h3 className="text-[14px] italic text-gray-500">
-                    3.29 out of 4.00
-                  </h3>
-                </div>
-              </div>
-              <div className="flex flex-col gap-4 pb-20 text-[14px]">
-                <h3 className="text-[28px] text-[#313C4E] font-semibold pb-4">
-                  PROJECTS
-                </h3>
-                <div className="flex flex-col">
-                  <h3 className="font-semibold text-[20px]">
-                    LUXEHAVEN(Backend)
-                  </h3>
-                  <div className="flex">
-                    <span className="font-bold pr-1 text-[12px]">-</span>I
-                    developed an advanced e-commerce backend with a fully
-                    functioning backend and secure authentication using the
-                    Django Rest Framework.
-                  </div>
-                  <div className="flex">
-                    <span className="font-bold pr-1 text-[12px]">-</span>
-                    The system included a secure authentication system with JWT
-                    tokens and role-based access control.
-                  </div>
-                  <div className="flex">
-                    <span className="font-bold pr-1 text-[12px]">-</span>
-                    Additionally, I designed and implemented the database schema
-                    using MySQL and developed RESTful API endpoints for product
-                    management and the checkout process.
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <h3 className="font-semibold text-[20px]">Portfolio</h3>
-                  <div className="flex">
-                    <span className="font-bold pr-1 text-[12px]">-</span>I
-                    designed and built a visually appealing and responsive
-                    portfolio website using React and Tailwind CSS.
-                  </div>
-                  <div className="flex">
-                    <span className="font-bold pr-1 text-[12px]">-</span>
-                    The website consists of a single page with distinct
-                    sections, such as Home, Skills, Problem Solving, Education,
-                    Achievements, and Contact.
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <h3 className="font-semibold text-[20px]">RAWG Clone</h3>
-                  <div className="flex">
-                    <span className="font-bold pr-1 text-[12px]">-</span>Clone
-                    of the popular Game Review Site RAWG.
-                  </div>
-                  <div className="flex">
-                    <span className="font-bold pr-1 text-[12px]">-</span>
-                    Used Technology: VITE, React, React Query, Chakra UI
-                  </div>
-                  <div className="flex">
-                    <span className="font-bold pr-1 text-[12px]">-</span>
-                    Mobile Responsive, Dark Mode
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <h3 className="font-semibold text-[20px]">ReactFunBox</h3>
-                  <div className="flex">
-                    <span className="font-bold pr-1 text-[12px]">-</span>a
-                    six-in-one project using react
-                  </div>
-                  <div className="flex">
-                    <span className="font-bold pr-1 text-[12px]">-</span>
-                    Calculator, Todo, Quiz, Snake Game, and TicTacToe.
-                  </div>
-                  <div className="flex">
-                    <span className="font-bold pr-1 text-[12px]">-</span>
-                    Mobile Responsive
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <h3 className="font-semibold text-[20px]">
-                    DjangoAuthentication
-                  </h3>
-                  <div className="flex">
-                    <span className="font-bold pr-1 text-[12px]">-</span>a
-                    Django-based authentication system. It aims to provide
-                    secure user authentication and authorization functionalities
-                    for Django web applications. The project includes features
-                    such as user registration, login, password reset, and
-                    account activation.
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col gap-4">
-                <h3 className="text-[28px] text-[#313C4E] font-semibold pb-4">
-                  WORK EXPERIENCE
-                </h3>
-                <div className="flex flex-col">
-                  <h2 className="text-[22px] font-semibold">
-                    Junior Software Engineer (Part Time)
-                  </h2>
-                  <h3 className="text-[20px]">LIILab</h3>
-                  <div className="flex">
-                    <h3 className="flex basis-[50%] text-[14px] italic text-gray-500">
-                      03/2021 - 01/2022
-                    </h3>
-                    <h3 className="text-[14px] italic text-gray-500">
-                      Sylhet, Bangladesh
-                    </h3>
-                  </div>
-                  <h3 className="text-[14px] text-gray-500 pb-4">PC BUILDER</h3>
-                  <div className="flex flex-col gap-4 text-[14px]">
-                    <div className="flex">
-                      <span className="font-bold pr-1">-</span>I designed and
-                      built a PC Builder product page with a basic Django
-                      backend and HTML/CSS frontend. This project is mainly
-                      focused on people who have no prior knowledge of how to
-                      build a PC.
-                    </div>
-                    <div className="flex">
-                      <span className="font-bold pr-1">-</span>I used Django ORM
-                      to create a dynamic product page that allows users to
-                      select and customize PC components.
-                    </div>
-                    <div className="flex">
-                      <span className="font-bold pr-1">-</span>
-                      Using HTML and CSS, I designed a visually appealing and
-                      user-friendly interface that provides users with an
-                      intuitive browsing experience.
-                    </div>
-                    <div className="flex">
-                      <span className="font-bold pr-1">-</span>I also
-                      implemented dynamic product filtering and search
-                      functionality to help users find the components they need
-                      quickly.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col basis[50%]">
-              <div className="flex flex-col pb-20">
-                <h3 className="text-[28px] text-[#313C4E] font-semibold pb-4">
-                  SKILLS
-                </h3>
-                <div className="flex flex-col gap-4">
-                  <div className="flex gap-4">
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[100px] h-[30px] rounded-[20px]">
-                      Python
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[80px] h-[30px] rounded-[20px]">
-                      C++
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[60px] h-[30px] rounded-[20px]">
-                      C
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[130px] h-[30px] rounded-[20px]">
-                      JavaScript
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[80px] h-[30px] rounded-[20px]">
-                      JAVA
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[130px] h-[30px] rounded-[20px]">
-                      TypeScript
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[100px] h-[30px] rounded-[20px]">
-                      Django
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[220px] h-[30px] rounded-[20px]">
-                      Django REST Framework
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[100px] h-[30px] rounded-[20px]">
-                      MySQL
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[100px] h-[30px] rounded-[20px]">
-                      Celery
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="flex justify-center items-center bg-gray-500 w-[130px] h-[30px] text-white rounded-[20px]">
-                      Celery Beat
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[100px] h-[30px] rounded-[20px]">
-                      FastAPI
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[100px] h-[30px] rounded-[20px]">
-                      React JS
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[130px] h-[30px] rounded-[20px]">
-                      React Query
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[100px] h-[30px] rounded-[20px]">
-                      Redux
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[150px] h-[30px] rounded-[20px]">
-                      Redux Toolkit
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[130px] h-[30px] rounded-[20px]">
-                      Tailwind CSS
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[120px] h-[30px] rounded-[20px]">
-                      Material UI
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[120px] h-[30px] rounded-[20px]">
-                      Chakra UI
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[100px] h-[30px] rounded-[20px]">
-                      HTML
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[100px] h-[30px] rounded-[20px]">
-                      CSS
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[80px] h-[30px] rounded-[20px]">
-                      Git
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[100px] h-[30px] rounded-[20px]">
-                      Docker
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[200px] h-[30px] rounded-[20px]">
-                      Data Structure
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[120px] h-[30px] rounded-[20px]">
-                      Algorithms
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[100px] h-[30px] rounded-[20px]">
-                      OOP
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col gap-4 pb-20 text-[14px]">
-                <h3 className="text-[28px] text-[#313C4E] font-semibold pb-4">
-                  ACHIVEMENTS
-                </h3>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>Participated in
-                  ICPC Dhaka Regional 2021(BUBT).
-                </div>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>
-                  8th Among Private University in ICPC Preliminary 2021.
-                </div>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>
-                  Champions, Mathophobic Skyvers, LU Intra University
-                  Programming Competition 2020.
-                </div>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>
-                  Champions, LUZeroIQ, LU Intra University Programming
-                  Competition 2021.
-                </div>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>
-                  Top 6 in Bangladesh, LUZeroIQ, IEEE Extreme 14.
-                </div>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>ICT Quiz
-                  Champions, National ICT FEST 2018
-                </div>
-              </div>
-              <div className="flex flex-col gap-4 pb-20 text-[14px]">
-                <h3 className="text-[28px] text-[#313C4E] font-semibold pb-4">
-                  COMPETITIVE PROGRAMMING
-                </h3>
-                <div className="flex flex-col gap-4">
-                  <span className="flex gap-4 font-[20px]">
-                    &#8226;
-                    <span>Codeforces: Specialist, Max-rating: 1543</span>
-                  </span>
+    <section
+      id="resume"
+      className="relative isolate overflow-hidden py-20 md:py-28"
+    >
+      <BackgroundFX />
 
-                  <h3 className="flex pl-4 basis-[50%] text-[14px] italic text-gray-500">
-                    Handle: _Bohemian
-                  </h3>
-                </div>
-                <div className="flex flex-col gap-4">
-                  <span className="flex gap-4 font-[20px]">
-                    &#8226;
-                    <span>Codechef: 4*, Max-rating: 1938</span>
-                  </span>
-
-                  <h3 className="flex pl-4 basis-[50%] text-[14px] italic text-gray-500">
-                    Handle: hkshakib
-                  </h3>
-                </div>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>
-                  ICPC ID
-                </div>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>
-                  Solved More then 3000+ algorithmic and general problems.
-                </div>
-              </div>
-              <div className="flex flex-col gap-4 pb-20 text-[14px]">
-                <h3 className="text-[28px] text-[#313C4E] font-semibold pb-4">
-                  OTHER ACTIVITIES
-                </h3>
-                <div className="flex flex-col gap-4">
-                  <span className="font-[20px]">
-                    ᠆ Judge and Setter of the several Intra University
-                    Programming Competition
-                  </span>
-                </div>
-                <div className="flex flex-col gap-4">
-                  <span className="flex gap-4 font-[20px]">
-                    ᠆ Arranged and took several workshops on programming and
-                    problem-solving
-                  </span>
-                </div>
-                <div className="flex gap-4">
-                  ᠆ Arranged a one vs one individual programming contest.
-                </div>
-                <div className="flex gap-4">
-                  ᠆ Mentored juniors in 1-on-1 mode
-                </div>
-                <span className="flex gap-4 font-[20px]">
-                  ᠆ ACM And Workshop Coordinator Lead
-                </span>
-
-                <h3 className="flex pl-4 basis-[50%] text-[14px] italic text-gray-500">
-                  Leading University Computer Club
-                </h3>
-              </div>
-            </div>
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
+              Resume
+            </h2>
+            <p className="mt-2 text-white/70 max-w-2xl">
+              A quick snapshot of my experience, skills, education, and
+              achievements.
+            </p>
           </div>
+
+          <a
+            href={RESUME_URL}
+            download
+            className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-500 active:scale-[0.99]"
+          >
+            <SlCloudDownload className="h-4 w-4" />
+            <span>Download Resume (PDF)</span>
+          </a>
+        </motion.div>
+
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <GlassCard title="Summary">
+            <p className="text-white/80">{SUMMARY}</p>
+          </GlassCard>
+
+          <GlassCard title="Experience">
+            <div className="space-y-5">
+              {EXPERIENCE.map((ex, i) => (
+                <div key={i}>
+                  <div className="text-white font-semibold">{ex.role}</div>
+                  <div className="text-white/80 text-sm">{ex.org}</div>
+                  <div className="text-white/60 text-xs">{ex.period}</div>
+                  <ul className="mt-2 list-disc pl-5 text-white/80 text-sm space-y-1">
+                    {ex.bullets.map((b, j) => (
+                      <li key={j}>{b}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </GlassCard>
+
+          <GlassCard title="Skills">
+            <div className="grid grid-cols-2 gap-3">
+              {SKILLS.map((g, i) => (
+                <div
+                  key={i}
+                  className="rounded-xl border border-white/10 bg-white/5 p-3"
+                >
+                  <div className="text-xs font-semibold text-white/90">
+                    {g.label}
+                  </div>
+                  <div className="mt-1 flex flex-wrap gap-1.5">
+                    {g.items.map((t, k) => (
+                      <span
+                        key={k}
+                        className="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[11px] text-white/80"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </GlassCard>
+
+          <GlassCard title="Projects">
+            <div className="space-y-5">
+              {PROJECTS.map((p, i) => (
+                <div key={i}>
+                  <div className="text-white font-semibold">{p.name}</div>
+                  <div className="mt-1 flex flex-wrap gap-1.5">
+                    {p.stack.map((s, k) => (
+                      <span
+                        key={k}
+                        className="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[11px] text-white/80"
+                      >
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                  <ul className="mt-2 list-disc pl-5 text-white/80 text-sm space-y-1">
+                    {p.bullets.map((b, j) => (
+                      <li key={j}>{b}</li>
+                    ))}
+                  </ul>
+                  {p.links?.length ? (
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {p.links.map((l, j) => (
+                        <a
+                          key={j}
+                          href={l.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1 text-xs text-blue-300 hover:text-blue-200"
+                        >
+                          <FiExternalLink className="h-3.5 w-3.5" /> {l.label}
+                        </a>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          </GlassCard>
+
+          <GlassCard title="Education">
+            <div className="space-y-5">
+              {EDUCATION.map((e, i) => (
+                <div key={i}>
+                  <div className="text-white font-semibold">{e.school}</div>
+                  <div className="text-white/80 text-sm">{e.degree}</div>
+                  <div className="text-white/60 text-xs">
+                    {e.period} · {e.location}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </GlassCard>
+
+          <GlassCard title="Competitive Programming">
+            <ul className="list-disc pl-5 text-white/80 text-sm space-y-1">
+              {COMPETITIVE.map((c, i) => (
+                <li key={i}>{c}</li>
+              ))}
+            </ul>
+          </GlassCard>
+
+          <GlassCard title="Achievements">
+            <ul className="list-disc pl-5 text-white/80 text-sm space-y-1">
+              {ACHIEVEMENTS.map((a, i) => (
+                <li key={i}>{a}</li>
+              ))}
+            </ul>
+          </GlassCard>
         </div>
       </div>
-      <div className="lg:hidden flex flex-col">
-        <div className="flex justify-center items-center mb-10">
-          <h1 className="text-[25px] md:text-[35px] lg:text-[56px] font-mono">
-            RESUME
-          </h1>
-        </div>
-        <div className="flex flex-col divide-y-4 divide-black pr-4">
-          <div className="flex flex-col pt-4 pl-4">
-            <span className="text-[16px] md:text-[26px] lg:text-[46px] font-semibold leading-10 text-[#313C4E]">
-              Humayun kibria shakib
-            </span>
-            <span className="flex flex-wrap text-[12px] md:text-[16px] lg:text-[22px] text-gray-500 pt-2 pb-5">
-              Competitive Programmer | Python | Django <br /> REST | React |
-              React Query
-            </span>
-          </div>
-          <div className="flex flex-col basis-[10%] pt-4 pb-4 pl-4">
-            <div className="flex flex-col gap-4">
-              <span className="flex items-center gap-4">
-                <MdEmail /> hkshakib.cse@gmail.com
-              </span>
-              <span className="flex items-center gap-4">
-                <CgWebsite /> hkshakib.me
-              </span>
-              <span className="flex items-center gap-4">
-                <ImGithub /> github.com/hkshakib
-              </span>
-              <span className="flex items-center gap-4">
-                <TbDeviceMobileFilled /> +880-1710889028
-              </span>
-              <span className="flex items-center gap-4">
-                <BsLinkedin /> linkedin.com/in/hkshakib
-              </span>
-            </div>
-          </div>
-          <div className="flex flex-col pl-4 pb-4 pt-4">
-            <div className="flex flex-col basis-[50%]">
-              <div className="flex flex-col pb-20">
-                <h3 className="text-[16px] md:text-[24px] text-[#313C4E] font-semibold pb-4">
-                  Education
-                </h3>
-                <h3 className="text-[14px] md:text-[18px] font-semibold">
-                  BSc in CSE
-                </h3>
-                <h3 className="text-[14px] md:text-[18px]">
-                  Leading University, Sylhet
-                </h3>
-                <div className="flex">
-                  <h3 className="flex basis-[50%] text-[10px] md:text-[12px] italic text-gray-500">
-                    02/2018 - 07/2022
-                  </h3>
-                  <h3 className="text-[10px] md:text-[12px] italic text-gray-500">
-                    3.29 out of 4.00
-                  </h3>
-                </div>
-              </div>
-              <div className="flex flex-col  gap-4 pb-20 text-[14px]">
-                <h3 className="text-[16px] md:text-[24px] text-[#313C4E] font-semibold pb-4">
-                  PROJECTS
-                </h3>
-                <div className="flex flex-col">
-                  <h3 className="font-semibold">LUXEHAVEN(Backend)</h3>
-                  <div className="flex text-[10px]">
-                    <span className="font-bold pr-1 text-[10px]">-</span>I
-                    developed an advanced e-commerce backend with a fully
-                    functioning backend <br /> and secure authentication using
-                    the Django Rest Framework.
-                  </div>
-                  <div className="flex text-[10px]">
-                    <span className="font-bold pr-1 text-[10px]">-</span>
-                    The system included a secure authentication system with{" "}
-                    <br /> JWT tokens and role-based access control.
-                  </div>
-                  <div className="flex text-[10px]">
-                    <span className="font-bold pr-1 text-[10px]">-</span>
-                    Additionally, I designed and implemented the database schema
-                    using MySQL <br /> and developed RESTful API endpoints for
-                    product management and the checkout process.
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <h3 className="font-semibold text-[16px] md:text-[20px]">
-                    Portfolio
-                  </h3>
-                  <div className="flex text-[10px]">
-                    <span className="font-bold pr-1 text-[10px]">-</span>I
-                    designed and built a visually appealing <br /> and
-                    responsive portfolio website using React and Tailwind CSS.
-                  </div>
-                  <div className="flex text-[10px]">
-                    <span className="font-bold pr-1 text-[10px]">-</span>
-                    The website consists of a single page with distinct
-                    sections, such as Home, <br /> Skills, Problem Solving,
-                    Education, Achievements, and Contact.
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <h3 className="font-semibold">RAWG Clone</h3>
-                  <div className="flex text-[10px]">
-                    <span className="font-bold pr-1 text-[10px]">-</span>Clone
-                    of the popular Game Review Site RAWG.
-                  </div>
-                  <div className="flex text-[10px]">
-                    <span className="font-bold pr-1 text-[12px]">-</span>
-                    Used Technology: VITE, React, React Query, Chakra UI
-                  </div>
-                  <div className="flex text-[10px]">
-                    <span className="font-bold pr-1 text-[12px]">-</span>
-                    Mobile Responsive, Dark Mode
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <h3 className="font-semibold">ReactFunBox</h3>
-                  <div className="flex text-[10px]">
-                    <span className="font-bold pr-1 text-[12px]">-</span>a
-                    six-in-one project using react
-                  </div>
-                  <div className="flex text-[10px]">
-                    <span className="font-bold pr-1 text-[12px]">-</span>
-                    Calculator, Todo, Quiz, Snake Game, and TicTacToe.
-                  </div>
-                  <div className="flex text-[10px]">
-                    <span className="font-bold pr-1 text-[12px]">-</span>
-                    Mobile Responsive
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <h3 className="font-semibold">DjangoAuthentication</h3>
-                  <div className="flex text-[10px]">
-                    <span className="font-bold pr-1 text-[12px]">-</span>a
-                    Django-based authentication system. It aims to provide
-                    secure user authentication <br /> and authorization
-                    functionalities for Django web applications.
-                    <br /> The project includes features such as user
-                    registration, <br /> login, password reset, and account
-                    activation.
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col gap-4 pb-20">
-                <h3 className="text-[24px] text-[#313C4E] font-semibold pb-4">
-                  WORK EXPERIENCE
-                </h3>
-                <div className="flex flex-col">
-                  <h2 className="text-[18px] font-semibold">
-                    Junior Software Engineer (Part Time)
-                  </h2>
-                  <h3 className="text-[18px]">LIILab</h3>
-                  <div className="flex">
-                    <h3 className="flex basis-[50%] text-[10px] italic text-gray-500">
-                      03/2021 - 01/2022
-                    </h3>
-                    <h3 className="text-[10px] italic text-gray-500">
-                      Sylhet, Bangladesh
-                    </h3>
-                  </div>
-                  <h3 className="text-[14px] text-gray-500 pb-4">PC BUILDER</h3>
-                  <div className="flex flex-col gap-4">
-                    <div className="flex text-[10px]">
-                      <span className="font-bold pr-1">-</span>I designed and
-                      built a PC Builder product page with a basic Django
-                      backend and HTML/CSS frontend.
-                      <br /> This project is mainly focused on people who have
-                      no prior knowledge of how to build a PC.
-                    </div>
-                    <div className="flex text-[10px]">
-                      <span className="font-bold pr-1">-</span>I used Django ORM
-                      to create a dynamic product page <br /> that allows users
-                      to select and customize PC components.
-                    </div>
-                    <div className="flex text-[10px]">
-                      <span className="font-bold pr-1">-</span>
-                      Using HTML and CSS, I designed a visually appealing and
-                      user-friendly interface <br /> that provides users with an
-                      intuitive browsing experience.
-                    </div>
-                    <div className="flex text-[10px]">
-                      <span className="font-bold pr-1">-</span>I also
-                      implemented dynamic product filtering and search
-                      functionality to help users <br /> find the components
-                      they need quickly.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <div className="flex flex-col pb-20">
-                <h3 className="text-[16px] md:text-[24px] text-[#313C4E] font-semibold pb-4">
-                  SKILLS
-                </h3>
-                <div className="flex flex-col gap-2 text-[10px]">
-                  <div className="flex gap-2">
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[60px] h-[30px] rounded-[20px]">
-                      Python
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[50px] h-[30px] rounded-[20px]">
-                      C++
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[40px] h-[30px] rounded-[20px]">
-                      C
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[90px] h-[30px] rounded-[20px]">
-                      JavaScript
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[50px] h-[30px] rounded-[20px]">
-                      JAVA
-                    </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[90px] h-[30px] rounded-[20px]">
-                      TypeScript
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[70px] h-[30px] rounded-[20px]">
-                      Django
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[130px] h-[30px] rounded-[20px]">
-                      Django REST Framework
-                    </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[60px] h-[30px] rounded-[20px]">
-                      MySQL
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[60px] h-[30px] rounded-[20px]">
-                      Celery
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 w-[80px] h-[30px] text-white rounded-[20px]">
-                      Celery Beat
-                    </div>
+    </section>
+  );
+}
 
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[60px] h-[30px] rounded-[20px]">
-                      FastAPI
-                    </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[60px] h-[30px] rounded-[20px]">
-                      React JS
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[90px] h-[30px] rounded-[20px]">
-                      React Query
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[60px] h-[30px] rounded-[20px]">
-                      Redux
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[100px] h-[30px] rounded-[20px]">
-                      Redux Toolkit
-                    </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[90px] h-[30px] rounded-[20px]">
-                      Tailwind CSS
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[80px] h-[30px] rounded-[20px]">
-                      Material UI
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[80px] h-[30px] rounded-[20px]">
-                      Chakra UI
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[60px] h-[30px] rounded-[20px]">
-                      HTML
-                    </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[60px] h-[30px] rounded-[20px]">
-                      CSS
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[50px] h-[30px] rounded-[20px]">
-                      Git
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[60px] h-[30px] rounded-[20px]">
-                      Docker
-                    </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[100px] h-[30px] rounded-[20px]">
-                      Data Structure
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[80px] h-[30px] rounded-[20px]">
-                      Algorithms
-                    </div>
-                    <div className="flex justify-center items-center bg-gray-500 text-white w-[60px] h-[30px] rounded-[20px]">
-                      OOP
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col gap-4 pb-20 text-[14px]">
-                <h3 className="text-[24px] text-[#313C4E] font-semibold pb-4">
-                  ACHIVEMENTS
-                </h3>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>Participated in
-                  ICPC Dhaka Regional 2021(BUBT).
-                </div>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>
-                  8th Among Private University in ICPC Preliminary 2021.
-                </div>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>
-                  Champions, Mathophobic Skyvers, LU Intra University
-                  Programming Competition 2020.
-                </div>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>
-                  Champions, LUZeroIQ, LU Intra University Programming
-                  Competition 2021.
-                </div>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>
-                  Top 6 in Bangladesh, LUZeroIQ, IEEE Extreme 14.
-                </div>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>ICT Quiz
-                  Champions, National ICT FEST 2018
-                </div>
-              </div>
-              <div className="flex flex-col gap-4 pb-20 text-[14px]">
-                <h3 className="text-[24px] text-[#313C4E] font-semibold pb-4">
-                  COMPETITIVE PROGRAMMING
-                </h3>
-                <div className="flex flex-col gap-4">
-                  <span className="flex gap-4 font-[20px]">
-                    &#8226;
-                    <span>Codeforces: Specialist, Max-rating: 1543</span>
-                  </span>
+function GlassCard({ title, children }) {
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.45 }}
+      className="relative rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl shadow-2xl"
+    >
+      <div className="pointer-events-none absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-indigo-400/20 via-fuchsia-400/10 to-purple-400/10 blur-xl" />
+      <h3 className="text-lg font-bold text-white">{title}</h3>
+      <div className="mt-3">{children}</div>
+    </motion.article>
+  );
+}
 
-                  <h3 className="flex pl-4 basis-[50%] text-[14px] italic text-gray-500">
-                    Handle: _Bohemian
-                  </h3>
-                </div>
-                <div className="flex flex-col gap-4">
-                  <span className="flex gap-4 font-[20px]">
-                    &#8226;
-                    <span>Codechef: 4*, Max-rating: 1938</span>
-                  </span>
-
-                  <h3 className="flex pl-4 basis-[50%] text-[14px] italic text-gray-500">
-                    Handle: hkshakib
-                  </h3>
-                </div>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>
-                  ICPC ID
-                </div>
-                <div className="flex gap-4">
-                  <span className="font-[20px]">&#8226;</span>
-                  Solved More then 3000+ algorithmic and general problems.
-                </div>
-              </div>
-              <div className="flex flex-col gap-4 pb-20 text-[14px]">
-                <h3 className="text-[24px] text-[#313C4E] font-semibold pb-4">
-                  OTHER ACTIVITIES
-                </h3>
-                <div className="flex flex-col gap-4">
-                  <span className="font-[20px]">
-                    ᠆ Judge and Setter of the several Intra University
-                    Programming Competition
-                  </span>
-                </div>
-                <div className="flex flex-col gap-4">
-                  <span className="flex gap-4 font-[20px]">
-                    ᠆ Arranged and took several workshops on programming and
-                    problem-solving
-                  </span>
-                </div>
-                <div className="flex gap-4">
-                  ᠆ Arranged a one vs one individual programming contest.
-                </div>
-                <div className="flex gap-4">
-                  ᠆ Mentored juniors in 1-on-1 mode
-                </div>
-                <span className="flex gap-4 font-[20px]">
-                  ᠆ ACM And Workshop Coordinator Lead
-                </span>
-
-                <h3 className="flex pl-4 basis-[50%] text-[14px] italic text-gray-500">
-                  Leading University Computer Club
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
+function BackgroundFX() {
+  return (
+    <div aria-hidden className="absolute inset-0 -z-10">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(160,160,255,0.28),transparent)]" />
+      <div className="absolute inset-0 blur-2xl">
+        <div className="absolute -top-24 left-[10%] h-64 w-64 rounded-full bg-gradient-to-br from-fuchsia-500/35 to-pink-500/25 mix-blend-screen" />
+        <div className="absolute top-[20%] right-[8%] h-72 w-72 rounded-full bg-gradient-to-br from-cyan-400/35 to-teal-400/25 mix-blend-screen" />
+        <div className="absolute bottom-[-10%] left-[25%] h-80 w-80 rounded-full bg-gradient-to-br from-amber-400/35 to-rose-400/25 mix-blend-screen" />
       </div>
+      <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_400px_at_50%_20%,transparent,rgba(0,0,0,0.55))]" />
     </div>
   );
-};
-
-export default Resume;
+}

@@ -1,47 +1,55 @@
 import { GrTechnology } from "react-icons/gr";
+import { motion } from "framer-motion";
 
-const ResearchComponent = ({ Title, Summery, Technologies, CodeUrl }) => {
+const ResearchComponent = ({ Title, Summery, Technologies = [], CodeUrl }) => {
   return (
-    <div className="flex flex-col bg-[#FCF4FF] border h-[400px] w-[300px] lg:w-[400px] shadow-lg">
-      <div className="flex justify-center bg-slate-800">
-        <span className="text-white">Yet to be Published</span>
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5 }}
+      className="relative flex flex-col rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl w-[300px] lg:w-[400px] h-[400px] p-5 sm:p-6"
+    >
+      <div className="pointer-events-none absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-indigo-400/20 to-purple-400/10 blur-xl" />
+      <div className="flex justify-center">
+        <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-[11px] font-medium text-white/80 backdrop-blur">
+          Yet to be Published
+        </span>
       </div>
-      <div className="flex justify-center lg:text-[18px] font-mono p-1 lg:pt-2 font-bold">
-        <span>{Title}</span>
-      </div>
-      <div className="flex flex-col">
-        <span className="text-[14px] p-2 lg:p-4 text-gray-500">
-          As part of my fourth-year thesis, I explored the challenges associated
-          with generating natural-sounding Bengali speech from text inputs,
-          including issues related to prosody and intonation. <br />
-          <br />
-        </span>
-        <span className="text-[14px] lg:text[16px] pl-2 lg:pl-4 font-bold lg:pt-1 lg:pb-2 pb-1">
-          Used Models:
-        </span>
-        <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-          <GrTechnology />
-          <span>VITS</span>
-        </span>
-        <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-          <GrTechnology />
-          <span>Tecotron-2</span>
-        </span>
-        <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-          <GrTechnology />
-          <span>FastPitch</span>
-        </span>
 
-        <span className="text-[12px] font-mono pl-2 lg:pl-4"></span>
+      <h3 className="mt-3 text-center text-lg lg:text-xl font-mono font-bold text-white">
+        {Title}
+      </h3>
+      <p className="mt-2 flex-1 text-[14px] text-white/80">{Summery}</p>
+
+      {Technologies?.length > 0 && (
+        <div className="mt-2">
+          <div className="text-[13px] font-semibold text-white/90">
+            Used Models:
+          </div>
+          <div className="mt-2 flex flex-wrap gap-2 text-white/80">
+            {Technologies.map((t, i) => (
+              <span
+                key={i}
+                className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-1 text-[12px] font-mono"
+              >
+                <GrTechnology className="h-4 w-4" /> {t}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+      <div className="mt-4 flex justify-center">
+        <a
+          href={CodeUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="bg-white/10 px-4 py-2 rounded-lg border border-white/20 text-white text-sm font-mono hover:bg-indigo-500/30 hover:border-indigo-400 transition-all"
+        >
+          View Paper
+        </a>
       </div>
-      <div className="flex flex-1 justify-center items-end pb-3 gap-4">
-        <button className="bg-white h-[40px] w-[120px] border font-mono lg:border-0 rounded hover:border hover:border-indigo-700 hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-md">
-          <a href="https://github.com/hkshakib/Prosody-Controlled-TTS">
-            View Paper
-          </a>
-        </button>
-      </div>
-    </div>
+    </motion.div>
   );
 };
 

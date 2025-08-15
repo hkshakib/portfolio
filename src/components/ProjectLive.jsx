@@ -3,55 +3,50 @@ import { PiWebhooksLogo } from "react-icons/pi";
 
 const ProjectLive = () => {
   return (
-    <div className="flex flex-col items-center bg-[#FCF4FF] border h-[400px] w-[350px] lg:w-[400px] shadow-lg rounded-xl gap-4 lg:p-1">
-      <div className="flex justify-center text-[16px] lg:text-[18px] font-mono pl-4 lg:pl-0 lg:pt-2 font-bold">
-        <span>RAWG Clone</span>
+    <div className="relative flex flex-col items-center rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl w-[350px] lg:w-[400px] h-[400px] gap-4 p-5 sm:p-6 transition-transform duration-300 hover:scale-[1.02] hover:shadow-indigo-500/20">
+      <div className="pointer-events-none absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-indigo-400/20 to-purple-400/10 blur-xl" />
+      <div className="flex justify-center text-center font-mono font-bold text-white text-lg lg:text-xl">
+        RAWG Clone
       </div>
-
-      <div className="flex flex-col pl-5 gap-8">
-        <span className="text-[14px] lg:p-4 text-gray-500">
+      <div className="flex flex-col pl-2 gap-4 flex-1">
+        <span className="text-[14px] lg:p-2 text-white/80">
           Welcome to a captivating clone of rawg.io! This React-powered site
           dazzles with filtering, sorting, and searching features, courtesy of
           rawg API. Infused with Vite and TypeScript, it promises a seamless
           journey through genres, games, and platforms. Get ready to explore an
           enchanting world of gaming wonders!
         </span>
-
-        <div className="flex flex-wrap gap-4">
-          <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-            <SiReact className="h-5 w-5" />
-            <span>React JS</span>
+        <div className="flex flex-wrap gap-4 text-white/70">
+          <span className="flex items-center gap-2 text-[12px] font-mono">
+            <SiReact className="h-5 w-5" /> React JS
           </span>
-          <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-            <SiReact className="h-5 w-5" />
-            <span>VITE</span>
+          <span className="flex items-center gap-2 text-[12px] font-mono">
+            <SiReact className="h-5 w-5" /> VITE
           </span>
-          <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-            <SiJavascript alt="" className="h-5 w-5" />
-            <span>TypeScript</span>
+          <span className="flex items-center gap-2 text-[12px] font-mono">
+            <SiJavascript className="h-5 w-5" /> TypeScript
           </span>
-          <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-            <PiWebhooksLogo className="h-5 w-5" />
-            <span>Custom Hooks</span>
+          <span className="flex items-center gap-2 text-[12px] font-mono">
+            <PiWebhooksLogo className="h-5 w-5" /> Custom Hooks
           </span>
-          <span className="flex items-center gap-2 pr-2 lg:pr-2 text-[12px] font-mono pl-2 lg:pl-4">
-            <SiReact className="h-5 w-5" />
-            <span>React ICONS</span>
+          <span className="flex items-center gap-2 text-[12px] font-mono">
+            <SiReact className="h-5 w-5" /> React ICONS
           </span>
         </div>
       </div>
-
-      <div className="flex flex-1 justify-center items-end pb-3 gap-4">
-        <button className="bg-white h-[40px] w-[100px] border lg:border-0 rounded hover:border hover:border-indigo-700 hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-md">
-          <a className="font-mono" href="https://github.com/hkshakib/playerhub">
-            Code
-          </a>
-        </button>
-        <button className="bg-white h-[40px] w-[100px] border lg:border-0 rounded hover:border hover:border-indigo-700 hover:bg-[#6E07F3] hover:transition-all duration-700 hover:text-white hover:shadow-md">
-          <a className="font-mono" href="https://rawg-clone-chi.vercel.app/">
-            Live
-          </a>
-        </button>
+      <div className="flex justify-center items-end pb-2 gap-3">
+        <a
+          href="https://github.com/hkshakib/playerhub"
+          className="bg-white/10 px-4 py-2 rounded-lg border border-white/20 text-white text-sm font-mono hover:bg-emerald-600/30 hover:border-emerald-700 transition-all"
+        >
+          Code
+        </a>
+        <a
+          href="https://rawg-clone-chi.vercel.app/"
+          className="bg-white/10 px-4 py-2 rounded-lg border border-white/20 text-white text-sm font-mono hover:bg-emerald-600/30 hover:border-emerald-700 transition-all"
+        >
+          Live
+        </a>
       </div>
     </div>
   );

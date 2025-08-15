@@ -1,258 +1,159 @@
 import { motion } from "framer-motion";
 
-const Experience = () => {
+const EXPERIENCES = [
+  {
+    role: "Software Engineer (AI/ML)",
+    org: "CopyAd AI · London, United Kingdom",
+    date: "May 2025 – Present",
+    bullets: [
+      "Built full‑stack AIaaS with FastAPI, React, TypeScript, Tailwind.",
+      "Stripe subscriptions + Supabase auth/DB/RLS.",
+      "LLM features with OpenAI; +40% user engagement.",
+      "SSR, code‑splitting, protected routes, perf tuning.",
+    ],
+    tone: "from-fuchsia-400/35 to-pink-400/25",
+  },
+  {
+    role: "Machine Learning Engineer",
+    org: "Bright Sight Solution · London, United Kingdom",
+    date: "Oct 2024 – Apr 2025",
+    bullets: [
+      "Migrated 10M+ records Alteryx → Databricks SQL.",
+      "Designed pipelines & query optimization strategies.",
+    ],
+    tone: "from-amber-300/35 to-rose-300/25",
+  },
+  {
+    role: "Software Engineer (Freelance)",
+    org: "",
+    date: "Feb 2022 – Oct 2024",
+    bullets: [
+      "Delivered React/Next.js sites with SEO & CMS.",
+      "Issue tracker with Next.js + Django REST (auth, roles).",
+      "Personal projects with markdown editor, comments, auth.",
+    ],
+    tone: "from-cyan-300/35 to-emerald-300/25",
+  },
+  {
+    role: "Junior Software Engineer",
+    org: "LIILab · Sylhet, Bangladesh",
+    date: "Mar 2021 – Jan 2022",
+    bullets: [
+      "Django ORM product configurator (custom PC builder).",
+      "MVT architecture, clean UI with HTML/CSS.",
+    ],
+    tone: "from-violet-400/35 to-indigo-400/25",
+  },
+  {
+    role: "ACM Coordinator Lead",
+    org: "Leading University Computer Club",
+    date: "Jan 2021 – Jan 2022",
+    bullets: ["Ran programming & quiz contests, ICT fests, campus tech ops."],
+    tone: "from-sky-300/35 to-blue-400/25",
+  },
+  {
+    role: "ACM Coordinator",
+    org: "Leading University Computer Club",
+    date: "Jan 2020 – Jan 2021",
+    bullets: [
+      "Organized competitive events; strengthened community & culture.",
+    ],
+    tone: "from-rose-300/35 to-orange-300/25",
+  },
+];
+
+export default function Experience() {
   return (
     <section
       id="experience"
-      className="flex pt-[50px] lg:pt-[200px] lg:mb-[200px] items-center justify-center relative"
+      className="relative isolate overflow-hidden py-20 md:py-28"
     >
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-[35px] lg:text-[56px] font-mono mb-[50px]">
-          Experience
-        </h1>
-        <div className="max-w-7xl mx-auto w-full grid grid-cols-9 px-2">
-          <motion.div
-            animate={{ x: 0 }}
-            transition={{ ease: "easeOut", duration: 3 }}
-            initial={{ x: -700 }}
-            style={{ overflow: "hidden" }}
-            className="col-span-4 w-full h-full "
-          >
-            <div className="w-full h-full bg-[#FCF4FF] rounded-md p-2 md:pl-4">
-              <h1 className="text-black text-xl font-medium py-1">
-                Software Engineer (AI/ML)
-              </h1>
-              <h2 className="text-black text-[16px] font-normal py-1">
-                CopyAD AI, London, United Kingdom
-              </h2>
-              <h2 className="text-black text-[14px] font-normal py-1">
-                May 2025 - Present
-              </h2>
-              <p className="text-gray-500 sm:text-sm text-xs">
-                • Developed and maintained a full-stack AIaaS fintech plat- form
-                using FastAPI, React, TypeScript, and Tailwind CSS to deliver
-                AI-powered ad solutions for businesses across global markets
-                <br />
-                • Built secure and scalable web features, including SSR, lazy
-                loading, and protected routes to ensure optimal per- formance
-                and user experience
-                <br />
-                • Integrated Stripe for subscription management and pay- ments
-                and Supabase for authentication, database, and role-based access
-                control
-                <br />
-                • Applied secure coding practices and handled subscrip- tion
-                logic with PCI-compliant Stripe integration, aligning with
-                fintech standards
-                <br />
-                • Collaborated with a cross-functional team to deliver user-
-                centered UI/UX using Framer Motion, glassmorphism de- sign, and
-                responsive layouts
-                <br />
-                • Led development of new AI tools and dashboards using FastAPI,
-                OpenAI APIs, and PostgreSQL, improving user engagement by 40
-                <br />• Optimized SEO, routing, and page load speed using Re-
-                act Router and metadata best practices
-              </p>
-            </div>
-          </motion.div>
-          <div className="relative col-span-1 w-full h-full flex justify-center items-center">
-            <div className="h-full w-1 bg-indigo-300"></div>
-            <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
-              2
-            </div>
-          </div>
-          <div className="col-span-4 w-full h-full"></div>
-          <div className="col-span-4 w-full h-full"></div>
-          <div className="relative col-span-1 w-full h-full flex justify-center items-center">
-            <div className="h-full w-1 bg-indigo-300"></div>
-            <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
-              1
-            </div>
-          </div>
+      <BackgroundFX />
 
-          <motion.div
-            animate={{ x: 0 }}
-            transition={{ ease: "easeOut", duration: 3 }}
-            initial={{ x: 850 }}
-            style={{ overflow: "hidden" }}
-            className="col-span-4 w-full h-full "
-          >
-            <div className="w-full h-full bg-[#FCF4FF] rounded-md p-2 md:pl-4">
-              <h1 className="text-black text-xl font-medium py-1">
-                Machine Learning Engineer
-              </h1>
-              <h2 className="text-black text-[16px] font-normal py-1">
-                Bright Sight Solution, London, United Kingdom
-              </h2>
-              <h2 className="text-black text-[14px] font-normal py-1">
-                October 2024 - April 2025
-              </h2>
-              <p className="text-gray-500 sm:text-sm text-xs">
-                • Led migration of enterprise-scale databases (10M+ records)
-                from Alteryx to Databricks SQL.
-                <br />• Designed data pipelines and optimization strategies to
-                enhance query performance and processing efficiency.
-              </p>
-            </div>
-          </motion.div>
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
+            Experience
+          </h2>
+          <p className="mt-3 text-white/70 max-w-xl mx-auto">
+            Roles, impact, and the tools I wield.
+          </p>
+        </motion.div>
+        <div className="relative mt-12">
+          <div className="pointer-events-none absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-white/20 md:block" />
 
-          <motion.div
-            animate={{ x: 0 }}
-            transition={{ ease: "easeOut", duration: 3 }}
-            initial={{ x: -700 }}
-            style={{ overflow: "hidden" }}
-            className="col-span-4 w-full h-full "
-          >
-            <div className="w-full h-full bg-[#FCF4FF] rounded-md p-2 md:pl-4">
-              <h1 className="text-black text-xl font-medium py-1">
-                Software Engineer (Freelance)
-              </h1>
-              <h2 className="text-black text-[14px] font-normal py-1">
-                February 2022 - October 2024
-              </h2>
-              <p className="text-gray-500 sm:text-sm text-xs">
-                • Created multiple client portfolio site with React and Next.js
-                and Implemented dynamic content management and SEO optimization.
-                <br />
-                • Built Issue Management App with React, Next.js, and Django
-                REST. Includes task creation, management, and user
-                authentication.
-                <br />• Developed some personal projects with React, Next.js,
-                and Django REST. Features Markdown editor, commenting system,
-                and user authentication. • Preparing for IELTS and GRE exams for
-                higher studies abroad.
-              </p>
-            </div>
-          </motion.div>
-          <div className="relative col-span-1 w-full h-full flex justify-center items-center">
-            <div className="h-full w-1 bg-indigo-300"></div>
-            <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
-              2
-            </div>
+          <div className="space-y-10">
+            {EXPERIENCES.map((item, idx) => (
+              <Row key={idx} item={item} index={idx} />
+            ))}
           </div>
-          <div className="col-span-4 w-full h-full"></div>
-
-          <div className="col-span-4 w-full h-full"></div>
-          <div className="relative col-span-1 w-full h-full flex justify-center items-center">
-            <div className="h-full w-1 bg-indigo-300"></div>
-            <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
-              3
-            </div>
-          </div>
-
-          <motion.div
-            animate={{ x: 0 }}
-            transition={{ ease: "easeOut", duration: 3 }}
-            initial={{ x: 850 }}
-            style={{ overflow: "hidden" }}
-            className="col-span-4 w-full h-full "
-          >
-            <div className="w-full h-full bg-[#FCF4FF] rounded-md p-2 md:pl-4">
-              <h1 className="text-black text-xl font-medium py-1">
-                Junior Software Engineer
-              </h1>
-              <h2 className="text-black text-[16px] font-normal py-1">
-                LIILab, Sylhet, Bangladesh
-              </h2>
-              <h2 className="text-black text-[14px] font-normal py-1">
-                March 2021 - January 2022
-              </h2>
-              <p className="text-gray-500 sm:text-sm text-xs">
-                • Utilized Django’s Object-Relational Mapping (ORM) to create a
-                dynamic product page that empowers users to select and customize
-                various PC components according to their preferences and
-                requirements.
-                <br />
-                • Crafted a visually appealing and intuitive user interface
-                using HTML and CSS, ensuring a seamless browsing experience for
-                users as they navigate through the available component options.
-                <br />• Leveraged Django’s Model-View-Template (MVT)
-                architecture to ensure maintainable and scalable code,
-                facilitating future enhancements and feature additions.
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div
-            animate={{ x: 0 }}
-            transition={{ ease: "easeOut", duration: 3 }}
-            initial={{ x: -700 }}
-            style={{ overflow: "hidden" }}
-            className="col-span-4 w-full h-full "
-          >
-            <div className="w-full h-full bg-[#FEFAF0] rounded-md p-2 md:pl-4">
-              <h1 className="text-black text-xl font-medium py-1">
-                ACM Coordinator Lead
-              </h1>
-              <h2 className="text-black text-[16px] font-normal py-1">
-                January 2021 - January 2022
-              </h2>
-              <p className="text-gray-500 sm:text-sm text-xs">
-                As the Lead ACM Co-Ordinator of the Leading University Computer
-                Club, I took charge of organizing and overseeing a diverse range
-                of events, including programming contests, quiz contests, and
-                ICT fests. With my strong leadership skills, I led a dedicated
-                team of organizers to successfully execute these events,
-                ensuring their smooth operation and high-quality standards.
-                Through these initiatives, I provided an enriching platform for
-                students to showcase their programming prowess, engage in
-                healthy competition, and foster a vibrant tech community on
-                campus. My role as an organizer allowed me to refine my
-                organizational abilities, strengthen my teamwork skills, and
-                contribute to the overall growth and success of the Computer
-                Club.
-              </p>
-            </div>
-          </motion.div>
-          <div className="relative col-span-1 w-full h-full flex justify-center items-center">
-            <div className="h-full w-1 bg-indigo-300"></div>
-            <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
-              4
-            </div>
-          </div>
-          <div className="col-span-4 w-full h-full"></div>
-          <div className="col-span-4 w-full h-full"></div>
-          <div className="relative col-span-1 w-full h-full flex justify-center items-center">
-            <div className="h-full w-1 bg-indigo-300"></div>
-            <div className="absolute w-6 h-6 rounded-full bg-indigo-400 z-1 text-white text-center">
-              5
-            </div>
-          </div>
-          <motion.div
-            animate={{ x: 0 }}
-            transition={{ ease: "easeOut", duration: 3 }}
-            initial={{ x: 850 }}
-            style={{ overflow: "hidden" }}
-            className="col-span-4 w-full h-full "
-          >
-            <div className="w-full h-full bg-[#FFF4F4] rounded-md p-2 md:pl-4">
-              <h1 className="text-black text-xl font-medium py-1">
-                ACM Cordinator
-              </h1>
-              <h2 className="text-black text-[16px] font-normal py-1">
-                January 2020 - January 2021
-              </h2>
-              <p className="text-gray-500 sm:text-sm text-xs">
-                As the ACM Co-Ordinator of the Leading University Computer Club
-                for a period of 1 year, I played a crucial role in organizing
-                and managing various programming contests, quiz contests, and
-                ICT fests. I successfully collaborated with a team of talented
-                individuals to create engaging and challenging events that
-                fostered a competitive spirit among participants. Through these
-                initiatives, I not only helped students enhance their
-                programming skills but also provided a platform for knowledge
-                sharing and networking within the university community. My
-                experience as a co-organizer strengthened my leadership and
-                organizational abilities while contributing to the growth of the
-                club and promoting a vibrant tech culture on campus.
-              </p>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
   );
-};
+}
 
-export default Experience;
+function Row({ item, index }) {
+  const left = index % 2 === 0;
+  return (
+    <div className="relative grid items-center gap-8 md:gap-12 grid-cols-1 md:grid-cols-2">
+      <div className="hidden md:block">
+        {left ? <Card item={item} /> : null}
+      </div>
+      <div className="hidden md:block">
+        {!left ? <Card item={item} /> : null}
+      </div>
+      <div className="md:hidden">
+        <Card item={item} />
+      </div>
+      <span className="pointer-events-none absolute left-1/2 top-1/2 hidden h-6 w-6 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-emerald-700 text-[11px] font-semibold text-white shadow-md md:grid">
+        {index + 1}
+      </span>
+    </div>
+  );
+}
+
+function Card({ item }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5 }}
+      className="relative rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl shadow-2xl"
+    >
+      <div
+        className={`pointer-events-none absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br ${item.tone} blur-xl`}
+      />
+      <h3 className="text-xl font-bold text-white">{item.role}</h3>
+      <div className="mt-1 text-sm text-white/80">{item.org}</div>
+      <div className="text-xs text-white/60">{item.date}</div>
+      <ul className="mt-3 space-y-1.5 list-disc pl-5 text-sm text-white/80">
+        {item.bullets.map((b, i) => (
+          <li key={i}>{b}</li>
+        ))}
+      </ul>
+    </motion.div>
+  );
+}
+
+function BackgroundFX() {
+  return (
+    <div aria-hidden className="absolute inset-0 -z-10">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(160,160,255,0.28),transparent)]" />
+      <div className="absolute inset-0 blur-2xl">
+        <div className="absolute -top-24 left-[10%] h-64 w-64 rounded-full bg-gradient-to-br from-fuchsia-500/35 to-pink-500/25 mix-blend-screen" />
+        <div className="absolute top-[20%] right-[8%] h-72 w-72 rounded-full bg-gradient-to-br from-cyan-400/35 to-teal-400/25 mix-blend-screen" />
+        <div className="absolute bottom-[-10%] left-[25%] h-80 w-80 rounded-full bg-gradient-to-br from-amber-400/35 to-rose-400/25 mix-blend-screen" />
+      </div>
+      <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_400px_at_50%_20%,transparent,rgba(0,0,0,0.55))]" />
+    </div>
+  );
+}

@@ -5,24 +5,36 @@ import ProjectLive from "../components/ProjectLive";
 import Project from "../components/Project";
 import IssueTrackerLive from "../components/IssueTrackerLive";
 
-const Projects = () => {
+export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex pt-[50px] lg:pt-[100px] items-center justify-center relative"
+      className="relative isolate overflow-hidden py-20 md:py-28"
     >
-      <div className="flex flex-col justify-center">
-        <div className="flex justify-center text-[35px] lg:text-[56px] font-mono mb-[20px]">
-          <h1>Projects</h1>
-        </div>
+      <BackgroundFX />
+
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
+            Projects
+          </h2>
+          <p className="mt-3 text-white/70 max-w-xl mx-auto">
+            Selected builds across backend, full‑stack, and UI engineering.
+          </p>
+        </motion.div>
 
         <motion.div
-          animate={{ x: 0 }}
-          transition={{ ease: "easeOut", duration: 2 }}
-          initial={{ x: 0, opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="flex flex-wrap gap-8 lg:p-12 justify-center"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="mt-10 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-items-center"
         >
           <Project
             Title={"Luxehaven"}
@@ -40,8 +52,10 @@ const Projects = () => {
             ]}
             CodeUrl={"https://github.com/hkshakib/luxehaven"}
           />
+
           <IssueTrackerLive />
           <ProjectLive />
+
           <Project
             Title={"Project Manager"}
             Summery={
@@ -56,7 +70,9 @@ const Projects = () => {
             ]}
             CodeUrl={"https://github.com/hkshakib/projectmanager"}
           />
+
           <ProjectWithLive />
+
           <Project
             Title={"Protfolio"}
             Summery={
@@ -80,6 +96,7 @@ const Projects = () => {
             ]}
             CodeUrl={"https://github.com/hkshakib/storefront2"}
           />
+
           <Project
             Title={"Django Authentication (Backend)"}
             Summery={
@@ -88,6 +105,7 @@ const Projects = () => {
             Technologies={["Django", "Django Rest", "Django Simple-JWT"]}
             CodeUrl={"https://github.com/hkshakib/DjangoAuthentication"}
           />
+
           <Project
             Title={"BID Buddy (Backend)"}
             Summery={
@@ -102,6 +120,7 @@ const Projects = () => {
             ]}
             CodeUrl={"https://github.com/hkshakib/auctionfrontend"}
           />
+
           <Project
             Title={"BID Buddy (Backend)"}
             Summery={
@@ -136,6 +155,19 @@ const Projects = () => {
       </div>
     </section>
   );
-};
+}
 
-export default Projects;
+function BackgroundFX() {
+  return (
+    <div aria-hidden className="absolute inset-0 -z-10">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(160,160,255,0.25),transparent)]" />
+      <div className="absolute inset-0 blur-2xl">
+        <div className="absolute -top-24 left-[10%] h-64 w-64 rounded-full bg-gradient-to-br from-fuchsia-500/35 to-pink-500/25 mix-blend-screen" />
+        <div className="absolute top-[20%] right-[8%] h-72 w-72 rounded-full bg-gradient-to-br from-cyan-400/35 to-teal-400/25 mix-blend-screen" />
+        <div className="absolute bottom-[-10%] left-[25%] h-80 w-80 rounded-full bg-gradient-to-br from-amber-400/35 to-rose-400/25 mix-blend-screen" />
+      </div>
+      <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_400px_at_50%_20%,transparent,rgba(0,0,0,0.55))]" />
+    </div>
+  );
+}
