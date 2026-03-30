@@ -1,84 +1,138 @@
-@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap");
 @tailwind base;
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rebeccapurple cornflowerblue;
-}
-
-*::-webkit-scrollbar {
-  width: 15px;
-}
-
-*::-webkit-scrollbar-track {
-  border-radius: 5px;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: rebeccapurple;
-  border-radius: 14px;
-}
-
 @tailwind components;
 @tailwind utilities;
 
-/* Skiils */
-.skills {
-  @apply text-gray-400 text-[12px] lg:text-[1rem];
+:root {
+  color-scheme: dark;
+  --bg: #0a0907;
+  --bg-soft: #12100d;
+  --panel: rgba(22, 19, 16, 0.84);
+  --panel-strong: rgba(28, 24, 20, 0.94);
+  --line: rgba(223, 214, 198, 0.12);
+  --line-strong: rgba(223, 214, 198, 0.2);
+  --text: #f5efe3;
+  --muted: #b7aa96;
+  --muted-soft: #8d816f;
+  --accent: #ddd0b9;
+  --accent-strong: #f1e7d4;
+  --success: #96c6ac;
 }
 
-.skillsTitle {
-  @apply flex flex-wrap justify-start items-center gap-1 lg:gap-2 mb-[10px];
+html {
+  scroll-behavior: smooth;
 }
 
-.skillsDesc {
-  @apply text-[#33CCCC] text-[14px] lg:text-[18px];
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(179, 153, 115, 0.1), transparent 28%),
+    radial-gradient(circle at 85% 12%, rgba(112, 106, 91, 0.14), transparent 24%),
+    radial-gradient(circle at 50% 100%, rgba(98, 90, 74, 0.12), transparent 30%),
+    var(--bg);
+  color: var(--text);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-.profficientSkills {
-  @apply text-gray-400 ml-4 text-[12px] lg:text-[18px];
+* {
+  box-sizing: border-box;
 }
 
-.fimilarSkills {
-  @apply text-gray-400 text-[12px] lg:text-[1rem];
+*::-webkit-scrollbar {
+  width: 10px;
 }
 
-/* Home */
-
-.HomeIcon {
-  @apply rounded text-blue-700 hover:bg-[#F2f4F8] hover:rounded-lg hover:border hover:border-indigo-700;
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
 }
 
-@keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(8px, -12px) scale(1.05);
-  }
-  66% {
-    transform: translate(-8px, 12px) scale(0.98);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
+*::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(223, 214, 198, 0.18);
 }
 
-.animate-blob {
-  animation: blob 14s ease-in-out infinite;
-}
-.animate-marquee {
-  animation: marquee 20s linear infinite;
-}
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+::selection {
+  background: rgba(221, 208, 185, 0.24);
+  color: var(--accent-strong);
 }
 
-section {
-  background-color: #0b0b10;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.page-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 110px 110px;
+  mask-image: radial-gradient(circle at center, black, transparent 85%);
+  opacity: 0.26;
+  z-index: -2;
+}
+
+.page-shell::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(10, 9, 7, 0.25), rgba(10, 9, 7, 0.6)),
+    radial-gradient(circle at 50% 0%, transparent, rgba(10, 9, 7, 0.78) 72%);
+  z-index: -1;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.surface-ring {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 0 0 1px rgba(255, 255, 255, 0.015);
+}
+
+.section-divider {
+  position: relative;
+}
+
+.section-divider::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(223, 214, 198, 0.15),
+    transparent
+  );
 }

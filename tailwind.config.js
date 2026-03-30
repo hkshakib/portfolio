@@ -1,100 +1,31 @@
-const { transform } = require("framer-motion");
-
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        'custom-gradient': 'linear-gradient(90deg, #33CCCC 67%, #ccf381 33%)',
-      },
-      colors: {
-        BgCustom: "rgba(243, 246, 246, var(1))",
-      },
-      keyframes: {
-        typing: {
-          "0%": {
-            width: "0%",
-            visibility: "hidden",
-          },
-          "90%": {
-            width: "47%",
-          },
-        },
-        tablettyping: {
-          "0%": {
-            width: "0%",
-            visibility: "hidden",
-          },
-          "100%": {
-            width: "55%",
-          },
-        },
-        mobiletyping: {
-          "0%": {
-            width: "0%",
-            visibility: "hidden",
-          },
-          "100%": {
-            width: "55%",
-          },
-        },
-        styping: {
-          "0%": {
-            width: "5%",
-            visibility: "hidden",
-          },
-          "100%": {
-            width: "80%",
-          },
-        },
-        blink: {
-          "50%": {
-            borderColor: "black",
-          },
-          "100%": {
-            borderColor: "black",
-          },
-        },
-        wave: {
-          "0%": { transform: "rotate(0.0deg)" },
-          "10%": { transform: "rotate(14deg)" },
-          "20%": { transform: "rotate(-8deg)" },
-          "30%": { transform: "rotate(14deg)" },
-          "40%": { transform: "rotate(-4deg)" },
-          "50%": { transform: "rotate(10.0deg)" },
-          "60%": { transform: "rotate(0.0deg)" },
-          "100%": { transform: "rotate(0.0deg)" },
-        },
-        flipHorizontal: {
-          "100%": {
-            transform: "rotateY(360deg)",
-          },
-        },
-        openMenu: {
-          "0%": { transform: "scaleY(0)" },
-          "80%": { transform: "scaleY(1.2)" },
-          "100%": { transform: "scaleY(1)" },
-        },
-      },
-
-      animation: {
-        typing: "typing 9s steps(32) infinite alternate, blink 5s infinite",
-        mobiletyping:
-          "mobiletyping 9s steps(32) infinite alternate, blink 5s infinite",
-        tablettyping:
-          "tablettyping 9s steps(32) infinite alternate, blink 5s infinite",
-        styping: "styping 9s steps(32) infinite alternate, blink 5s infinite",
-        wavinghand: "wave 4s linear infinite",
-        hFlip: "flipHorizontal 2s infinite",
-        openMenu: "openMenue .5s ease-in-out forwards",
+      boxShadow: {
+        panel:
+          "0 24px 80px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.04)",
       },
       fontFamily: {
-        modefor: ["Wix Madefor Text"],
+        sans: ["IBM Plex Mono", "ui-monospace", "SFMono-Regular", "monospace"],
+        accent: ["Instrument Serif", "serif"],
+      },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        shimmer: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+      },
+      animation: {
+        float: "float 10s ease-in-out infinite",
+        shimmer: "shimmer 6s linear infinite",
       },
     },
   },
-  plugins: [
-    require("tailwindcss-font-inter"),
-    require("@tailwindcss/typography"),
-  ],
+  plugins: [],
 };
