@@ -2,6 +2,7 @@ import { BatteryFull, ChevronRight, Search, SignalHigh, Wifi } from "lucide-reac
 import { NavLink, useLocation } from "react-router-dom";
 import { appViews, portfolio } from "../../data/portfolio";
 import { iconMap } from "./iconMap";
+import { AndroidMark, MobileAppBubble } from "./PlatformIcons";
 import useClock from "../../hooks/useClock";
 import Card from "../ui/Card";
 
@@ -24,8 +25,11 @@ export default function MobileShell({ children }) {
             </div>
           </div>
           <div className="mt-5 flex items-center justify-between">
-            <div>
+            <div className="flex items-center gap-3">
+              <AndroidMark className="h-11 w-11" />
+              <div>
               <h1 className="mt-2 text-xl font-semibold text-white">{currentView.label}</h1>
+              </div>
             </div>
             <div className="grid h-11 w-11 place-items-center rounded-full bg-white/[0.08] text-white">
               <Search className="h-4 w-4" />
@@ -42,11 +46,13 @@ export default function MobileShell({ children }) {
                   to={item.path}
                   className={`flex shrink-0 items-center gap-2 rounded-full border px-3 py-2 text-[11px] uppercase tracking-[0.16em] ${
                     isActive
-                      ? "border-[#7f93ff] bg-[#6c82ff]/20 text-white"
+                      ? "border-[#8CE4B8] bg-[#4CCC7B]/16 text-white"
                       : "border-white/10 bg-white/[0.04] text-white/[0.55]"
                   }`}
                 >
-                  <Icon className="h-3.5 w-3.5" />
+                  <MobileAppBubble active={isActive} tone="teal">
+                    <Icon className="h-3.5 w-3.5" />
+                  </MobileAppBubble>
                   <span>{item.shortLabel}</span>
                 </NavLink>
               );
@@ -72,11 +78,13 @@ export default function MobileShell({ children }) {
                   to={item.path}
                   className={({ isActive }) =>
                     `flex flex-col items-center justify-center gap-1 rounded-[20px] px-2 py-3 text-[10px] uppercase tracking-[0.16em] ${
-                      isActive ? "bg-white/10 text-white" : "text-white/[0.48]"
+                      isActive ? "bg-white/[0.08] text-white" : "text-white/[0.48]"
                     }`
                   }
                 >
-                  <Icon className="h-4 w-4" />
+                  <MobileAppBubble active={location.pathname === item.path} tone="blue">
+                    <Icon className="h-4 w-4" />
+                  </MobileAppBubble>
                   <span>{item.shortLabel}</span>
                 </NavLink>
               );

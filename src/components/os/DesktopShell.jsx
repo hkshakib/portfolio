@@ -2,6 +2,7 @@ import { Apple, Search, Wifi, BatteryFull, ArrowUpRight, Star } from "lucide-rea
 import { NavLink, useLocation } from "react-router-dom";
 import { appViews, portfolio, socialLinks } from "../../data/portfolio";
 import { iconMap } from "./iconMap";
+import { DesktopAppTile, FinderMark } from "./PlatformIcons";
 import Button from "../ui/Button";
 import Card from "../ui/Card";
 
@@ -17,9 +18,12 @@ export default function DesktopShell({ children }) {
           <div className="sticky top-[4.75rem] space-y-4">
             <Card className="overflow-hidden rounded-[30px] bg-[rgba(30,33,38,0.72)]">
               <div className="desktop-sidebar-glow px-5 pb-5 pt-6">
-                <p className="text-[11px] uppercase tracking-[0.22em] text-white/[0.45]">
+                <div className="flex items-center gap-3">
+                  <FinderMark className="h-12 w-12" />
+                  <p className="text-[11px] uppercase tracking-[0.22em] text-white/[0.45]">
                   Finder
-                </p>
+                  </p>
+                </div>
                 <h1 className="mt-4 text-2xl font-semibold text-white">{portfolio.shortName}.portfolio</h1>
                 <p className="mt-3 text-sm leading-7 text-white/[0.58]">{portfolio.summary}</p>
               </div>
@@ -38,9 +42,9 @@ export default function DesktopShell({ children }) {
                       }`}
                     >
                       <span className="flex items-center gap-3 text-sm">
-                        <span className="grid h-10 w-10 place-items-center rounded-2xl bg-white/[0.06]">
+                        <DesktopAppTile active={isActive} tone={item.tone}>
                           <Icon className="h-4 w-4" />
-                        </span>
+                        </DesktopAppTile>
                         <span>
                           <span className="block">{item.label}</span>
                           <span className="block text-[11px] uppercase tracking-[0.18em] text-white/40">
@@ -155,8 +159,10 @@ function DesktopDock() {
                 }`
               }
             >
-              <div className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-b from-white/[0.12] to-white/[0.06] text-white shadow-lg transition group-hover:-translate-y-1">
-                <Icon className="h-5 w-5" />
+              <div className="transition group-hover:-translate-y-1">
+                <DesktopAppTile active={location.pathname === item.path} tone={item.tone}>
+                  <Icon className="h-5 w-5" />
+                </DesktopAppTile>
               </div>
               <span className="text-[10px] uppercase tracking-[0.18em] text-white/[0.45]">
                 {item.shortLabel}
@@ -168,9 +174,11 @@ function DesktopDock() {
           href={portfolio.resume}
           target="_blank"
           rel="noreferrer"
-          className="ml-2 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-b from-[#6e8aff] to-[#4d63d9] text-white shadow-lg"
+          className="ml-2 transition hover:-translate-y-1"
         >
-          <Star className="h-5 w-5" />
+          <DesktopAppTile tone="amber">
+            <Star className="h-5 w-5" />
+          </DesktopAppTile>
         </a>
       </div>
     </div>

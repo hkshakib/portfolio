@@ -27,9 +27,9 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at 15% 12%, rgba(110, 138, 255, 0.16), transparent 24%),
+    radial-gradient(circle at 15% 12%, rgba(114, 152, 255, 0.18), transparent 24%),
     radial-gradient(circle at 82% 16%, rgba(255, 255, 255, 0.08), transparent 20%),
-    radial-gradient(circle at 50% 100%, rgba(71, 166, 177, 0.12), transparent 28%),
+    radial-gradient(circle at 50% 100%, rgba(80, 196, 144, 0.12), transparent 28%),
     linear-gradient(180deg, #06080c 0%, #090d13 35%, #090b10 100%);
   color: var(--text);
   font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
@@ -129,8 +129,8 @@ textarea {
   inset: -20% -10% auto;
   height: 160px;
   background:
-    radial-gradient(circle at top left, rgba(130, 151, 255, 0.22), transparent 52%),
-    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1), transparent 38%);
+    radial-gradient(circle at top left, rgba(102, 180, 255, 0.22), transparent 52%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.12), transparent 38%);
   pointer-events: none;
 }
 
@@ -145,7 +145,7 @@ textarea {
   inset: 0 0 auto;
   height: 180px;
   background:
-    radial-gradient(circle at top, rgba(120, 144, 255, 0.22), transparent 58%),
+    radial-gradient(circle at top, rgba(72, 208, 130, 0.26), transparent 58%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 70%);
   pointer-events: none;
 }

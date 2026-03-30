@@ -5,6 +5,7 @@ export const appViews = [
     shortLabel: "Home",
     subtitle: "Snapshot",
     icon: "LayoutGrid",
+    tone: "sky",
   },
   {
     path: "/experience",
@@ -12,6 +13,7 @@ export const appViews = [
     shortLabel: "Work",
     subtitle: "Career",
     icon: "BriefcaseBusiness",
+    tone: "amber",
   },
   {
     path: "/skills",
@@ -19,6 +21,7 @@ export const appViews = [
     shortLabel: "Stack",
     subtitle: "Toolkit",
     icon: "Layers3",
+    tone: "green",
   },
   {
     path: "/projects",
@@ -26,6 +29,7 @@ export const appViews = [
     shortLabel: "Builds",
     subtitle: "Shipped work",
     icon: "FolderKanban",
+    tone: "violet",
   },
   {
     path: "/achievements",
@@ -33,6 +37,7 @@ export const appViews = [
     shortLabel: "Wins",
     subtitle: "Signal",
     icon: "Trophy",
+    tone: "rose",
   },
   {
     path: "/education",
@@ -40,6 +45,7 @@ export const appViews = [
     shortLabel: "Study",
     subtitle: "Foundation",
     icon: "GraduationCap",
+    tone: "sky",
   },
   {
     path: "/contact",
@@ -47,6 +53,7 @@ export const appViews = [
     shortLabel: "Contact",
     subtitle: "Reach out",
     icon: "Send",
+    tone: "slate",
   },
 ];
 
