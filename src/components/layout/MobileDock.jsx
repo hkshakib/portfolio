@@ -2,7 +2,7 @@ import { ArrowUp, Mail, FileText } from "lucide-react";
 import { portfolio } from "../../data/portfolio";
 
 const items = [
-  { label: "Resume", href: portfolio.resume, icon: FileText },
+  { label: "Download", href: portfolio.resume, icon: FileText },
   { label: "Email", href: `mailto:${portfolio.email}`, icon: Mail },
 ];
 

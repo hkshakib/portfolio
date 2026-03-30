@@ -22,7 +22,7 @@ export default function ContactView() {
           </div>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button href={portfolio.resume} icon={ArrowUpRight}>
-              Resume
+              Download Resume
             </Button>
             {socialLinks.map((link) => (
               <Button key={link.href} href={link.href} variant="secondary">

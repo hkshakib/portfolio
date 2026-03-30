@@ -32,7 +32,7 @@ export default function OverviewView() {
               Start a Conversation
             </Button>
             <Button href={portfolio.resume} variant="secondary" icon={Download}>
-              Resume
+              Download Resume
             </Button>
           </div>
           <div className="mt-6 flex flex-wrap gap-2">

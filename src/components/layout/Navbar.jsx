@@ -57,7 +57,7 @@ export default function Navbar() {
 
           <div className="hidden lg:block">
             <Button href={portfolio.resume} icon={ArrowUpRight}>
-              Resume
+              Download Resume
             </Button>
           </div>
 

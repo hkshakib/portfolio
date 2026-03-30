@@ -96,9 +96,9 @@ export default function MobileShell({ children }) {
         </div>
       </div>
       <div className="mx-auto mt-3 flex max-w-md items-center justify-between rounded-[22px] border border-white/[0.08] bg-[rgba(255,255,255,0.04)] px-4 py-3 text-sm text-white/[0.65]">
-        <span>Resume</span>
+        <span>Download Resume</span>
         <a href={portfolio.resume} target="_blank" rel="noreferrer" className="flex items-center gap-1 text-white">
-          Open <ChevronRight className="h-4 w-4" />
+          Open PDF <ChevronRight className="h-4 w-4" />
         </a>
       </div>
     </div>

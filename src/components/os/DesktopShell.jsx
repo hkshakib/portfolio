@@ -174,11 +174,16 @@ function DesktopDock() {
           href={portfolio.resume}
           target="_blank"
           rel="noreferrer"
-          className="ml-2 transition hover:-translate-y-1"
+          className="ml-2 flex flex-col items-center gap-2 rounded-2xl px-3 py-2 transition hover:bg-white/[0.06] hover:-translate-y-1"
+          aria-label="Download Resume"
+          title="Download Resume"
         >
           <DesktopAppTile tone="amber">
             <Star className="h-5 w-5" />
           </DesktopAppTile>
+          <span className="text-[10px] uppercase tracking-[0.18em] text-white/[0.58]">
+            Resume
+          </span>
         </a>
       </div>
     </div>
