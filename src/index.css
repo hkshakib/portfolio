@@ -5,18 +5,18 @@
 
 :root {
   color-scheme: dark;
-  --bg: #0a0907;
-  --bg-soft: #12100d;
-  --panel: rgba(22, 19, 16, 0.84);
-  --panel-strong: rgba(28, 24, 20, 0.94);
-  --line: rgba(223, 214, 198, 0.12);
-  --line-strong: rgba(223, 214, 198, 0.2);
-  --text: #f5efe3;
-  --muted: #b7aa96;
-  --muted-soft: #8d816f;
-  --accent: #ddd0b9;
-  --accent-strong: #f1e7d4;
-  --success: #96c6ac;
+  --bg: #07090d;
+  --bg-soft: #0f1218;
+  --panel: rgba(24, 27, 33, 0.84);
+  --panel-strong: rgba(17, 20, 26, 0.94);
+  --line: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --text: #f5f7fb;
+  --muted: #b5bfd1;
+  --muted-soft: #8590a5;
+  --accent: #d8dff3;
+  --accent-strong: #eef2ff;
+  --success: #8fe6c8;
 }
 
 html {
@@ -27,10 +27,10 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at top left, rgba(179, 153, 115, 0.1), transparent 28%),
-    radial-gradient(circle at 85% 12%, rgba(112, 106, 91, 0.14), transparent 24%),
-    radial-gradient(circle at 50% 100%, rgba(98, 90, 74, 0.12), transparent 30%),
-    var(--bg);
+    radial-gradient(circle at 15% 12%, rgba(110, 138, 255, 0.16), transparent 24%),
+    radial-gradient(circle at 82% 16%, rgba(255, 255, 255, 0.08), transparent 20%),
+    radial-gradient(circle at 50% 100%, rgba(71, 166, 177, 0.12), transparent 28%),
+    linear-gradient(180deg, #06080c 0%, #090d13 35%, #090b10 100%);
   color: var(--text);
   font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
   text-rendering: optimizeLegibility;
@@ -43,6 +43,7 @@ body {
 
 *::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 *::-webkit-scrollbar-track {
@@ -51,12 +52,12 @@ body {
 
 *::-webkit-scrollbar-thumb {
   border-radius: 999px;
-  background: rgba(223, 214, 198, 0.18);
+  background: rgba(255, 255, 255, 0.14);
 }
 
 ::selection {
-  background: rgba(221, 208, 185, 0.24);
-  color: var(--accent-strong);
+  background: rgba(110, 138, 255, 0.35);
+  color: #ffffff;
 }
 
 a {
@@ -85,11 +86,11 @@ textarea {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 110px 110px;
-  mask-image: radial-gradient(circle at center, black, transparent 85%);
-  opacity: 0.26;
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 120px 120px;
+  mask-image: radial-gradient(circle at center, black, transparent 82%);
+  opacity: 0.18;
   z-index: -2;
 }
 
@@ -99,8 +100,8 @@ textarea {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(10, 9, 7, 0.25), rgba(10, 9, 7, 0.6)),
-    radial-gradient(circle at 50% 0%, transparent, rgba(10, 9, 7, 0.78) 72%);
+    linear-gradient(180deg, rgba(4, 5, 8, 0.08), rgba(4, 5, 8, 0.5)),
+    radial-gradient(circle at top, transparent, rgba(4, 5, 8, 0.62) 74%);
   z-index: -1;
 }
 
@@ -114,25 +115,37 @@ textarea {
 
 .surface-ring {
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.04) inset,
-    0 0 0 1px rgba(255, 255, 255, 0.015);
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 0 0 1px rgba(255, 255, 255, 0.02);
 }
 
-.section-divider {
+.desktop-sidebar-glow {
   position: relative;
 }
 
-.section-divider::after {
+.desktop-sidebar-glow::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(223, 214, 198, 0.15),
-    transparent
-  );
+  inset: -20% -10% auto;
+  height: 160px;
+  background:
+    radial-gradient(circle at top left, rgba(130, 151, 255, 0.22), transparent 52%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1), transparent 38%);
+  pointer-events: none;
+}
+
+.android-top-sheen {
+  position: relative;
+  overflow: hidden;
+}
+
+.android-top-sheen::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 180px;
+  background:
+    radial-gradient(circle at top, rgba(120, 144, 255, 0.22), transparent 58%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 70%);
+  pointer-events: none;
 }

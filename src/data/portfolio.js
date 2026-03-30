@@ -1,11 +1,53 @@
-export const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Achievements", href: "#achievements" },
-  { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+export const appViews = [
+  {
+    path: "/",
+    label: "Overview",
+    shortLabel: "Home",
+    subtitle: "Snapshot",
+    icon: "LayoutGrid",
+  },
+  {
+    path: "/experience",
+    label: "Experience",
+    shortLabel: "Work",
+    subtitle: "Career",
+    icon: "BriefcaseBusiness",
+  },
+  {
+    path: "/skills",
+    label: "Skills",
+    shortLabel: "Stack",
+    subtitle: "Toolkit",
+    icon: "Layers3",
+  },
+  {
+    path: "/projects",
+    label: "Projects",
+    shortLabel: "Builds",
+    subtitle: "Shipped work",
+    icon: "FolderKanban",
+  },
+  {
+    path: "/achievements",
+    label: "Achievements",
+    shortLabel: "Wins",
+    subtitle: "Signal",
+    icon: "Trophy",
+  },
+  {
+    path: "/education",
+    label: "Education",
+    shortLabel: "Study",
+    subtitle: "Foundation",
+    icon: "GraduationCap",
+  },
+  {
+    path: "/contact",
+    label: "Contact",
+    shortLabel: "Contact",
+    subtitle: "Reach out",
+    icon: "Send",
+  },
 ];
 
 export const socialLinks = [
@@ -19,47 +61,55 @@ export const portfolio = {
   name: "MD Humayun Kibria Shakib",
   shortName: "Shakib",
   role: "Full-Stack AI Engineer",
+  titleLine: "Full-stack engineer specializing in AI-driven SaaS ecosystems",
   location: "Kocaeli, Izmit, Turkey",
   availability: "Open to B2B / Remote Worldwide",
   email: "hkshakib.cse@gmail.com",
   phone: "+90 535 442 7438",
   resume: "/hkshakib-resume.pdf",
-  intro:
-    "Full-stack engineer specializing in AI-driven SaaS ecosystems, with hands-on experience shipping commercial products across web, iOS, Android, and the backend systems that keep them reliable.",
   headline:
-    "Shipping calm, scalable AI products across web, mobile, and the infrastructure underneath.",
-  heroNotes: [
-    "FastAPI, React, Flutter, and modern AI workflows",
-    "Commercial delivery across Web, iOS, and Android",
-    "Strong algorithmic foundation from competitive programming",
+    "Building AI products that feel sharp on the surface and solid underneath.",
+  intro:
+    "I work across interface systems, backend architecture, and production AI workflows. My recent focus has been shipping SaaS products that span web, mobile, billing, admin operations, and the infrastructure required to keep them dependable.",
+  summary:
+    "Proven track record of launching commercial products across iOS, Android, and web from conception to production, with strong foundations in FastAPI, React, scalable infrastructure, and high-performance problem solving.",
+  heroBullets: [
+    "Commercial product delivery across Web, iOS, and Android",
+    "FastAPI, React, Flutter, Supabase, Databricks, and AI SDK workflows",
+    "Strong algorithmic foundation from 3000+ solved programming problems",
   ],
-  stats: [
-    { value: "10M+", label: "records migrated to Databricks SQL" },
+  metrics: [
+    { value: "10M+", label: "records migrated into Databricks SQL" },
     { value: "3000+", label: "algorithmic problems solved" },
-    { value: "Web + iOS + Android", label: "product surface shipped together" },
+    { value: "Full Web + Mobile", label: "product ecosystems shipped" },
+  ],
+  desktopNotes: [
+    "macOS-inspired desktop workspace",
+    "Android-inspired mobile app shell",
+    "Single design system, two device personalities",
   ],
 };
 
 export const about = {
   paragraphs: [
-    "I build full-stack systems where product quality and engineering discipline carry equal weight. My recent work has centered on AI-native SaaS, operational tooling, subscriptions, and multi-platform delivery.",
-    "I enjoy shaping platforms end to end: backend architecture, AI integrations, admin control centers, polished frontend systems, and the deployment workflows that make shipping feel dependable instead of fragile.",
+    "I build full-stack systems where product quality and engineering discipline carry equal weight. My work usually spans admin tooling, subscription logic, AI orchestration, frontend polish, and the deployment path that turns prototypes into real products.",
+    "What excites me most is shaping the entire product surface, then making sure the backend, data layer, and delivery workflows are just as thoughtful as the interface. I like systems that feel calm to use and predictable to maintain.",
   ],
   focusAreas: [
     {
       title: "AI Product Architecture",
       description:
-        "Designing AI workbenches, orchestration flows, and production-ready backend services around OpenAI and Gemini workflows.",
+        "Designing AI workbenches, backend flows, and operational tooling around OpenAI and Gemini-based systems.",
     },
     {
-      title: "Interface Systems",
+      title: "Frontend Systems",
       description:
-        "Building refined React frontends with reusable components, clear hierarchy, and calm interaction design that feels deliberate on desktop and mobile.",
+        "Building reusable React interfaces with strong hierarchy, refined interaction design, and cross-device consistency.",
     },
     {
       title: "Platform Delivery",
       description:
-        "Connecting data, auth, storage, billing, and deployment into one coherent system using tools like Supabase, Render, Vercel, and Cloudflare R2.",
+        "Connecting auth, data, storage, billing, deployment, and monitoring into one coherent delivery pipeline.",
     },
   ],
 };
@@ -71,10 +121,10 @@ export const experiences = [
     location: "London, UK",
     period: "May 2025 - Present",
     bullets: [
-      "Architected and deployed a full AI SaaS ecosystem solo, covering web, mobile, and a centralized backend.",
-      "Built an admin command center with role-based access control for operational oversight across the platform.",
+      "Architected and deployed a full AI SaaS ecosystem solo across web, mobile, and a centralized backend.",
+      "Built an admin command center with role-based access control for system-wide operational oversight.",
       "Engineered an AI-agent workbench on Render using OpenAI and Gemini workflows, backed by Supabase and Cloudflare R2.",
-      "Delivered Flutter mobile apps and React web experiences with feature parity, plus Stripe and in-app purchase flows for subscription management.",
+      "Delivered Flutter mobile apps and React web apps with feature parity, plus Stripe and in-app purchase flows for subscriptions.",
     ],
   },
   {
@@ -83,8 +133,8 @@ export const experiences = [
     location: "London, UK",
     period: "Oct 2024 - Apr 2025",
     bullets: [
-      "Migrated enterprise-scale datasets with 10M+ records into Databricks SQL to improve analytics and query performance.",
-      "Built production-grade data pipelines supporting large-scale reporting and machine learning workloads.",
+      "Migrated enterprise-scale datasets with 10M+ records into Databricks SQL to improve query performance.",
+      "Built production-grade data pipelines supporting large-scale analytics and machine learning workloads.",
     ],
   },
   {
@@ -101,12 +151,50 @@ export const experiences = [
 
 export const skillGroups = [
   {
-    title: "Backend & AI",
-    items: ["FastAPI", "Django", "RBAC", "Redis", "OpenAI SDKs", "Gemini SDKs"],
+    title: "Languages",
+    items: ["Python", "TypeScript", "JavaScript", "C++", "C", "Java", "Dart"],
   },
   {
     title: "Frontend",
-    items: ["React.js", "Next.js App Router", "Tailwind CSS", "Redux"],
+    items: [
+      "React.js",
+      "Next.js",
+      "Next.js App Router",
+      "Tailwind CSS",
+      "HTML",
+      "CSS",
+      "Framer Motion",
+      "Material UI",
+      "Chakra UI",
+      "Radix UI",
+      "React Router DOM",
+    ],
+  },
+  {
+    title: "State & Client Patterns",
+    items: [
+      "Redux",
+      "Redux Toolkit",
+      "React Query",
+      "Zod",
+      "Design Pattern",
+    ],
+  },
+  {
+    title: "Backend & APIs",
+    items: [
+      "FastAPI",
+      "Django",
+      "Django REST Framework",
+      "RBAC",
+      "Redis",
+      "Djoser",
+      "JWT Authentication",
+      "NextAuth",
+      "Celery",
+      "Celery Beat",
+      "Web Scraping",
+    ],
   },
   {
     title: "Mobile",
@@ -114,15 +202,43 @@ export const skillGroups = [
   },
   {
     title: "Data & Storage",
-    items: ["PostgreSQL", "Databricks SQL", "Supabase", "Cloudflare R2"],
+    items: [
+      "PostgreSQL",
+      "MySQL",
+      "Databricks SQL",
+      "Supabase",
+      "Firebase",
+      "Cloudflare R2",
+    ],
   },
   {
-    title: "DevOps & Delivery",
-    items: ["Vercel", "Render", "GitHub Actions", "Docker", "CI/CD"],
+    title: "DevOps & Platform",
+    items: [
+      "Git",
+      "GitHub",
+      "Vercel",
+      "Render",
+      "Railway",
+      "Docker",
+      "GitHub Actions",
+      "CI/CD",
+      "Stripe",
+    ],
   },
   {
-    title: "Languages",
-    items: ["Python", "TypeScript", "JavaScript", "C++"],
+    title: "AI & Machine Learning",
+    items: [
+      "OpenAI SDKs",
+      "Gemini SDKs",
+      "NLP",
+      "Text-To-Speech",
+      "Reinforcement Learning",
+      "ANN",
+    ],
+  },
+  {
+    title: "Additional Working Knowledge",
+    items: ["WordPress"],
   },
 ];
 
@@ -138,9 +254,7 @@ export const projects = [
       "Built the interface as a scalable component system with strong reuse across flows.",
       "Shaped authentication and backend foundations for secure multi-channel usage.",
     ],
-    links: [
-      { label: "Code", href: "https://github.com/hkshakib/copyad-backend" },
-    ],
+    links: [{ label: "Code", href: "https://github.com/hkshakib/copyad-backend" }],
   },
   {
     title: "LUXHAVEN Backend",
@@ -159,12 +273,12 @@ export const projects = [
     title: "Issue Tracker",
     eyebrow: "Workflow Product",
     summary:
-      "A polished issue management application with structured workflows for creating, assigning, filtering, and updating work items.",
+      "A polished issue management product with structured workflows for creating, assigning, filtering, and updating work items.",
     stack: ["Next.js", "TypeScript", "Prisma", "MySQL", "Zod", "NextAuth"],
     highlights: [
-      "Implemented Google-based authentication with role-aware actions.",
-      "Added markdown support, filtering, sorting, and assignment flows.",
-      "Deployed the app with Railway-backed data and a Vercel frontend.",
+      "Implemented Google authentication with role-aware actions.",
+      "Added markdown support, filtering, sorting, and assignment workflows.",
+      "Deployed with Railway-backed data and a Vercel frontend.",
     ],
     links: [
       { label: "Code", href: "https://github.com/hkshakib/issue-tracker" },
@@ -172,15 +286,47 @@ export const projects = [
     ],
   },
   {
+    title: "PlayerHub",
+    eyebrow: "Game Discovery UI",
+    summary:
+      "A polished RAWG-inspired game browsing interface built to explore search, filters, platform views, and faster client-side interaction design.",
+    stack: ["React", "Vite", "TypeScript", "Custom Hooks"],
+    highlights: [
+      "Built a clean interactive browsing experience around external API data.",
+      "Focused on client state, filtering, sorting, and category-driven discovery.",
+      "Used the project to sharpen component structure and data-driven UI thinking.",
+    ],
+    links: [
+      { label: "Code", href: "https://github.com/hkshakib/playerhub" },
+      { label: "Live", href: "https://rawg-clone-chi.vercel.app/" },
+    ],
+  },
+  {
+    title: "React Fun Box",
+    eyebrow: "Learning Sandbox",
+    summary:
+      "A compact collection of mini applications including a calculator, to-do list, quiz, snake, memory game, and tic-tac-toe.",
+    stack: ["React", "React Router DOM", "React Icons"],
+    highlights: [
+      "Built as a hands-on playground to improve interaction design and state management.",
+      "Packaged multiple small experiences into one reusable interface shell.",
+      "Used the project to accelerate practical frontend iteration speed.",
+    ],
+    links: [
+      { label: "Code", href: "https://github.com/hkshakib/reactfunbox" },
+      { label: "Live", href: "https://reactfunbox.vercel.app/" },
+    ],
+  },
+  {
     title: "Prosody-Controlled TTS",
     eyebrow: "Thesis Research",
     summary:
-      "A Bengali text-to-speech research project exploring natural-sounding speech generation with better prosody and pitch control.",
+      "A Bengali text-to-speech research project exploring natural-sounding speech generation with stronger prosody and pitch control.",
     stack: ["NLP", "VITS", "Tacotron 2", "FastPitch"],
     highlights: [
       "Explored neural approaches for more natural Bangla speech synthesis.",
       "Worked on prosody and intonation control inside the generation pipeline.",
-      "Built the project as part of a fourth-year thesis in software engineering.",
+      "Built the project as a fourth-year thesis in software engineering.",
     ],
     links: [
       {
@@ -197,7 +343,7 @@ export const achievements = [
     detail: "Ranked Top 6 in Bangladesh with Team LUZeroIQ among 200+ teams.",
   },
   {
-    title: "Competitive Programming",
+    title: "Problem Solving",
     detail: "Solved 3000+ algorithmic problems across major online judges.",
   },
   {
@@ -214,7 +360,7 @@ export const achievements = [
   },
   {
     title: "Recognition",
-    detail: "Known for high-performance algorithm design and disciplined problem solving.",
+    detail: "Recognized for high-performance algorithm design and disciplined problem solving.",
   },
 ];
 

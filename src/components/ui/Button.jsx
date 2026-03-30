@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+
 export default function Button({
   children,
   href,
+  to,
   icon: Icon,
   variant = "primary",
   className = "",
@@ -23,6 +26,14 @@ export default function Button({
       {Icon ? <Icon className="h-4 w-4 transition group-hover:translate-x-0.5" /> : null}
     </>
   );
+
+  if (to) {
+    return (
+      <Link to={to} className={`${base} ${variants[variant]} ${className}`}>
+        {content}
+      </Link>
+    );
+  }
 
   if (href) {
     const external = href.startsWith("http") || href.startsWith("mailto") || href.startsWith("tel");
