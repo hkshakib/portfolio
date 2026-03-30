@@ -25,7 +25,6 @@ export default function MobileShell({ children }) {
           </div>
           <div className="mt-5 flex items-center justify-between">
             <div>
-              <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.45]">Android mode</p>
               <h1 className="mt-2 text-xl font-semibold text-white">{currentView.label}</h1>
             </div>
             <div className="grid h-11 w-11 place-items-center rounded-full bg-white/[0.08] text-white">
@@ -58,7 +57,6 @@ export default function MobileShell({ children }) {
         <div className="min-h-[calc(100vh-13rem)] px-3 pb-4">
           {children}
           <Card className="mt-4 rounded-[28px] border-white/[0.08] bg-[rgba(255,255,255,0.03)] p-5">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.45]">Device profile</p>
             <p className="mt-4 text-lg text-white">{portfolio.role}</p>
             <p className="mt-2 text-sm leading-7 text-white/[0.58]">{portfolio.location}</p>
           </Card>

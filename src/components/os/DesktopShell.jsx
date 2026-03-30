@@ -1,4 +1,4 @@
-import { Apple, Search, Wifi, BatteryFull, MoonStar, ArrowUpRight, Star } from "lucide-react";
+import { Apple, Search, Wifi, BatteryFull, ArrowUpRight, Star } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import { appViews, portfolio, socialLinks } from "../../data/portfolio";
 import { iconMap } from "./iconMap";
@@ -118,10 +118,7 @@ function WindowBar({ currentView }) {
           <p className="text-sm text-white/80">{currentView.label}</p>
         </div>
       </div>
-      <div className="flex items-center gap-2 rounded-full border border-white/[0.08] bg-black/20 px-3 py-2 text-[11px] uppercase tracking-[0.18em] text-white/[0.55]">
-        <MoonStar className="h-3.5 w-3.5" />
-        macOS mode
-      </div>
+      <div className="h-10 w-10 rounded-full border border-white/[0.08] bg-black/20" />
     </div>
   );
 }
@@ -129,14 +126,7 @@ function WindowBar({ currentView }) {
 function DesktopInspector() {
   return (
     <aside className="hidden bg-[rgba(255,255,255,0.02)] px-5 py-6 xl:block">
-      <Card className="rounded-[28px] bg-[rgba(18,20,24,0.72)] p-5">
-        <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.45]">System card</p>
-        <h3 className="mt-4 text-lg text-white">Current mode</h3>
-        <p className="mt-3 text-sm leading-7 text-white/[0.58]">
-          Desktop turns the portfolio into a macOS-inspired workspace with a sidebar, window chrome, and dock-driven navigation.
-        </p>
-      </Card>
-      <div className="mt-4 space-y-4">
+      <div className="space-y-4">
         {portfolio.metrics.map((metric) => (
           <Card key={metric.label} className="rounded-[24px] bg-[rgba(18,20,24,0.72)] p-5">
             <p className="text-[11px] uppercase tracking-[0.18em] text-white/40">Metric</p>
