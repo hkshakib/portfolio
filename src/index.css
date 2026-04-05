@@ -153,9 +153,9 @@ textarea {
 .hks-wordmark {
   display: inline-flex;
   align-items: center;
-  gap: 0.08em;
+  gap: 0.12em;
   filter: drop-shadow(0 0 12px rgba(216, 223, 243, 0.14));
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
 }
 
 .hks-wordmark__letter {
@@ -177,51 +177,62 @@ textarea {
 
 @keyframes hks-side-letter {
   0%,
-  84%,
+  72%,
   100% {
     transform: translateX(0);
     opacity: 1;
   }
-  89% {
+  80%,
+  88% {
     transform: translateX(0.52em);
-    opacity: 0.22;
+    opacity: 0.18;
   }
   94% {
-    transform: translateX(0.18em);
-    opacity: 0.7;
+    transform: translateX(0.52em);
+    opacity: 0.18;
+  }
+  98% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes hks-side-letter-right {
   0%,
-  84%,
+  72%,
   100% {
     transform: translateX(0);
     opacity: 1;
   }
-  89% {
-    transform: translateX(-0.52em);
-    opacity: 0.22;
-  }
+  88%,
   94% {
-    transform: translateX(-0.18em);
-    opacity: 0.7;
+    transform: translateX(-0.52em);
+    opacity: 0.18;
+  }
+  98% {
+    transform: translateX(-0.52em);
+    opacity: 0.18;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes hks-center-letter {
   0%,
-  84%,
+  72%,
   100% {
     transform: scale(1);
     opacity: 1;
   }
-  89% {
+  80%,
+  94% {
     transform: scale(1.08);
     opacity: 1;
   }
-  94% {
-    transform: scale(1.03);
+  98% {
+    transform: scale(1.02);
     opacity: 1;
   }
 }
