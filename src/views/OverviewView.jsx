@@ -58,9 +58,10 @@ export default function OverviewView() {
           </div>
           <div className="grid gap-4 lg:grid-cols-2 2xl:grid-cols-3">
             {featuredProjects.map((project) => {
-              const primaryCodeLink = project.links.find(
-                (link) => link.label.toLowerCase() === "code" || link.label.toLowerCase() === "repository"
-              );
+              const primaryLinks = project.links.filter((link) => {
+                const label = link.label.toLowerCase();
+                return label === "code" || label === "repository" || label === "live";
+              });
 
               return (
                 <Card
@@ -68,11 +69,13 @@ export default function OverviewView() {
                   className="flex h-full flex-col rounded-[28px] p-5"
                 >
                   <h3 className="text-lg font-semibold text-white">{project.title}</h3>
-                  {primaryCodeLink ? (
-                    <div className="mt-auto pt-6">
-                      <Button href={primaryCodeLink.href} variant="secondary">
-                        Code
-                      </Button>
+                  {primaryLinks.length ? (
+                    <div className="mt-auto flex flex-wrap gap-3 pt-6">
+                      {primaryLinks.map((link) => (
+                        <Button key={link.href} href={link.href} variant="secondary">
+                          {link.label}
+                        </Button>
+                      ))}
                     </div>
                   ) : null}
                 </Card>
