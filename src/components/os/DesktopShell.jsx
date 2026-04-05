@@ -1,4 +1,4 @@
-import { Apple, Search, Wifi, BatteryFull, Star } from "lucide-react";
+import { Apple, BatteryFull, Code2, Download, Github, Linkedin, Search, Star, Trophy, Wifi } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import { appViews, portfolio, socialLinks } from "../../data/portfolio";
 import { iconMap } from "./iconMap";
@@ -9,6 +9,17 @@ import Card from "../ui/Card";
 export default function DesktopShell({ children }) {
   const location = useLocation();
   const currentView = appViews.find((item) => item.path === location.pathname) || appViews[0];
+  const quickLinks = socialLinks.map((link) => ({
+    ...link,
+    icon:
+      link.label === "GitHub"
+        ? Github
+        : link.label === "LinkedIn"
+          ? Linkedin
+          : link.label === "CodeChef"
+            ? Code2
+            : Trophy,
+  }));
 
   return (
     <div className="min-h-screen px-5 pb-6 pt-4">
@@ -30,10 +41,11 @@ export default function DesktopShell({ children }) {
                   Quick links
                 </p>
                 <div className="grid gap-2">
-                  {socialLinks.map((link) => (
+                  {quickLinks.map((link) => (
                     <Button
                       key={link.href}
                       href={link.href}
+                      icon={link.icon}
                       variant="secondary"
                       className="w-full justify-between text-white/80"
                     >
@@ -43,6 +55,7 @@ export default function DesktopShell({ children }) {
                   <Button
                     href={portfolio.resume}
                     newTab
+                    icon={Download}
                     variant="secondary"
                     className="w-full justify-between text-white/80"
                   >
