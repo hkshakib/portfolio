@@ -2,7 +2,6 @@ import { ArrowUpRight, Download, MapPin } from "lucide-react";
 import { portfolio, projects } from "../data/portfolio";
 import Card from "../components/ui/Card";
 import Button from "../components/ui/Button";
-import Tag from "../components/ui/Tag";
 import ViewHeader from "../components/portfolio/ViewHeader";
 
 export default function OverviewView() {
@@ -59,27 +58,21 @@ export default function OverviewView() {
             </Button>
           </div>
           <div className="grid gap-4 lg:grid-cols-2 2xl:grid-cols-3">
-            {featuredProjects.map((project, index) => (
+            {featuredProjects.map((project) => (
               <Card
                 key={project.title}
                 className="flex h-full flex-col rounded-[28px] p-5"
               >
-                <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.4]">
-                  {index + 1}. {project.eyebrow}
-                </p>
-                <h3 className="mt-3 text-lg font-semibold text-white">{project.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-white/60">{project.summary}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.stack.slice(0, 4).map((item) => (
-                    <Tag key={item}>{item}</Tag>
-                  ))}
-                </div>
-                <div className="mt-auto pt-5 flex flex-wrap gap-3">
-                  {project.links.map((link) => (
-                    <Button key={link.href} href={link.href} variant="secondary">
-                      {link.label}
-                    </Button>
-                  ))}
+                <h3 className="text-lg font-semibold text-white">{project.title}</h3>
+                <div className="mt-auto pt-6">
+                  {project.links
+                    .filter((link) => link.label.toLowerCase() === "code" || link.label.toLowerCase() === "repository")
+                    .slice(0, 1)
+                    .map((link) => (
+                      <Button key={link.href} href={link.href} variant="secondary">
+                        Code
+                      </Button>
+                    ))}
                 </div>
               </Card>
             ))}
