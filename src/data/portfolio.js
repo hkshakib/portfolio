@@ -261,7 +261,7 @@ export const projects = [
       "Built admin tooling, subscription infrastructure, and backend workflows for daily operations.",
       "Integrated AI-agent workflows with OpenAI, Gemini, Supabase, and Cloudflare R2.",
     ],
-    links: [],
+    links: [{ label: "Live", href: "https://bizclicq.com" }],
   },
   {
     title: "CopyAD AI",
@@ -274,7 +274,10 @@ export const projects = [
       "Built the interface as a scalable component system with strong reuse across flows.",
       "Shaped authentication and backend foundations for secure multi-channel usage.",
     ],
-    links: [{ label: "Code", href: "https://github.com/hkshakib/copyad-backend" }],
+    links: [
+      { label: "Code", href: "https://github.com/hkshakib/copyad-backend" },
+      { label: "Live", href: "https://copyad.ai" },
+    ],
   },
   {
     title: "LUXHAVEN Backend",
@@ -319,40 +322,6 @@ export const projects = [
     links: [
       { label: "Code", href: "https://github.com/hkshakib/playerhub" },
       { label: "Live", href: "https://rawg-clone-chi.vercel.app/" },
-    ],
-  },
-  {
-    title: "React Fun Box",
-    eyebrow: "Learning Sandbox",
-    summary:
-      "A compact collection of mini applications including a calculator, to-do list, quiz, snake, memory game, and tic-tac-toe.",
-    stack: ["React", "React Router DOM", "React Icons"],
-    highlights: [
-      "Built as a hands-on playground to improve interaction design and state management.",
-      "Packaged multiple small experiences into one reusable interface shell.",
-      "Used the project to accelerate practical frontend iteration speed.",
-    ],
-    links: [
-      { label: "Code", href: "https://github.com/hkshakib/reactfunbox" },
-      { label: "Live", href: "https://reactfunbox.vercel.app/" },
-    ],
-  },
-  {
-    title: "Prosody-Controlled TTS",
-    eyebrow: "Thesis Research",
-    summary:
-      "A Bengali text-to-speech research project exploring natural-sounding speech generation with stronger prosody and pitch control.",
-    stack: ["NLP", "VITS", "Tacotron 2", "FastPitch"],
-    highlights: [
-      "Explored neural approaches for more natural Bangla speech synthesis.",
-      "Worked on prosody and intonation control inside the generation pipeline.",
-      "Built the project as a fourth-year thesis in software engineering.",
-    ],
-    links: [
-      {
-        label: "Repository",
-        href: "https://github.com/hkshakib/Prosody-Controlled-TTS",
-      },
     ],
   },
 ];
