@@ -13,7 +13,6 @@ export default function OverviewView() {
         eyebrow="Overview"
         title={portfolio.name}
         description={portfolio.summary}
-        aside={<span>{portfolio.availability}</span>}
       />
 
       <div className="grid gap-4 xl:grid-cols-[320px_minmax(0,1fr)] xl:items-start">
