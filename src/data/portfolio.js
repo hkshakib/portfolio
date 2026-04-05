@@ -274,10 +274,7 @@ export const projects = [
       "Built the interface as a scalable component system with strong reuse across flows.",
       "Shaped authentication and backend foundations for secure multi-channel usage.",
     ],
-    links: [
-      { label: "Code", href: "https://github.com/hkshakib/copyad-backend" },
-      { label: "Live", href: "https://copyad.ai" },
-    ],
+    links: [{ label: "Live", href: "https://copyad.ai" }],
   },
   {
     title: "LUXHAVEN Backend",
