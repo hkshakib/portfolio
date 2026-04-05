@@ -57,24 +57,27 @@ export default function OverviewView() {
             </Button>
           </div>
           <div className="grid gap-4 lg:grid-cols-2 2xl:grid-cols-3">
-            {featuredProjects.map((project) => (
-              <Card
-                key={project.title}
-                className="flex h-full flex-col rounded-[28px] p-5"
-              >
-                <h3 className="text-lg font-semibold text-white">{project.title}</h3>
-                <div className="mt-auto pt-6">
-                  {project.links
-                    .filter((link) => link.label.toLowerCase() === "code" || link.label.toLowerCase() === "repository")
-                    .slice(0, 1)
-                    .map((link) => (
-                      <Button key={link.href} href={link.href} variant="secondary">
+            {featuredProjects.map((project) => {
+              const primaryCodeLink = project.links.find(
+                (link) => link.label.toLowerCase() === "code" || link.label.toLowerCase() === "repository"
+              );
+
+              return (
+                <Card
+                  key={project.title}
+                  className="flex h-full flex-col rounded-[28px] p-5"
+                >
+                  <h3 className="text-lg font-semibold text-white">{project.title}</h3>
+                  {primaryCodeLink ? (
+                    <div className="mt-auto pt-6">
+                      <Button href={primaryCodeLink.href} variant="secondary">
                         Code
                       </Button>
-                    ))}
-                </div>
-              </Card>
-            ))}
+                    </div>
+                  ) : null}
+                </Card>
+              );
+            })}
           </div>
         </div>
       </div>

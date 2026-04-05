@@ -251,6 +251,19 @@ export const skillGroups = [
 
 export const projects = [
   {
+    title: "BizClicQ",
+    eyebrow: "Commercial SaaS Platform",
+    summary:
+      "Built and launched an AI-driven SaaS ecosystem across Web, Android, and iOS with a centralized backend, admin operations, subscription flows, and automated AI workflows.",
+    stack: ["Web", "Android", "iOS", "FastAPI", "React", "Flutter"],
+    highlights: [
+      "Architected and shipped a connected product experience across web and mobile platforms.",
+      "Built admin tooling, subscription infrastructure, and backend workflows for daily operations.",
+      "Integrated AI-agent workflows with OpenAI, Gemini, Supabase, and Cloudflare R2.",
+    ],
+    links: [],
+  },
+  {
     title: "CopyAD AI",
     eyebrow: "AI Ad Platform",
     summary:
