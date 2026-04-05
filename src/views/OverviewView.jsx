@@ -13,7 +13,7 @@ export default function OverviewView() {
       <ViewHeader
         eyebrow="Overview"
         title={portfolio.name}
-        description={portfolio.role}
+        description={portfolio.summary}
         aside={<span>{portfolio.availability}</span>}
       />
 

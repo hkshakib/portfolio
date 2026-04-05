@@ -79,7 +79,7 @@ export const portfolio = {
   intro:
     "I work across interface systems, backend architecture, and production AI workflows. My recent focus has been shipping SaaS products that span web, mobile, billing, admin operations, and the infrastructure required to keep them dependable.",
   summary:
-    "Proven track record of launching commercial products across iOS, Android, and web from conception to production, with strong foundations in FastAPI, React, scalable infrastructure, and high-performance problem solving.",
+    "Full-Stack Engineer specializing in AI-driven SaaS ecosystems. Proven track record of launching commercial products across iOS, Android, and Web from conception to production. Expert in FastAPI, React, and Scalable Infrastructure with a strong foundation in high-performance competitive programming and automated AI workflows.",
   heroBullets: [
     "Commercial product delivery across Web, iOS, and Android",
     "FastAPI, React, Flutter, Supabase, Databricks, and AI SDK workflows",
