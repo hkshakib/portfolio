@@ -125,7 +125,7 @@ export const experiences = [
   {
     company: "BizClicQ",
     role: "Full-Stack AI Engineer",
-    location: "London, UK",
+    location: "London, UK / Remote",
     period: "May 2025 - Present",
     bullets: [
       "Architected and deployed a full AI SaaS ecosystem solo across web, mobile, and a centralized backend.",
