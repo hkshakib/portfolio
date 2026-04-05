@@ -1,10 +1,9 @@
 import { education } from "../data/portfolio";
-import uniLogo from "../static/unilogo.png";
 
 const schoolMarks = {
   "Kocaeli University": { initials: "KU", tone: "from-sky-400/28 to-blue-500/18" },
   "University of Hertfordshire": { initials: "UH", tone: "from-amber-300/24 to-orange-400/16" },
-  "Leading University": { logo: uniLogo, tone: "from-emerald-300/24 to-teal-400/18" },
+  "Leading University": { initials: "LU", tone: "from-emerald-300/24 to-teal-400/18" },
 };
 
 const studyHighlights = [
@@ -72,17 +71,6 @@ export default function EducationView() {
 
 function UniversityMark({ school }) {
   const mark = schoolMarks[school];
-
-  if (mark.logo) {
-    return (
-      <div
-        className={`relative grid h-[76px] w-[76px] place-items-center overflow-hidden rounded-[24px] border border-white/[0.08] bg-gradient-to-br ${mark.tone}`}
-      >
-        <div className="absolute inset-0 bg-[rgba(8,10,14,0.2)]" />
-        <img src={mark.logo} alt={`${school} logo`} className="relative h-[54px] w-[54px] object-contain" />
-      </div>
-    );
-  }
 
   return (
     <div
