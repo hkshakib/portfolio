@@ -177,19 +177,19 @@ textarea {
 
 @keyframes hks-side-letter {
   0%,
-  72%,
+  70%,
   100% {
     transform: translateX(0);
     opacity: 1;
   }
-  80%,
-  88% {
+  78%,
+  90% {
     transform: translateX(0.52em);
-    opacity: 0.18;
+    opacity: 0.08;
   }
   94% {
     transform: translateX(0.52em);
-    opacity: 0.18;
+    opacity: 0.08;
   }
   98% {
     transform: translateX(0);
@@ -199,19 +199,19 @@ textarea {
 
 @keyframes hks-side-letter-right {
   0%,
-  72%,
+  70%,
   100% {
     transform: translateX(0);
     opacity: 1;
   }
-  88%,
-  94% {
+  86%,
+  96% {
     transform: translateX(-0.52em);
-    opacity: 0.18;
+    opacity: 0.08;
   }
   98% {
     transform: translateX(-0.52em);
-    opacity: 0.18;
+    opacity: 0.08;
   }
   100% {
     transform: translateX(0);
@@ -221,14 +221,14 @@ textarea {
 
 @keyframes hks-center-letter {
   0%,
-  72%,
+  70%,
   100% {
     transform: scale(1);
     opacity: 1;
   }
-  80%,
-  94% {
-    transform: scale(1.08);
+  78%,
+  96% {
+    transform: scale(1.1);
     opacity: 1;
   }
   98% {
