@@ -17,8 +17,8 @@ export default function OverviewView() {
         aside={<span>{portfolio.availability}</span>}
       />
 
-      <div className="grid gap-4 xl:grid-cols-[0.82fr_1.18fr]">
-        <Card className="overflow-hidden rounded-[30px] bg-[linear-gradient(135deg,rgba(103,135,255,0.16),rgba(17,19,24,0.2)_48%,rgba(255,255,255,0.03))] p-6 sm:p-7">
+      <div className="grid gap-4 xl:grid-cols-[320px_minmax(0,1fr)] xl:items-start">
+        <Card className="self-start overflow-hidden rounded-[30px] bg-[linear-gradient(135deg,rgba(103,135,255,0.16),rgba(17,19,24,0.2)_48%,rgba(255,255,255,0.03))] p-6 sm:p-7">
           <div className="rounded-[24px] border border-white/[0.08] bg-white/[0.03] p-4">
             <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.4]">Location</p>
             <p className="mt-3 flex items-center gap-2 text-sm text-white/70">
@@ -26,47 +26,65 @@ export default function OverviewView() {
               {portfolio.location}
             </p>
           </div>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Button to="/projects" newTab icon={ArrowUpRight}>
+          <div className="mt-6 grid gap-3">
+            <Button to="/projects" newTab icon={ArrowUpRight} className="w-full justify-between">
               Open Projects
             </Button>
-            <Button to="/contact" newTab variant="secondary" icon={ArrowUpRight}>
+            <Button
+              to="/contact"
+              newTab
+              variant="secondary"
+              icon={ArrowUpRight}
+              className="w-full justify-between"
+            >
               Start a Conversation
             </Button>
-            <Button href={portfolio.resume} newTab variant="secondary" icon={Download}>
+            <Button
+              href={portfolio.resume}
+              newTab
+              variant="secondary"
+              icon={Download}
+              className="w-full justify-between"
+            >
               Download Resume
             </Button>
           </div>
         </Card>
 
-        <Card className="rounded-[30px] p-6">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.42]">Top 3 Projects</p>
-          <div className="mt-4 grid gap-4">
+        <div>
+          <div className="mb-4 flex items-center justify-between gap-3 px-1">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.42]">Top 3 Projects</p>
+            <Button to="/projects" variant="ghost" className="px-0 py-0 text-white/60">
+              View All
+            </Button>
+          </div>
+          <div className="grid gap-4 lg:grid-cols-2 2xl:grid-cols-3">
             {featuredProjects.map((project, index) => (
-              <div
+              <Card
                 key={project.title}
-                className="rounded-[24px] border border-white/[0.08] bg-white/[0.03] p-5"
+                className="flex h-full flex-col rounded-[28px] p-5"
               >
                 <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.4]">
                   {index + 1}. {project.eyebrow}
                 </p>
                 <h3 className="mt-3 text-lg font-semibold text-white">{project.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-white/60">{project.summary}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.stack.slice(0, 4).map((item) => (
                     <Tag key={item}>{item}</Tag>
                   ))}
                 </div>
-                <div className="mt-5 flex flex-wrap gap-3">
+                <div className="mt-auto pt-5 flex flex-wrap gap-3">
                   {project.links.map((link) => (
                     <Button key={link.href} href={link.href} variant="secondary">
                       {link.label}
                     </Button>
                   ))}
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
-        </Card>
+        </div>
       </div>
     </div>
   );

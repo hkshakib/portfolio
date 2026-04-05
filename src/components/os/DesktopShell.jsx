@@ -26,13 +26,18 @@ export default function DesktopShell({ children }) {
                 </div>
               </div>
               <div className="border-t border-white/[0.08] px-5 py-5">
-              <div className="mt-4 flex flex-wrap gap-2">
-                {socialLinks.map((link) => (
-                  <Button key={link.href} href={link.href} variant="secondary" className="text-white/80">
-                    {link.label}
-                  </Button>
-                ))}
-              </div>
+                <div className="grid gap-2">
+                  {socialLinks.map((link) => (
+                    <Button
+                      key={link.href}
+                      href={link.href}
+                      variant="secondary"
+                      className="w-full justify-between text-white/80"
+                    >
+                      {link.label}
+                    </Button>
+                  ))}
+                </div>
               </div>
             </Card>
           </div>
@@ -42,7 +47,7 @@ export default function DesktopShell({ children }) {
           <Card className="overflow-hidden rounded-[34px] border-white/10 bg-[rgba(24,26,31,0.74)]">
             <WindowBar currentView={currentView} />
             <div className="grid min-h-[calc(100vh-10rem)] gap-0 xl:grid-cols-[minmax(0,1fr)_290px]">
-              <div className="min-w-0 border-r border-white/[0.08] px-4 py-4 sm:px-6 sm:py-6 xl:px-7">
+              <div className="min-w-0 border-r border-white/[0.08] px-4 py-4 sm:px-6 sm:py-6 xl:px-7 xl:pb-28">
                 {children}
               </div>
               <DesktopInspector />
