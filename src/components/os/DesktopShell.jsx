@@ -88,7 +88,11 @@ function DesktopMenuBar() {
   return (
     <div className="mx-auto flex max-w-[1500px] items-center justify-between rounded-full border border-white/10 bg-[rgba(18,19,23,0.62)] px-4 py-2 text-sm text-white/70 backdrop-blur-2xl">
       <div className="flex items-center gap-3">
-        <span className="hks-wordmark font-medium uppercase tracking-[0.28em] text-white/90">HKS</span>
+        <span className="hks-wordmark font-medium uppercase text-white/90" aria-label="HKS">
+          <span className="hks-wordmark__letter hks-wordmark__letter--left">H</span>
+          <span className="hks-wordmark__letter hks-wordmark__letter--center">K</span>
+          <span className="hks-wordmark__letter hks-wordmark__letter--right">S</span>
+        </span>
         <span className="font-medium text-white/80">Portfolio</span>
         <span className="hidden text-white/[0.45] xl:inline">File</span>
         <span className="hidden text-white/[0.45] xl:inline">Edit</span>

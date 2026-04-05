@@ -151,27 +151,77 @@ textarea {
 }
 
 .hks-wordmark {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.08em;
   filter: drop-shadow(0 0 12px rgba(216, 223, 243, 0.14));
-  animation: hks-wordmark-shift 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  letter-spacing: 0.08em;
 }
 
-@keyframes hks-wordmark-shift {
+.hks-wordmark__letter {
+  display: inline-block;
+}
+
+.hks-wordmark__letter--left,
+.hks-wordmark__letter--right {
+  animation: hks-side-letter 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.hks-wordmark__letter--right {
+  animation-name: hks-side-letter-right;
+}
+
+.hks-wordmark__letter--center {
+  animation: hks-center-letter 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@keyframes hks-side-letter {
   0%,
   84%,
   100% {
-    transform: translateY(0) scale(1);
-    letter-spacing: 0.28em;
+    transform: translateX(0);
     opacity: 1;
   }
   89% {
-    transform: translateY(-1px) scale(1.04);
-    letter-spacing: 0.34em;
-    opacity: 0.96;
+    transform: translateX(0.52em);
+    opacity: 0.22;
   }
   94% {
-    transform: translateY(0.5px) scale(0.99);
-    letter-spacing: 0.3em;
+    transform: translateX(0.18em);
+    opacity: 0.7;
+  }
+}
+
+@keyframes hks-side-letter-right {
+  0%,
+  84%,
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  89% {
+    transform: translateX(-0.52em);
+    opacity: 0.22;
+  }
+  94% {
+    transform: translateX(-0.18em);
+    opacity: 0.7;
+  }
+}
+
+@keyframes hks-center-letter {
+  0%,
+  84%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  89% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  94% {
+    transform: scale(1.03);
     opacity: 1;
   }
 }
