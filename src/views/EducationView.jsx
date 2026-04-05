@@ -1,83 +1,98 @@
 import { education } from "../data/portfolio";
-import Card from "../components/ui/Card";
+import uniLogo from "../static/unilogo.png";
+
+const schoolMarks = {
+  "Kocaeli University": { initials: "KU", tone: "from-sky-400/28 to-blue-500/18" },
+  "University of Hertfordshire": { initials: "UH", tone: "from-amber-300/24 to-orange-400/16" },
+  "Leading University": { logo: uniLogo, tone: "from-emerald-300/24 to-teal-400/18" },
+};
 
 const studyHighlights = [
-  { label: "Current focus", value: "Software Engineering" },
-  { label: "Graduate depth", value: "AI + Robotics" },
-  { label: "Foundation", value: "Computer Science" },
+  "Software Engineering",
+  "AI and Robotics",
+  "Computer Science",
 ];
 
 export default function EducationView() {
   return (
     <div>
-      <div className="mb-6 sm:mb-7">
+      <div className="mb-5 sm:mb-6">
         <p className="text-[11px] uppercase tracking-[0.2em] text-white/[0.42]">Education</p>
         <h2 className="mt-3 max-w-4xl text-2xl font-semibold text-white sm:text-3xl">
-          Graduate study in software engineering and AI, grounded by a computer science foundation.
+          Graduate study in software engineering and AI, backed by a computer science foundation.
         </h2>
-        <p className="mt-3 max-w-3xl text-sm leading-7 text-white/60">
-          Kept compact here so it supports the main engineering story without overpowering the
-          professional work.
-        </p>
       </div>
 
-      <div className="grid gap-6 xl:grid-cols-[340px_minmax(0,1fr)]">
-        <div className="space-y-5 xl:sticky xl:top-24 xl:self-start">
-          <Card className="overflow-hidden rounded-[30px] bg-[linear-gradient(145deg,rgba(118,168,255,0.12),rgba(24,26,31,0.14)_42%,rgba(255,255,255,0.03))] p-6 sm:p-7">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.42]">
-              Academic snapshot
-            </p>
-            <h3 className="mt-4 max-w-sm text-xl font-semibold leading-tight text-white">
-              A progression from computer science fundamentals into software engineering and AI.
-            </h3>
-            <p className="mt-4 text-sm leading-7 text-white/60">
-              The path is intentionally broad enough to support product engineering, systems work,
-              and applied AI delivery.
-            </p>
-          </Card>
-
-          <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-            {studyHighlights.map((item) => (
-              <div
-                key={item.label}
-                className="rounded-[22px] border border-white/[0.08] bg-white/[0.02] px-4 py-4"
-              >
-                <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.42]">
-                  {item.label}
-                </p>
-                <p className="mt-3 text-lg text-white">{item.value}</p>
-              </div>
-            ))}
+      <div className="grid gap-5 xl:grid-cols-[300px_minmax(0,1fr)]">
+        <div className="space-y-4 xl:sticky xl:top-24 xl:self-start">
+          <div className="rounded-[28px] border border-white/[0.08] bg-[linear-gradient(145deg,rgba(118,168,255,0.1),rgba(24,26,31,0.12)_42%,rgba(255,255,255,0.03))] p-5">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.42]">Academic path</p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {studyHighlights.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/[0.08] bg-white/[0.03] px-3 py-1 text-[11px] text-white/70"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="rounded-[30px] border border-white/[0.08] bg-white/[0.02] px-5 py-2 sm:px-6">
-          {education.map((item, index) => (
+        <div className="space-y-4">
+          {education.map((item) => (
             <article
               key={item.school}
-              className={`grid gap-4 py-6 md:grid-cols-[140px_minmax(0,1fr)] md:gap-6 ${
-                index !== education.length - 1 ? "border-b border-white/[0.08]" : ""
-              }`}
+              className="grid gap-4 rounded-[28px] border border-white/[0.08] bg-white/[0.02] p-5 sm:grid-cols-[76px_minmax(0,1fr)] sm:p-6"
             >
-              <div className="md:pt-1">
-                <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.32]">
-                  {item.period}
-                </p>
-                <p className="mt-2 text-sm text-white/50">{item.location}</p>
-              </div>
+              <UniversityMark school={item.school} />
 
-              <div className="relative">
-                <div className="absolute left-0 top-2 hidden h-full w-px bg-white/[0.08] md:block" />
-                <div className="relative md:pl-8">
-                  <span className="absolute left-[-5px] top-2 hidden h-3 w-3 rounded-full border border-white/[0.16] bg-[rgba(118,168,255,0.24)] md:block" />
-                  <h3 className="text-xl text-white">{item.school}</h3>
-                  <p className="mt-3 max-w-2xl text-sm leading-7 text-white/60">{item.degree}</p>
+              <div className="min-w-0">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.42]">
+                      {item.location}
+                    </p>
+                    <h3 className="mt-2 text-xl text-white">{item.school}</h3>
+                  </div>
+                  <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.36]">
+                    {item.period}
+                  </p>
                 </div>
+                <p className="mt-4 text-sm leading-7 text-white/62">{item.degree}</p>
               </div>
             </article>
           ))}
         </div>
       </div>
+    </div>
+  );
+}
+
+function UniversityMark({ school }) {
+  const mark = schoolMarks[school];
+
+  if (mark.logo) {
+    return (
+      <div
+        className={`relative grid h-[76px] w-[76px] place-items-center overflow-hidden rounded-[24px] border border-white/[0.08] bg-gradient-to-br ${mark.tone}`}
+      >
+        <div className="absolute inset-0 bg-[rgba(8,10,14,0.2)]" />
+        <img src={mark.logo} alt={`${school} logo`} className="relative h-[54px] w-[54px] object-contain" />
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className={`grid h-[76px] w-[76px] place-items-center rounded-[24px] border border-white/[0.08] bg-gradient-to-br ${mark.tone}`}
+      aria-label={`${school} mark`}
+      title={school}
+    >
+      <span className="text-lg font-semibold uppercase tracking-[0.14em] text-white">
+        {mark.initials}
+      </span>
     </div>
   );
 }
