@@ -4,6 +4,7 @@ export default function Button({
   children,
   href,
   to,
+  newTab = false,
   icon: Icon,
   variant = "primary",
   className = "",
@@ -29,14 +30,20 @@ export default function Button({
 
   if (to) {
     return (
-      <Link to={to} className={`${base} ${variants[variant]} ${className}`}>
+      <Link
+        to={to}
+        target={newTab ? "_blank" : undefined}
+        rel={newTab ? "noreferrer" : undefined}
+        className={`${base} ${variants[variant]} ${className}`}
+      >
         {content}
       </Link>
     );
   }
 
   if (href) {
-    const external = href.startsWith("http") || href.startsWith("mailto") || href.startsWith("tel");
+    const external =
+      newTab || href.startsWith("http") || href.startsWith("mailto") || href.startsWith("tel");
     return (
       <a
         href={href}

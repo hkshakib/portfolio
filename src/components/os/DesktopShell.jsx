@@ -1,4 +1,4 @@
-import { Apple, Search, Wifi, BatteryFull, ArrowUpRight, Star } from "lucide-react";
+import { Apple, Search, Wifi, BatteryFull, Star } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import { appViews, portfolio, socialLinks } from "../../data/portfolio";
 import { iconMap } from "./iconMap";
@@ -21,52 +21,18 @@ export default function DesktopShell({ children }) {
                 <div className="flex items-center gap-3">
                   <FinderMark className="h-12 w-12" />
                   <p className="text-[11px] uppercase tracking-[0.22em] text-white/[0.45]">
-                  Finder
+                    hkshakib
                   </p>
                 </div>
-                <h1 className="mt-4 text-2xl font-semibold text-white">{portfolio.shortName}.portfolio</h1>
-                <p className="mt-3 text-sm leading-7 text-white/[0.58]">{portfolio.summary}</p>
               </div>
-              <div className="border-t border-white/[0.08] px-3 py-3">
-                {appViews.map((item) => {
-                  const Icon = iconMap[item.icon];
-                  const isActive = location.pathname === item.path;
-                  return (
-                    <NavLink
-                      key={item.path}
-                      to={item.path}
-                      className={`mb-1 flex items-center justify-between rounded-2xl px-3 py-3 transition ${
-                        isActive
-                          ? "bg-white/[0.12] text-white"
-                          : "text-white/[0.58] hover:bg-white/[0.06] hover:text-white"
-                      }`}
-                    >
-                      <span className="flex items-center gap-3 text-sm">
-                        <DesktopAppTile active={isActive} tone={item.tone}>
-                          <Icon className="h-4 w-4" />
-                        </DesktopAppTile>
-                        <span>
-                          <span className="block">{item.label}</span>
-                          <span className="block text-[11px] uppercase tracking-[0.18em] text-white/40">
-                            {item.subtitle}
-                          </span>
-                        </span>
-                      </span>
-                      <ArrowUpRight className="h-4 w-4" />
-                    </NavLink>
-                  );
-                })}
-              </div>
-            </Card>
-
-            <Card className="rounded-[28px] bg-[rgba(29,32,37,0.7)] p-5">
-              <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.45]">Quick links</p>
+              <div className="border-t border-white/[0.08] px-5 py-5">
               <div className="mt-4 flex flex-wrap gap-2">
                 {socialLinks.map((link) => (
                   <Button key={link.href} href={link.href} variant="secondary" className="text-white/80">
                     {link.label}
                   </Button>
                 ))}
+              </div>
               </div>
             </Card>
           </div>

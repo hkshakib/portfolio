@@ -19,18 +19,7 @@ export default function OverviewView() {
 
       <div className="grid gap-4 xl:grid-cols-[0.82fr_1.18fr]">
         <Card className="overflow-hidden rounded-[30px] bg-[linear-gradient(135deg,rgba(103,135,255,0.16),rgba(17,19,24,0.2)_48%,rgba(255,255,255,0.03))] p-6 sm:p-7">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.45]">Recruiter Snapshot</p>
-          <div className="mt-5 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-[24px] border border-white/[0.08] bg-white/[0.03] p-4">
-              <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.4]">Name</p>
-              <p className="mt-3 text-lg font-semibold text-white">{portfolio.name}</p>
-            </div>
-            <div className="rounded-[24px] border border-white/[0.08] bg-white/[0.03] p-4">
-              <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.4]">Title</p>
-              <p className="mt-3 text-lg font-semibold text-white">{portfolio.role}</p>
-            </div>
-          </div>
-          <div className="mt-4 rounded-[24px] border border-white/[0.08] bg-white/[0.03] p-4">
+          <div className="rounded-[24px] border border-white/[0.08] bg-white/[0.03] p-4">
             <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.4]">Location</p>
             <p className="mt-3 flex items-center gap-2 text-sm text-white/70">
               <MapPin className="h-4 w-4 text-white/45" />
@@ -38,20 +27,15 @@ export default function OverviewView() {
             </p>
           </div>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Button to="/projects" icon={ArrowUpRight}>
+            <Button to="/projects" newTab icon={ArrowUpRight}>
               Open Projects
             </Button>
-            <Button to="/contact" variant="secondary" icon={ArrowUpRight}>
+            <Button to="/contact" newTab variant="secondary" icon={ArrowUpRight}>
               Start a Conversation
             </Button>
-            <Button href={portfolio.resume} variant="secondary" icon={Download}>
+            <Button href={portfolio.resume} newTab variant="secondary" icon={Download}>
               Download Resume
             </Button>
-          </div>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {["FastAPI", "React", "Flutter", "Supabase", "OpenAI", "Databricks SQL"].map((item) => (
-              <Tag key={item}>{item}</Tag>
-            ))}
           </div>
         </Card>
 
