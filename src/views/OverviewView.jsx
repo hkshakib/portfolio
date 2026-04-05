@@ -1,5 +1,5 @@
-import { ArrowUpRight, Download } from "lucide-react";
-import { about, portfolio, projects } from "../data/portfolio";
+import { ArrowUpRight, Download, MapPin } from "lucide-react";
+import { portfolio, projects } from "../data/portfolio";
 import Card from "../components/ui/Card";
 import Button from "../components/ui/Button";
 import Tag from "../components/ui/Tag";
@@ -12,18 +12,31 @@ export default function OverviewView() {
     <div>
       <ViewHeader
         eyebrow="Overview"
-        title={portfolio.headline}
-        description={portfolio.intro}
+        title={portfolio.name}
+        description={portfolio.role}
         aside={<span>{portfolio.availability}</span>}
       />
 
-      <div className="grid gap-4 xl:grid-cols-[1.25fr_0.75fr]">
+      <div className="grid gap-4 xl:grid-cols-[0.82fr_1.18fr]">
         <Card className="overflow-hidden rounded-[30px] bg-[linear-gradient(135deg,rgba(103,135,255,0.16),rgba(17,19,24,0.2)_48%,rgba(255,255,255,0.03))] p-6 sm:p-7">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.45]">{portfolio.titleLine}</p>
-          <h3 className="mt-4 max-w-3xl text-2xl font-semibold leading-tight text-white sm:text-3xl">
-            Shipping full product systems, not isolated screens or isolated APIs.
-          </h3>
-          <p className="mt-4 max-w-3xl text-sm leading-7 text-white/[0.62]">{portfolio.summary}</p>
+          <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.45]">Recruiter Snapshot</p>
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-[24px] border border-white/[0.08] bg-white/[0.03] p-4">
+              <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.4]">Name</p>
+              <p className="mt-3 text-lg font-semibold text-white">{portfolio.name}</p>
+            </div>
+            <div className="rounded-[24px] border border-white/[0.08] bg-white/[0.03] p-4">
+              <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.4]">Title</p>
+              <p className="mt-3 text-lg font-semibold text-white">{portfolio.role}</p>
+            </div>
+          </div>
+          <div className="mt-4 rounded-[24px] border border-white/[0.08] bg-white/[0.03] p-4">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.4]">Location</p>
+            <p className="mt-3 flex items-center gap-2 text-sm text-white/70">
+              <MapPin className="h-4 w-4 text-white/45" />
+              {portfolio.location}
+            </p>
+          </div>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button to="/projects" icon={ArrowUpRight}>
               Open Projects
@@ -42,63 +55,34 @@ export default function OverviewView() {
           </div>
         </Card>
 
-        <div className="grid gap-4">
-          {portfolio.metrics.map((metric) => (
-            <Card key={metric.label} className="rounded-[28px] p-5">
-              <p className="text-[11px] uppercase tracking-[0.18em] text-white/40">Metric</p>
-              <p className="mt-4 text-xl text-white">{metric.value}</p>
-              <p className="mt-2 text-sm leading-7 text-white/60">{metric.label}</p>
-            </Card>
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-4 grid gap-4 xl:grid-cols-[0.9fr_1.1fr]">
         <Card className="rounded-[30px] p-6">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.42]">Approach</p>
-          <div className="mt-4 space-y-4">
-            {about.paragraphs.map((paragraph) => (
-              <p key={paragraph} className="text-sm leading-8 text-white/60">
-                {paragraph}
-              </p>
-            ))}
-          </div>
-          <div className="mt-6 grid gap-3">
-            {portfolio.heroBullets.map((item) => (
+          <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.42]">Top 3 Projects</p>
+          <div className="mt-4 grid gap-4">
+            {featuredProjects.map((project, index) => (
               <div
-                key={item}
-                className="rounded-[22px] border border-white/[0.08] bg-white/[0.03] px-4 py-4 text-sm leading-7 text-white/[0.68]"
+                key={project.title}
+                className="rounded-[24px] border border-white/[0.08] bg-white/[0.03] p-5"
               >
-                {item}
+                <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.4]">
+                  {index + 1}. {project.eyebrow}
+                </p>
+                <h3 className="mt-3 text-lg font-semibold text-white">{project.title}</h3>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.stack.slice(0, 4).map((item) => (
+                    <Tag key={item}>{item}</Tag>
+                  ))}
+                </div>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  {project.links.map((link) => (
+                    <Button key={link.href} href={link.href} variant="secondary">
+                      {link.label}
+                    </Button>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
         </Card>
-
-        <div className="grid gap-4">
-          {about.focusAreas.map((item) => (
-            <Card key={item.title} className="rounded-[28px] p-5">
-              <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.42]">Focus area</p>
-              <h3 className="mt-4 text-lg text-white">{item.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-white/60">{item.description}</p>
-            </Card>
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-4 grid gap-4 lg:grid-cols-3">
-        {featuredProjects.map((project) => (
-          <Card key={project.title} className="rounded-[28px] p-5">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.42]">{project.eyebrow}</p>
-            <h3 className="mt-4 text-lg text-white">{project.title}</h3>
-            <p className="mt-3 text-sm leading-7 text-white/60">{project.summary}</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {project.stack.slice(0, 4).map((item) => (
-                <Tag key={item}>{item}</Tag>
-              ))}
-            </div>
-          </Card>
-        ))}
       </div>
     </div>
   );
