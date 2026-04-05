@@ -150,126 +150,28 @@ textarea {
   pointer-events: none;
 }
 
-.hks-mark {
-  position: relative;
-  height: 20px;
-  width: 24px;
-  filter: drop-shadow(0 0 12px rgba(216, 223, 243, 0.12));
+.hks-wordmark {
+  display: inline-block;
+  filter: drop-shadow(0 0 12px rgba(216, 223, 243, 0.14));
+  animation: hks-wordmark-shift 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
-.hks-mark__pillar,
-.hks-mark__bridge,
-.hks-mark__slash {
-  position: absolute;
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(245, 247, 251, 0.96), rgba(216, 223, 243, 0.76));
-}
-
-.hks-mark__pillar {
-  top: 1px;
-  bottom: 1px;
-  width: 4px;
-}
-
-.hks-mark__pillar--left {
-  left: 1px;
-  animation: hks-left-shift 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-}
-
-.hks-mark__pillar--center {
-  left: 10px;
-  animation: hks-center-shift 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-}
-
-.hks-mark__pillar--right {
-  right: 1px;
-  animation: hks-right-shift 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-}
-
-.hks-mark__bridge {
-  left: 4px;
-  right: 4px;
-  top: 8px;
-  height: 4px;
-  animation: hks-bridge-shift 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-}
-
-.hks-mark__slash {
-  right: 3px;
-  top: 2px;
-  height: 16px;
-  width: 4px;
-  transform: rotate(37deg);
-  transform-origin: center;
-  animation: hks-slash-shift 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-}
-
-@keyframes hks-left-shift {
+@keyframes hks-wordmark-shift {
   0%,
   84%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+    letter-spacing: 0.28em;
+    opacity: 1;
   }
   89% {
-    transform: translateY(-1.5px);
+    transform: translateY(-1px) scale(1.04);
+    letter-spacing: 0.34em;
+    opacity: 0.96;
   }
   94% {
-    transform: translateY(0.75px);
-  }
-}
-
-@keyframes hks-center-shift {
-  0%,
-  84%,
-  100% {
-    transform: scaleY(1);
-  }
-  89% {
-    transform: scaleY(1.08);
-  }
-  94% {
-    transform: scaleY(0.96);
-  }
-}
-
-@keyframes hks-right-shift {
-  0%,
-  84%,
-  100% {
-    transform: translateY(0);
-  }
-  89% {
-    transform: translateY(1.5px);
-  }
-  94% {
-    transform: translateY(-0.75px);
-  }
-}
-
-@keyframes hks-bridge-shift {
-  0%,
-  84%,
-  100% {
-    transform: scaleX(1);
-  }
-  89% {
-    transform: scaleX(1.12);
-  }
-  94% {
-    transform: scaleX(0.98);
-  }
-}
-
-@keyframes hks-slash-shift {
-  0%,
-  84%,
-  100% {
-    transform: rotate(37deg) translateX(0);
-  }
-  89% {
-    transform: rotate(32deg) translateX(1px);
-  }
-  94% {
-    transform: rotate(39deg) translateX(-0.5px);
+    transform: translateY(0.5px) scale(0.99);
+    letter-spacing: 0.3em;
+    opacity: 1;
   }
 }
