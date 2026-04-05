@@ -338,10 +338,12 @@ export const achievements = [
   {
     title: "CodeChef",
     detail: "Reached 4-star status with a maximum rating of 1938.",
+    href: "https://www.codechef.com/users/hkshakib",
   },
   {
     title: "Codeforces",
     detail: "Earned Specialist rank with a maximum rating of 1543.",
+    href: "https://codeforces.com/profile/_Bohemian",
   },
   {
     title: "ICPC",
