@@ -1,5 +1,4 @@
 import { experiences } from "../data/portfolio";
-import Card from "../components/ui/Card";
 import ViewHeader from "../components/portfolio/ViewHeader";
 
 export default function ExperienceView() {
@@ -10,9 +9,9 @@ export default function ExperienceView() {
         title="Roles focused on AI systems, data movement, backend reliability, and product delivery."
         description="Compressed into high-signal summaries so the route still feels like a portfolio experience rather than a raw resume dump."
       />
-      <div className="space-y-4">
+      <div className="divide-y divide-white/[0.08]">
         {experiences.map((item) => (
-          <Card key={`${item.company}-${item.period}`} className="rounded-[30px] p-6 sm:p-7">
+          <section key={`${item.company}-${item.period}`} className="py-6 first:pt-0 last:pb-0 sm:py-7">
             <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
               <div>
                 <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.42]">
@@ -34,7 +33,7 @@ export default function ExperienceView() {
                 ))}
               </ul>
             </div>
-          </Card>
+          </section>
         ))}
       </div>
     </div>
