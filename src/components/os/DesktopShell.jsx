@@ -26,6 +26,9 @@ export default function DesktopShell({ children }) {
                 </div>
               </div>
               <div className="border-t border-white/[0.08] px-5 py-5">
+                <p className="mb-4 text-[11px] uppercase tracking-[0.18em] text-white/[0.45]">
+                  Quick links
+                </p>
                 <div className="grid gap-2">
                   {socialLinks.map((link) => (
                     <Button
@@ -37,6 +40,14 @@ export default function DesktopShell({ children }) {
                       {link.label}
                     </Button>
                   ))}
+                  <Button
+                    href={portfolio.resume}
+                    newTab
+                    variant="secondary"
+                    className="w-full justify-between text-white/80"
+                  >
+                    Download Resume
+                  </Button>
                 </div>
               </div>
             </Card>
