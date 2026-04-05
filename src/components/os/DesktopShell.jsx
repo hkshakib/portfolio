@@ -1,4 +1,4 @@
-import { Apple, BatteryFull, Code2, Download, Github, Linkedin, Search, Star, Trophy, Wifi } from "lucide-react";
+import { BatteryFull, Code2, Download, Github, Linkedin, Search, Star, Trophy, Wifi } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import { appViews, portfolio, socialLinks } from "../../data/portfolio";
 import { iconMap } from "./iconMap";
@@ -88,7 +88,10 @@ function DesktopMenuBar() {
   return (
     <div className="mx-auto flex max-w-[1500px] items-center justify-between rounded-full border border-white/10 bg-[rgba(18,19,23,0.62)] px-4 py-2 text-sm text-white/70 backdrop-blur-2xl">
       <div className="flex items-center gap-3">
-        <Apple className="h-4 w-4 text-white" />
+        <div className="flex items-center gap-2.5">
+          <HKSLogo />
+          <span className="font-medium uppercase tracking-[0.28em] text-white/90">HKS</span>
+        </div>
         <span className="font-medium text-white/80">Portfolio</span>
         <span className="hidden text-white/[0.45] xl:inline">File</span>
         <span className="hidden text-white/[0.45] xl:inline">Edit</span>
@@ -99,6 +102,18 @@ function DesktopMenuBar() {
         <Wifi className="h-4 w-4" />
         <BatteryFull className="h-4 w-4" />
       </div>
+    </div>
+  );
+}
+
+function HKSLogo() {
+  return (
+    <div className="hks-mark" aria-hidden="true">
+      <span className="hks-mark__pillar hks-mark__pillar--left" />
+      <span className="hks-mark__pillar hks-mark__pillar--center" />
+      <span className="hks-mark__pillar hks-mark__pillar--right" />
+      <span className="hks-mark__bridge" />
+      <span className="hks-mark__slash" />
     </div>
   );
 }
