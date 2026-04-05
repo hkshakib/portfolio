@@ -1,16 +1,20 @@
 import { achievements } from "../data/portfolio";
 import AchievementCard from "../components/cards/AchievementCard";
 import Card from "../components/ui/Card";
-import ViewHeader from "../components/portfolio/ViewHeader";
 
 export default function AchievementsView() {
   return (
     <div>
-      <ViewHeader
-        eyebrow="Achievements"
-        title="Proof points that reinforce the engineering story."
-        description="Competitive programming, rankings, and algorithm-heavy practice continue to show up in how systems are designed, optimized, and reasoned about."
-      />
+      <div className="mb-6 sm:mb-7">
+        <p className="text-[11px] uppercase tracking-[0.2em] text-white/[0.42]">Achievements</p>
+        <h2 className="mt-3 max-w-4xl text-2xl font-semibold text-white sm:text-3xl">
+          Proof points that reinforce the engineering story.
+        </h2>
+        <p className="mt-3 max-w-3xl text-sm leading-7 text-white/60">
+          Competitive programming, rankings, and algorithm-heavy practice continue to show up in
+          how systems are designed, optimized, and reasoned about.
+        </p>
+      </div>
       <div className="grid gap-4 xl:grid-cols-[0.82fr_1.18fr]">
         <Card className="rounded-[30px] p-6">
           <p className="text-[11px] uppercase tracking-[0.18em] text-white/[0.42]">Competitive profile</p>

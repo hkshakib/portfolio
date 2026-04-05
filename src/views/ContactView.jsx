@@ -3,16 +3,20 @@ import { portfolio, socialLinks } from "../data/portfolio";
 import ContactForm from "../components/ContactForm";
 import Button from "../components/ui/Button";
 import Card from "../components/ui/Card";
-import ViewHeader from "../components/portfolio/ViewHeader";
 
 export default function ContactView() {
   return (
     <div>
-      <ViewHeader
-        eyebrow="Contact"
-        title="Reach out if you need someone who can own the interface and the system behind it."
-        description="The form remains frontend-only and opens your mail client, keeping the portfolio simple while still ready for recruiter outreach."
-      />
+      <div className="mb-6 sm:mb-7">
+        <p className="text-[11px] uppercase tracking-[0.2em] text-white/[0.42]">Contact</p>
+        <h2 className="mt-3 max-w-4xl text-2xl font-semibold text-white sm:text-3xl">
+          Reach out if you need someone who can own the interface and the system behind it.
+        </h2>
+        <p className="mt-3 max-w-3xl text-sm leading-7 text-white/60">
+          The form remains frontend-only and opens your mail client, keeping the portfolio simple
+          while still ready for recruiter outreach.
+        </p>
+      </div>
       <div className="grid gap-4 xl:grid-cols-[0.84fr_1.16fr]">
         <Card className="rounded-[30px] p-6">
           <div className="space-y-4">
