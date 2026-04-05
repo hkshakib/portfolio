@@ -25,14 +25,14 @@ export default function ExperienceView() {
               </div>
             </div>
             <div className="mt-5 grid gap-3">
-              {item.bullets.map((bullet) => (
-                <div
-                  key={bullet}
-                  className="rounded-[22px] border border-white/[0.08] bg-white/[0.03] px-4 py-4 text-sm leading-7 text-white/[0.66]"
-                >
-                  {bullet}
-                </div>
-              ))}
+              <ul className="space-y-3 text-sm leading-7 text-white/[0.66]">
+                {item.bullets.map((bullet) => (
+                  <li key={bullet} className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white/55" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </Card>
         ))}
