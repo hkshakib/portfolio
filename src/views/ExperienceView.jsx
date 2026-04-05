@@ -1,14 +1,18 @@
 import { experiences } from "../data/portfolio";
-import ViewHeader from "../components/portfolio/ViewHeader";
 
 export default function ExperienceView() {
   return (
     <div>
-      <ViewHeader
-        eyebrow="Experience"
-        title="Roles focused on AI systems, data movement, backend reliability, and product delivery."
-        description="Compressed into high-signal summaries so the route still feels like a portfolio experience rather than a raw resume dump."
-      />
+      <div className="mb-6 sm:mb-7">
+        <p className="text-[11px] uppercase tracking-[0.2em] text-white/[0.42]">Experience</p>
+        <h2 className="mt-3 max-w-4xl text-2xl font-semibold text-white sm:text-3xl">
+          Roles focused on AI systems, data movement, backend reliability, and product delivery.
+        </h2>
+        <p className="mt-3 max-w-3xl text-sm leading-7 text-white/60">
+          Compressed into high-signal summaries so the route still feels like a portfolio experience
+          rather than a raw resume dump.
+        </p>
+      </div>
       <div className="divide-y divide-white/[0.08]">
         {experiences.map((item) => (
           <section key={`${item.company}-${item.period}`} className="py-6 first:pt-0 last:pb-0 sm:py-7">
